@@ -6,3 +6,7 @@ Integrantes del grupo:
 * Escalante, Juan Diego
 * Rodriguez, Leandro
 * Rossi, Matias Alberto
+
+* Referencias :
+
+- http://www.candyshop.net.ar //Carrosel y colores pastel
