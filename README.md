@@ -10,3 +10,6 @@ Integrantes del grupo:
 * Referencias :
 
 - http://www.candyshop.net.ar //Carrosel y colores pastel
+-https://www.georgalos.com.ar/   //lasdiapositivas del comiezo que ni bien las vi se me hizo agua la boca.
+-http://clubcandy.com.ar/ //me gusto el trasfondo con las golosinas... 
+-
