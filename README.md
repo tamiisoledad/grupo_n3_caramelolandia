@@ -4,7 +4,7 @@ Integrantes del grupo:
 
 * Benitez, Tamara
 * Escalante, Juan Diego
-* Rodriguez, Leandro
+* Rodriguez, Leandro: 24 años,DJ,Fotografo,Estudiante de programacion,Aspiraciones Trabajar en el exterior.
 * Rossi, Matias Alberto
 
 * Referencias :
