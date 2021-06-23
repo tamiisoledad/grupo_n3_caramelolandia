@@ -2,7 +2,7 @@
 "La pagina esta orientada en la venta de golosinas, esta dirigida a personas tanto adultos como niños amantes del mundo de la dulzura"
 Integrantes del grupo:
 
-* Benitez, Tamara
+* Benitez, Tamara: 22 años, fanatica de marvel, aspiraciones vivir en el exterior
 * Escalante, Juan Diego : 31 años,tecnico electromecanico,estudiante de programacion, aspiraciones recorrer el mundo.
 * Rodriguez, Leandro: 24 años,DJ,Fotografo,Estudiante de programacion,Aspiraciones Trabajar en el exterior.
 * Rossi, Matias Alberto
