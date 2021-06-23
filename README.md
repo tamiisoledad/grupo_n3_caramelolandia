@@ -14,3 +14,11 @@ Integrantes del grupo:
 - http://clubcandy.com.ar/ //me gusto el trasfondo con las golosinas... 
 - https://www.candynation.com/ // me gusto la apariencia y como parece que tiene un techo de tienda arriba
 - https://bagley.com.ar/Default.aspx // carrosel de marcas de primera calidad y arriba un carrosel de ofertas
+
+* Colores a usar :
+
+- #FFD28F(Naranja Claro).
+- #FF71BE(Rosa Claro).
+- #39B8FF(Azul Claro).
+- #FCFF82(Amarillo Claro).
+- FFFFFF(Blanco)
