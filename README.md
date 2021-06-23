@@ -3,7 +3,7 @@
 Integrantes del grupo:
 
 * Benitez, Tamara
-* Escalante, Juan Diego
+* Escalante, Juan Diego : 31 años,tecnico electromecanico,estudiante de programacion, aspiraciones recorrer el mundo.
 * Rodriguez, Leandro: 24 años,DJ,Fotografo,Estudiante de programacion,Aspiraciones Trabajar en el exterior.
 * Rossi, Matias Alberto
 
