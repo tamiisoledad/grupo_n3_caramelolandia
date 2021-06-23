@@ -22,7 +22,7 @@
 
 ## Colores a usar
 ```css
-::root {
+:root {
    --naranja: #FFD28F!important;
    --magenta: #FF71BE!important;
    --rosa: #FFCDE8!important;
