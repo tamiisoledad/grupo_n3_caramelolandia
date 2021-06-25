@@ -3,7 +3,7 @@
 
 ## Integrantes del grupo
 > ### 🤓 Benitez, Tamara: 
-22 años, fanatica de marvel, aspiracion vivir en el exterior
+>22 años, fanatica de marvel, aspiracion vivir en el exterior
 > ### 🤡 Escalante, Juan Diego
 > 31 años,tecnico electromecanico,estudiante de programacion, aspiraciones recorrer el mundo.
 > ### 😎 Rodriguez, Leandro
