@@ -20,7 +20,7 @@ main section.carrusel article img{
 main section.carrusel article p.titulo{
     position: absolute;
     text-transform: uppercase;
-    color: white;
+    color: var(--blanco);
     background-color: rgba(0, 0, 0, 0.5);
     bottom: 65%;
     left: 23%;
@@ -28,7 +28,7 @@ main section.carrusel article p.titulo{
 main section.carrusel article p.parrafo{
     position: absolute;
     text-transform: uppercase;
-    color: white;
+    color: var(--blanco);
     font-size: 14px;
     background-color: rgba(0, 0, 0, 0.5);
     bottom: 30%;

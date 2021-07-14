@@ -5,107 +5,14 @@
     font-family: 'Signika Negative', sans-serif;
     color: black;
 }
-:root{
-    --fucsia: #FF71BE;
-    --azul: #39B8FF;
+:root {
     --marron: #FFD28F;
-}
-/* header */
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: var(--fucsia);
-    border-bottom:1px solid rgba(0, 0, 0, 0.3);
-}
-header div.logo {
-    width: 25%;
-}
-header img{
-    width: 100%;
-}
-header input{
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-}
-header a.lupa i{
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    background-color: white;
-    padding: 3px;
-    border-radius: 18%;
-}
-header a.carrito i{
-    background-color: pink;
-    padding: 3px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    border-radius: 18%;
-}
-
-header a.burger i{
-    background-color: pink;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    padding: 3px;
-    border-radius: 18%;
-}
-header nav ul{
-    display: none;
-}
-/* footer */
-
-footer{
-    width: 100%;
-    background-color: var(--fucsia);
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border-top:1px solid rgba(0, 0, 0, 0.3);
-}
-footer nav.menup{
-    display: flex;
-    justify-content: space-evenly;
-}
-footer nav.menup ul{
-    display: flex;
-}
-footer nav.menup ul li{
-    margin: 5px 10px 20px 10px;
-}
-footer nav.menup ul li a{
-    color: rgb(206, 0, 137);
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-footer nav.redes h4{
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 10px;
-    color: rgb(206, 0, 137);
-    
-    
-}
-footer nav.redes{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-}
-footer nav.redes ul{
-    display: flex;
-    justify-content: center;
-}
-footer nav.redes ul li{
-    margin: 6px;
-}
-footer nav.redes li.facebook a i{
-    font-size: 30px;
-    color: rgb(206, 0, 137);
-}
-footer nav.redes li.instagram a i{
-    color: rgb(206, 0, 137);
-    font-size: 30px;
-}
-footer nav.redes li.twitter a i{
-    color: rgb(206, 0, 137);
-    font-size: 30px;
-}
+    --fucsia: #FF71BE;
+    --fucsia-oscuro:#fa0a7a;
+    --rosa: #FFCDE8;
+    --azul: #39B8FF;
+    --amarillo: #FCFF82;
+    --blanco: #F2F2F2;
+    --gris: #D1D1D1;
+    --negro: #414141;
+ }
