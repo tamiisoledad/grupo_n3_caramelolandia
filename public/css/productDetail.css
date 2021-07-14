@@ -1,0 +1,60 @@
+.detail main section a.arrow{
+    color: rgba(0, 255, 255, 0);
+    font-size: 50px;
+    display: none;
+}
+
+.detail main section a.circle{
+    margin: 15px 15px 0 0;
+}
+
+.detail main section article.descripcion{
+    background-color: var(--azul);
+    border-radius: 25px;
+    margin: 15px auto;
+    text-align: center;
+    width: 90%;
+}
+
+.detail main section article.descripcion h4{
+    padding: 10px;
+    margin: 20px;
+    display: inline-block;
+    text-transform: capitalize;
+    background-color: var(--gris);
+    border-radius: 25px;
+}
+
+.detail main section article.descripcion p{
+    display: inline-block;
+    background-color: var(--blanco);
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.detail main section article.descripcion p:last-child{
+    margin: 15px;
+}
+
+.detail main div .agregar{
+    display: inline-block;
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+    background-color: var(--fucsia);
+    border-radius: 25px;
+}
+
+.detail main h3{
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+    background-color: var(--fucsia);
+    border-radius: 25px;
+}
+
+.detail main .relacionados{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
