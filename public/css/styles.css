@@ -1,2 +1,3 @@
-@import url("general.css");
-@import url("detalleprod.css");
+@import url("./general.css");
+@import url("./detalleprod.css");
+@import url("./index.css");
