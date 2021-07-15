@@ -21,16 +21,16 @@
     margin: 20px;
     display: inline-block;
     text-transform: capitalize;
-    background-color: var(--gris);
-    border-radius: 25px;
+    background-color: rgba(153, 152, 152, 0.575);
+    border-radius: 5px;
 }
 
 .detail main section article.descripcion p{
     display: inline-block;
-    background-color: var(--blanco);
+    background-color: rgba(255, 255, 255, 0.418);
     margin: 10px auto;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .detail main section article.descripcion p:last-child{
