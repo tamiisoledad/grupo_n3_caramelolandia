@@ -1,0 +1,90 @@
+.login{
+    
+    justify-content: center;
+    text-align: center;
+    
+}
+.login .box-remember{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.login .box-form input{
+    margin: 5px 0;
+    height: 35px;
+}
+
+.login main{
+    width: 350px;
+    background-color: var(--marron);
+    margin: 0 auto;
+}
+
+.login h1{
+    text-align: center;
+}
+
+.login .box-form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+
+
+.login .box-button button {
+    padding: 8px 0;
+    color: black;
+    background-color: var(--fucsia);
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    margin-top: 15px;
+}
+
+.login .box-button-olvido button {
+    padding: 8px 0;
+    color: white;
+    background-color: var(--negro);
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    margin-top: 15px;
+}
+
+.login .box-remember input{
+    margin-right: 8px;
+}
+
+.login small {
+    color: red;
+    margin: 10px 0;
+    display: inline-block;
+    ;
+}
+.login small .link{
+    color: var(--azul);
+    margin-bottom: 15px;
+}
+
+.login .box-google button{
+    padding: 8px 0;
+    color: black;
+    background-color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+.login .box-face button{
+    padding: 8px 0;
+    color: var(--blanco);
+    background-color: rgb(60, 60, 231);
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 13px;
+    margin-top: 15px;
+}
