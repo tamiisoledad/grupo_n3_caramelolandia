@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+#register * {
+  font-family: 'Poppins', sans-serif;
+  color: var(--negro);
+}
+
+#register main {
+    width: 90%;
+    margin: 4px 5.5%;
+    height: calc(100vh - 80px);
+}
+
+#register .element{
+  min-width: 300px;
+  width: 100%;
+  max-width: 450px;
+  padding: 10px;
+}
+#register .element .input-data{
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+#register .element .input-data input{
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid silver;
+}
+#register .input-data input {outline: none;}
+#register .input-data input:focus ~ label,
+#register .input-data input:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: var(--fucsia);
+}
+#register .element .input-data label{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+#register .input-data .underline{
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  text-align: start;
+}
+#register .input-data .underline:before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: var(--fucsia);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+#register .input-data input:focus ~ .underline:before,
+#register .input-data input:valid ~ .underline:before{
+  transform: scaleX(1);
+}
+#register [type=submit]{
+	background-color: var(--fucsia);
+	text-align: center;
+	letter-spacing: .5px;
+	-webkit-transition: background-color .2s ease-out;
+	transition: background-color .2s ease-out;
+	cursor: pointer;
+    border: none;
+    width: 250px;
+    height: 40px;
+}
