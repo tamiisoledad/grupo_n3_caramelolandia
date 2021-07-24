@@ -2,13 +2,41 @@
 
 #register * {
   font-family: 'Poppins', sans-serif;
-  color: var(--negro);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+	    --marron: #eFc27F;
+	    --fucsia: #eF61aE;
+	    --fucsia-oscuro:#ea006a;
+	    --rosa: #eFbDd8;
+	    --azul: #29a8eF;
+	    --amarillo: #eCeF72;
+	    --blanco: #e2e2e2;
+	    --gris: #c1c1c1;
+	    --negro: #313131;
+	 }
+	#register body, #register main * {
+		background: var(--negro);
+		color: white;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	#register body, #register main * {
+		background:  white;
+  		color: var(--negro);
+	}
 }
 
 #register main {
     width: 90%;
-    margin: 4px 5.5%;
+    margin: 4px 3.5%;
     height: calc(100vh - 80px);
+}
+
+#register form {
+	padding: 15vh 0;
 }
 
 #register .element{
@@ -28,8 +56,8 @@
   border: none;
   font-size: 17px;
   border-bottom: 2px solid silver;
+  outline: none;
 }
-#register .input-data input {outline: none;}
 #register .input-data input:focus ~ label,
 #register .input-data input:valid ~ label{
   transform: translateY(-20px);
@@ -45,6 +73,7 @@
   transition: all 0.3s ease;
 }
 #register .input-data .underline{
+  background: grey;
   position: absolute;
   height: 2px;
   width: 100%;
@@ -75,4 +104,29 @@
     border: none;
     width: 250px;
     height: 40px;
+}
+#register [type=submit]:active {
+	background-color: var(--fucsia-oscuro);
+    position: relative;
+    top: 3px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 12px -6px;
+}
+
+#register [type=checkbox]{
+	margin: 0 5px;
+}
+
+@media (min-width:481px) /* tablet */ {
+}
+@media (min-width:769px) /* desktop */ {
+	#register form {
+    	margin: 17vh 0px;
+	    padding: 50px;
+	    width: 100%;
+	    max-width: 420px;
+	    box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 12px -3px;
+	}
+}
+@media (min-width:1200px)/* largue monitor */ {
+
 }
