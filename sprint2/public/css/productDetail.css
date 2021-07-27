@@ -12,6 +12,10 @@
     width: 90%;
 }
 
+.deatil main section.carrusel img{
+    width: 50%;
+}
+
 .detail section article div.carruselarrow{
     display: flex;
     flex-wrap: wrap;
@@ -35,6 +39,10 @@
 }
 
 .detail main section article.descripcion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     background-color: var(--azul);
     border-radius: 25px;
     margin: 15px auto;
@@ -61,6 +69,13 @@
 
 .detail main section article.descripcion p:last-child{
     margin: 15px;
+}
+
+.detail main section article.descripcion div.nombre,.detail main section article.descripcion div.stock,.detail main section article.descripcion div.marca,.detail main section article.descripcion div.info,.detail main section article.descripcion div.vegan,.detail main section article.descripcion div.acerca{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .detail main div .agregar{
@@ -100,13 +115,16 @@
     border-bottom: 2px solid var(--rosa);
 }
 
-.detail main section.relacionados div.nav-pages{
+.detail main div.nav-pages{
     margin: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-.detail main section.relacionados div.nav-pages i{
+.detail main div.nav-pages i{
     color: var(--azul);
     font-size: 25px;
+    margin: 5px;
 }
 
 .detail main section.relacionados article div.nombreprod{
@@ -117,7 +135,7 @@
     border-radius: 15px;
 }
 
-@media (min-width : 438px) {
+@media (min-width : 481px) {
     
     /*main*/
 
@@ -127,5 +145,27 @@
 
     .detail main section a.arrow{
         display: block;
+    }
+}
+
+@media (min-width : 769px) {
+    
+    /*main*/
+
+    .detail main .relacionados{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    .detail main section.relacionados article{
+        margin: 20px 10px 10px 10px;
+    }
+
+    .detail main div .agregar{
+        margin: 20px 30% 20px 30%;
+    }
+
+    .detail main h3{
+        margin: 20px 20% 20px 20% ;
     }
 }

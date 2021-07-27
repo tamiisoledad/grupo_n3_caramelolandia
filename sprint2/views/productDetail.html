@@ -11,34 +11,36 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <title>Detalle de Producto</title>
   </head>
-  <body class="detail" #="top">
-    <header class="index">
-      <div class="logo">
-        <img src="/images/logo.png" alt="logo" >
-      </div>
-      <div class="buscar">
-        <input class="search" type="text" placeholder="Buscar producto" />
-        <a class="lupa" href=""><i class="fas fa-search"></i></a>
+  <body class="detail">
+    <header>
+      <div class="head">
+          <div class="logo">
+              <img src="/images/logo.webp" alt="logo">
+          </div>
+          <div class="buscar">
+              <input class="search" type="text" placeholder="Buscar producto">
+              <a class="lupa" href=""><i class="fas fa-search"></i></a>
+          </div>
       </div>
       <nav>
-        <a class="carrito" href="/productCart.html"
-          ><i class="fas fa-shopping-cart"></i
-        ></a>
-        <a class="burger" href="#"><i class="fas fa-bars"></i></a>
-        <ul class="menu">
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/">Productos</a></li>
-          <li><a href="/contact">Contacto</a></li>
-        </ul>
-        <ul class="info">
-          <li><a href="/login">Login</a></li>
-          <li><a href="/register">Registro</a></li>
-        </ul>
+          <div class="iconos">
+              <a class="carrito" href="#"><i class="fas fa-shopping-cart"></i></a>
+              <a class="burger" href="#"><i class="fas fa-bars"></i></a>
+          </div>
+          <ul class="menu">
+              <li><a href="">Inicio</a></li>
+              <li><a href="">Productos</a></li>
+              <li><a href="">Carrito</a></li>
+              <li><a href="">Contacto</a></li>
+          </ul>
+          <ul class="info">
+              <li><a href="">Login</a></li>
+              <li><a href="">Registro</a></li>
+          </ul>
       </nav>
-    </header>
+  </header>
     <main>
-      <section class="carrusel">
-        
+      <section class="carrusel">  
         <article class="producto">
           <div class="carruselarrow">
             <a href="" class="arrow"><i class="fas fa-chevron-left"></i></a>
@@ -54,28 +56,40 @@
       </section>
       <section>
         <article class="descripcion">
-          <h4>nombre del producto:</h4>
-          <p>Alfajor Guaymallen(Simple)</p>
-          <h4>Disponible en:</h4>
-          <p>Chocolate, Dulce de leche y Membrillo</p>
-          <h4>Marca:</h4>
-          <p>Guaymallen</p>
-          <h4>Informacion nutricional:</h4>
-          <p>
-            Alfajor de Chocolate 1 alfajor (38g) 162 kcal<br />
-            Alfajor Blanco 1 alfajor (38g) 161 kcal<br />
-            Alfajor de Membrillo 1 porción (38g) 156 kcal
-          </p>
-          <h4>Apto vegano:</h4>
-          <p>No</p>
-          <h4>acerca de la Marca:</h4>
-          <p>
-            Guaymallen comenzó en 1944 operando desde una panadería alquilada y
-            desde allí se convirtió en la primera fábrica de alfajores de venta
-            masiva de Argentina. En 1972, abrió su planta de 1.200 metros
-            cuadrados en el barrio porteño de Mataderos. ... Hoy tienen 220
-            empleados y producen 2 millones de alfajores al día
-          </p>
+          <div class="nombre">
+            <h4>nombre del producto:</h4>
+            <p>Alfajor Guaymallen(Simple)</p>
+          </div>
+          <div class="stock">
+            <h4>Disponible en:</h4>
+            <p>Chocolate, Dulce de leche y Membrillo</p>
+          </div>
+          <div class="marca">
+            <h4>Marca:</h4>
+            <p>Guaymallen</p>
+          </div>
+          <div class="info">
+            <h4>Informacion nutricional:</h4>
+            <p>
+              Alfajor de Chocolate 1 alfajor (38g) 162 kcal<br />
+              Alfajor Blanco 1 alfajor (38g) 161 kcal<br />
+              Alfajor de Membrillo 1 porción (38g) 156 kcal
+            </p>
+          </div>
+          <div class="vegan">
+            <h4>Apto vegano:</h4>
+            <p>No</p>
+          </div>
+          <div class="acerca">
+            <h4>acerca de la Marca:</h4>
+            <p>
+              Guaymallen comenzó en 1944 operando desde una panadería alquilada y
+              desde allí se convirtió en la primera fábrica de alfajores de venta
+              masiva de Argentina. En 1972, abrió su planta de 1.200 metros
+              cuadrados en el barrio porteño de Mataderos. ... Hoy tienen 220
+              empleados y producen 2 millones de alfajores al día
+            </p>
+          </div>
         </article>
       </section>
       <div>
@@ -106,14 +120,14 @@
             <h4>Caja Arcor</h4>
           </div>
         </article>
-        <div class="nav-pages">
-          <i class="far fa-arrow-alt-circle-left"></i>
-          <i class="far fa-circle"></i>
-          <i class="far fa-circle"></i>
-          <i class="far fa-circle"></i>
-          <i class="far fa-arrow-alt-circle-right"></i>
         </div>
       </section>
+      <div class="nav-pages">
+        <i class="far fa-arrow-alt-circle-left"></i>
+        <i class="far fa-circle"></i>
+        <i class="far fa-circle"></i>
+        <i class="far fa-circle"></i>
+        <i class="far fa-arrow-alt-circle-right"></i>
     </main>
     <footer class="principal">
       <nav class="menup">
