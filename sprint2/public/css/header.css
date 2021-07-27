@@ -7,6 +7,9 @@ header{
     background-color: var(--fucsia);
     border-bottom:1px solid rgba(0, 0, 0, 0.3);
 }
+header div.head{
+    display: flex;
+}
 header div.logo {
     width: 25%;
 }
@@ -57,7 +60,7 @@ header div.iconos{
     header{
         height: 150px;
     }
-    header div.iconos{
+    header div div.iconos{
         display: none;
     }
     header nav {
