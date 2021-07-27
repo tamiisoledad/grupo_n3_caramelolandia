@@ -70,3 +70,19 @@ main section.productos article a{
     border-radius: 12%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
+main section.productos article.b{
+    display: none;
+}
+main section.productos article.c{
+    display: none;
+}
+main section.productos article.d{
+    display: none;
+}
+
+/* tablet */
+@media (min-width:481px){
+    main section.productos article.b{
+        display: flex;
+    }
+}

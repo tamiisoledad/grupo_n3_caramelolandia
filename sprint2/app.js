@@ -6,7 +6,7 @@ const
 app.use(express.static('public'));
 
 direction = (x) => (req,res) => res.sendFile(path.join(__dirname, 'views', x))
-app.get('/', direction('home.html'));
+app.get('/', direction('index.html'));
 
 const page = ['register','login','contact','productDetail','productCart'];
 for (let i = page.length - 1; i >= 0; i--) {
