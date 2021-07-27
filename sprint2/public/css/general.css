@@ -18,3 +18,9 @@
     --gris: #D1D1D1;
     --negro: #414141;
  }
+ ul li{
+    list-style: none;
+ }
+ a{
+     text-decoration: none;
+ }

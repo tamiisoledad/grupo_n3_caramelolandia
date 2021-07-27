@@ -7,6 +7,9 @@ header{
     background-color: var(--fucsia);
     border-bottom:1px solid rgba(0, 0, 0, 0.3);
 }
+header div.head{
+    display: flex;
+}
 header div.logo {
     width: 25%;
 }
@@ -39,4 +42,32 @@ header a.burger i{
 }
 header nav ul{
     display: none;
+}
+header div.iconos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* tablets */
+@media (min-width:481px){
+    header{
+        height: 100px;
+    }
+}
+
+/* laptops */
+@media (min-width: 769px){
+    header{
+        height: 150px;
+    }
+    header div div.iconos{
+        display: none;
+    }
+    header nav {
+        display: flex;
+    }
+    header nav ul{
+        display: flex;
+    }
 }
