@@ -1,5 +1,5 @@
 /* main */
-main section.carrusel {
+.home main section.carrusel {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -8,16 +8,16 @@ main section.carrusel {
     background-size: cover;
     border-bottom:1px solid rgba(0, 0, 0, 0.3);
 }
-main section.carrusel article {
+.home main section.carrusel article {
     margin: 5%;
     position: relative;
     width: 90%;
 }
-main section.carrusel article img{
+.home main section.carrusel article img{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     width: 100%;
 }
-main section.carrusel article p.titulo{
+.home main section.carrusel article p.titulo{
     position: absolute;
     text-transform: uppercase;
     color: white;
@@ -25,7 +25,7 @@ main section.carrusel article p.titulo{
     bottom: 65%;
     left: 23%;
 }
-main section.carrusel article p.parrafo{
+.home main section.carrusel article p.parrafo{
     position: absolute;
     text-transform: uppercase;
     color: white;
@@ -34,55 +34,55 @@ main section.carrusel article p.parrafo{
     bottom: 30%;
     left: 12%;
 }
-main section.carrusel article a{
+.home main section.carrusel article a{
     display: inline-block;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     text-align: center;
     background-color: seagreen;
     text-transform: capitalize;
 }
-main section.productos h2{
+.home main section.productos h2{
     text-transform: capitalize;
 }
-main section.productos article{
+.home main section.productos article{
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     margin: 10px;
 }
-main section.productos article img{
+.home main section.productos article img{
     width: 100%;
 }
-main section.productos article div{
+.home main section.productos article div{
     text-align: center;
     width: 100%;
     background-color: rgba(128, 128, 128, 0.3);
 }
-main section.productos article h4{  
+.home main section.productos article h4{  
     text-transform: uppercase;
 }
 
-main section.productos article a{
+.home main section.productos article a{
     background-color: var(--fucsia);
     margin: 8px;
     padding: 8px;
     border-radius: 12%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-main section.productos article.b{
+.home main section.productos article.b{
     display: none;
 }
-main section.productos article.c{
+.home main section.productos article.c{
     display: none;
 }
-main section.productos article.d{
+.home main section.productos article.d{
     display: none;
 }
 
 /* tablet */
 @media (min-width:481px){
-    main section.productos article.b{
+    .home main section.productos article.b{
         display: flex;
     }
 }
