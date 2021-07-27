@@ -1,7 +1,29 @@
+/*main*/
+
 .detail main section a.arrow{
     color: rgba(0, 255, 255, 0);
     font-size: 50px;
     display: none;
+}
+
+.deatil main section.carrusel{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.detail section article div.carruselarrow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.deatil main section article.producto{
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .detail main section article div.nav{
@@ -42,23 +64,68 @@
 }
 
 .detail main div .agregar{
-    display: inline-block;
-    text-align: center;
-    margin: 20px 20px 20px 20px;
+    display: flex;
+    margin: 20px 100px 20px 100px;
+    padding: 10px;
     background-color: var(--fucsia);
     border-radius: 25px;
+    align-content: space-around;
+    justify-content: center;
 }
 
 .detail main h3{
     text-align: center;
-    margin: 20px 20px 20px 20px;
+    margin: 20px 50px 20px 50px;
+    padding: 10px;
     background-color: var(--fucsia);
     border-radius: 25px;
 }
 
 .detail main .relacionados{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
+}
+
+.detail main section.relacionados article{
+    width: 90%;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 0 0 1.5em var(--azul);
+    border: 1px solid var(--rosa);
+}
+
+.detail main section.relacionados article a{
+    border-bottom: 2px solid var(--rosa);
+}
+
+.detail main section.relacionados div.nav-pages{
+    margin: 20px;
+}
+
+.detail main section.relacionados div.nav-pages i{
+    color: var(--azul);
+    font-size: 25px;
+}
+
+.detail main section.relacionados article div.nombreprod{
+    background-color: var(--rosa);
+    border: solid 1px var(--rosa);
+    margin: 10px 70px 10px 70px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
+}
+
+@media (min-width : 438px) {
+    
+    /*main*/
+
+    .detail main section article div.nav{
+        display: none;
+    }
+
+    .detail main section a.arrow{
+        display: block;
+    }
 }

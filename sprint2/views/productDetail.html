@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <title>Detalle de Producto</title>
   </head>
-  <body class="detail">
+  <body class="detail" #="top">
     <header class="index">
       <div class="logo">
         <img src="/images/logo.png" alt="logo" >
@@ -38,16 +38,19 @@
     </header>
     <main>
       <section class="carrusel">
-        <a href="" class="arrow"><i class="fas fa-chevron-left"></i></a>
+        
         <article class="producto">
-          <img src="/images/guaymallen.png" alt="" width="100%"/>
+          <div class="carruselarrow">
+            <a href="" class="arrow"><i class="fas fa-chevron-left"></i></a>
+            <img src="/images/guaymallen.png" alt="" width="80%"/>
+            <a href="" class="arrow"><i class="fas fa-chevron-right"></i></a>
+          </div>
           <div class="nav">
             <a class="circle" href=""><i class="fas fa-circle"></i></a>
             <a class="circle" href=""><i class="fas fa-circle"></i></a>
             <a class="circle" href=""><i class="fas fa-circle"></i></a>
           </div>
         </article>
-        <a href="" class="arrow"><i class="fas fa-chevron-right"></i></a>
       </section>
       <section>
         <article class="descripcion">
@@ -82,21 +85,34 @@
       <section class="relacionados">
         <article>
           <a href=""><img src="/images/rockelt.jpg" alt="product1" width="100%"></a>
-          <span>$200</span>
-          <h4>Rocklets</h4>
+          <div class="nombreprod">
+            <span>$200</span>
+            <h4>Rocklets</h4>
+          </div>
         </article>
         <article>
           <a href=""><img src="/images/jorgito.jpg" alt="product2" width="100%"></a>
-          <span>$250</span>
-          <h4>Alfajorcitos Jorgito</h4>
+          <div class="nombreprod">
+            <span>$250</span>
+            <h4>Alfajorcitos Jorgito</h4>
+          </div>
         </article>
         <article>
           <a href=""
             ><img src="/images/7790580110796_02.jpg" alt="product3" width="100%"></a>
-          <span>$1.500</span>
-          <p>15%OFF</p>
-          <h4>Caja Arcor</h4>
+          <div class="nombreprod">
+            <span>$1.500</span>
+            <p>15%OFF</p>
+            <h4>Caja Arcor</h4>
+          </div>
         </article>
+        <div class="nav-pages">
+          <i class="far fa-arrow-alt-circle-left"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-circle"></i>
+          <i class="far fa-arrow-alt-circle-right"></i>
+        </div>
       </section>
     </main>
     <footer class="principal">
