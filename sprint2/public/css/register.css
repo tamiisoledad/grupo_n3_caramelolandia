@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+#register * {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+	    --marron: #eFc27F;
+	    --fucsia: #eF61aE;
+	    --fucsia-oscuro:#ea006a;
+	    --rosa: #eFbDd8;
+	    --azul: #29a8eF;
+	    --amarillo: #eCeF72;
+	    --blanco: #e2e2e2;
+	    --gris: #c1c1c1;
+	    --negro: #313131;
+	 }
+	#register body, #register main * {
+		background: var(--negro);
+		color: white;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	#register body, #register main * {
+		background:  white;
+  		color: var(--negro);
+	}
+}
+
+#register main {
+    width: 90%;
+    margin: 4px 3.5%;
+    height: 100vh;
+}
+
+#register form {
+	padding: 15vh 0;
+}
+
+#register .element{
+  min-width: 300px;
+  width: 100%;
+  max-width: 450px;
+  padding: 10px;
+}
+#register .element .input-data{
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+#register .element .input-data input{
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid silver;
+  outline: none;
+}
+#register .input-data input:focus ~ label,
+#register .input-data input:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: var(--fucsia);
+}
+#register .element .input-data label{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+#register .input-data .underline{
+  background: grey;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  text-align: start;
+}
+#register .input-data .underline:before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: var(--fucsia);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+#register .input-data input:focus ~ .underline:before,
+#register .input-data input:valid ~ .underline:before{
+  transform: scaleX(1);
+}
+#register [type=submit]{
+	text-align: center;
+	letter-spacing: .5px;
+	-webkit-transition: background-color .2s ease-out;
+	transition: background-color .2s ease-out;
+	cursor: pointer;
+  border: none;
+  width: 250px;
+  height: 40px;
+}
+
+#register [type=submit]#c{
+  background-color: var(--fucsia);
+}
+#register [type=submit]#g{
+  background-color: white;
+  color: #222;
+}
+#register [type=submit]#f{
+  background-color: blue;
+}
+#register [type=submit]:active {
+  position: relative;
+  top: 3px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 12px -6px;
+}
+#register [type=submit]#c:active {
+  background-color: var(--fucsia-oscuro);
+}
+#register [type=submit]#g:active {
+  background-color: var(--gris);
+}
+#register [type=submit]#f:active {
+  background-color: darkblue;
+}
+
+#register [type=checkbox]{
+	margin: 0 5px;
+}
+
+#register form hr {
+  border: none;
+  background: none;
+  margin: 15px;
+}
+#register form p {
+  height: 6px;
+}
+
+#register #get #init {
+  margin-top: 20px;
+}
+#register #get #init a {
+  color: gray;
+  text-decoration: none;
+}
+
+@media (min-width:481px) /* tablet */ {
+}
+
+@media (min-width:769px) /* desktop */ {
+	#register form {
+    	margin: 17vh 0px;
+	    padding: 50px;
+	    width: 100%;
+	    max-width: 420px;
+      box-shadow: rgb(0 0 0 / 50%) 0px 10px 20px 1px;
+	}
+}
+@media (min-width:1200px)/* largue monitor */ {
+  #register form {
+    margin: calc(17vh - 50px) 0px;
+    max-width: 840px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #register form div hr {
+    display: none;
+  }
+  #register #get {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}

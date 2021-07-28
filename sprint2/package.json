@@ -1,0 +1,22 @@
+{
+  "name": "grupo_n3_caramelolandia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamiisoledad/grupo_n3_caramelolandia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tamiisoledad/grupo_n3_caramelolandia/issues"
+  },
+  "homepage": "https://github.com/tamiisoledad/grupo_n3_caramelolandia#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
