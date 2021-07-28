@@ -41,7 +41,7 @@
     background-color: seagreen;
     text-transform: capitalize;
 }
-.home main section.productos h2{
+.home main div h2{
     text-transform: capitalize;
 }
 .home main section.productos article{
@@ -50,6 +50,7 @@
     align-items: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     margin: 10px;
+    width: 100%;
 }
 .home main section.productos article img{
     width: 100%;
@@ -63,7 +64,7 @@
     text-transform: uppercase;
 }
 
-.home main section.productos article a{
+.home main section.productos article a.carrito{
     background-color: var(--fucsia);
     margin: 8px;
     padding: 8px;
@@ -85,4 +86,54 @@
     .home main section.productos article.b{
         display: flex;
     }
+}
+/* laptops */
+@media (min-width:769px){
+    .home main section.carrusel article p.titulo{
+        left: 36%;
+    }
+    .home main section.carrusel article p.parrafo{
+        left: 22%;
+    }
+    .home main section.productos{
+        display: flex;
+        flex-direction: column;
+    }
+    .home main section.productos div.pri{
+        display: flex;
+    }
+    
+}
+/* desktop */
+@media (min-width:1280px){
+    .home main section.carrusel{
+        height: 900px;
+    }
+    .home main section.carrusel article{
+        width: 80%;
+    }
+    .home main section.carrusel article p.titulo{
+        left: 34%;
+        font-size: 40px;
+    }
+    .home main section.carrusel article p.parrafo{
+        left: 22%;
+        font-size: 30px;
+    }
+    .home main section.carrusel article a{
+        font-size: 22px;
+    }
+    .home main section.productos article.c{
+        display: flex;
+    }
+    .home main section.productos article.d{
+        display: flex;
+    }
+    .home main section.productos div.seg{
+        display: flex;
+    }
+    .home main div h2{
+        font-size: 30px;
+    }
+   
 }
