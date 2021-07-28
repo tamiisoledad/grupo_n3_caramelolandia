@@ -2,6 +2,7 @@
 
 #register * {
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,7 +33,7 @@
 #register main {
     width: 90%;
     margin: 4px 3.5%;
-    height: calc(100vh - 80px);
+    height: 100vh;
 }
 
 #register form {
@@ -95,38 +96,90 @@
   transform: scaleX(1);
 }
 #register [type=submit]{
-	background-color: var(--fucsia);
 	text-align: center;
 	letter-spacing: .5px;
 	-webkit-transition: background-color .2s ease-out;
 	transition: background-color .2s ease-out;
 	cursor: pointer;
-    border: none;
-    width: 250px;
-    height: 40px;
+  border: none;
+  width: 250px;
+  height: 40px;
+}
+
+#register [type=submit]#c{
+  background-color: var(--fucsia);
+}
+#register [type=submit]#g{
+  background-color: white;
+  color: #222;
+}
+#register [type=submit]#f{
+  background-color: blue;
 }
 #register [type=submit]:active {
-	background-color: var(--fucsia-oscuro);
-    position: relative;
-    top: 3px;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 12px -6px;
+  position: relative;
+  top: 3px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 12px -6px;
+}
+#register [type=submit]#c:active {
+  background-color: var(--fucsia-oscuro);
+}
+#register [type=submit]#g:active {
+  background-color: var(--gris);
+}
+#register [type=submit]#f:active {
+  background-color: darkblue;
 }
 
 #register [type=checkbox]{
 	margin: 0 5px;
 }
 
+#register form hr {
+  border: none;
+  background: none;
+  margin: 15px;
+}
+#register form p {
+  height: 6px;
+}
+
+#register #get #init {
+  margin-top: 20px;
+}
+#register #get #init a {
+  color: gray;
+  text-decoration: none;
+}
+
 @media (min-width:481px) /* tablet */ {
 }
+
 @media (min-width:769px) /* desktop */ {
 	#register form {
     	margin: 17vh 0px;
 	    padding: 50px;
 	    width: 100%;
 	    max-width: 420px;
-	    box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 12px -3px;
+      box-shadow: rgb(0 0 0 / 50%) 0px 10px 20px 1px;
 	}
 }
 @media (min-width:1200px)/* largue monitor */ {
-
+  #register form {
+    margin: calc(17vh - 50px) 0px;
+    max-width: 840px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #register form div hr {
+    display: none;
+  }
+  #register #get {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }

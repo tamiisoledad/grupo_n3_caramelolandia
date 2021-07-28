@@ -12,27 +12,47 @@
 	<main>
 	    <center>
 			<form action="">
-			  <h1>Crear tu cuenta</h1>
-		      <div class="element">
-		         <div class="input-data">
-		            <input type="text" required>
-		            <div class="underline"></div>
-		            <label>Nombre de Usuario</label>
-		         </div>
-		      </div>
-		      <div class="element">
-		         <div class="input-data">
-		            <input type="password" required>
-		            <div class="underline"></div>
-		            <label>Contraseña</label>
-		         </div>
-		      </div>
-				<label for="userContrat">Acepto los <a href="#!">terminos y condiciones</a></label>
-					<input required type="checkbox" name="userContrat"><br>
-				<label for="notiPull">Recibir notificaciones de ofertas</label>
-					<input type="checkbox" name="notiPull"><br>
-				<br>
-				<input required type="submit" name="acept" id="acept" value="Registrar">
+				<div>
+				  <h1>Crear tu cuenta</h1>
+			      <div class="element">
+			         <div class="input-data">
+			            <input type="text" required name="data-1">
+			            <div class="underline"></div>
+			            <label>Nombre Completo</label>
+			         </div>
+			      </div>
+			      <div class="element">
+			         <div class="input-data">
+			            <input type="email" required name="data-2">
+			            <div class="underline"></div>
+			            <label>Correo electronico</label>
+			         </div>
+			      </div>
+			      <div class="element">
+			         <div class="input-data">
+			            <input type="password" required name="data-3">
+			            <div class="underline"></div>
+			            <label>Contraseña</label>
+			         </div>
+			      </div>
+					<label>Acepto los <a href="#!">terminos y condiciones</a></label>
+						<input required type="checkbox" name="data-5"><br>
+					<label>Recibir notificaciones de ofertas</label>
+						<input type="checkbox" name="datsa-6"><br>
+					<br>
+					<input required type="submit" id="c" name="aceptC" id="acept" value="Registrarse">
+				</div>
+				<div id="get">
+					<div>
+						<hr>
+						<input required type="submit" id="g" name="aceptG" id="acept" value="Registrarse con Google">
+						<p></p>
+						<input required type="submit" id="f" name="aceptF" id="acept" value="Registrarse con Facebook">	
+					</div>
+					<div id="init">
+						<a href="#">Iniciar seción</a>
+					</div>
+				</div>
 			</form>
 	    </center>
 	</main>
