@@ -8,16 +8,24 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding-right: 15px;
 }
 .login .box-form input{
-    margin: 5px 0;
+    margin: 8px 0px 8px 25px;
     height: 35px;
+    width: 300px;
+    border-radius: 2px;
+    text-align: center;
+    border: 0;
+    align-items: center;
+    transition: .25s;
 }
 
 .login main{
     width: 350px;
     background-color: var(--marron);
     margin: 0 auto;
+    margin-top: 20px;
 }
 
 .login h1{
@@ -37,19 +45,21 @@
     color: black;
     background-color: var(--fucsia);
     border: none;
-    border-radius: 5px;
-    width: 300px;
+    border-radius: 24px;
+    width: 200px;
     margin-top: 15px;
+    transition: .25s;
 }
 
 .login .box-button-olvido button {
     padding: 8px 0;
     color: white;
     background-color: var(--negro);
-    border: none;
-    border-radius: 5px;
-    width: 300px;
+    border: 0;
+    border-radius: 24px;
+    width: 200px;
     margin-top: 15px;
+    transition: .25s;
 }
 
 .login .box-remember input{
@@ -72,19 +82,53 @@
     color: black;
     background-color: var(--blanco);
     border: none;
-    border-radius: 5px;
-    width: 300px;
+    border-radius: 24px;
+    width: 200px;
     font-size: 13px;
     margin-bottom: 10px;
     margin-top: 15px;
+    transition: 0.25s;
 }
 .login .box-face button{
     padding: 8px 0;
     color: var(--blanco);
     background-color: rgb(60, 60, 231);
     border: none;
-    border-radius: 5px;
-    width: 300px;
+    border-radius: 24px;
+    width: 200px;
     font-size: 13px;
     margin-top: 15px;
+    margin-bottom: 30px;
+    transition: 0.25s;
 }
+
+/*TRANSICIONES*/
+
+.login .box-form input:hover{
+    border-color: var(--azul);
+
+}
+    .login .box-form input:focus{
+        border:crimson
+    }
+
+.login .box-face button:hover,
+    .login .box-google button:hover,
+    .login .box-button-olvido button:hover,
+    .login .box-button button:hover{
+        border-color: var(--fucsia-oscuro);
+        width: 280px;
+    }
+    
+   
+
+/*media querri 1280*/
+/*
+@media(min-width:1280px){.login .box-face button,
+    .login .box-google button,
+    .login .box-button-olvido button,
+    {
+        width: 280px;
+        border: 0;
+        border-color: var(--azul);
+    }}
