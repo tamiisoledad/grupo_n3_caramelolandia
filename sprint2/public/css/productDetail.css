@@ -1,5 +1,7 @@
 /*main*/
 
+/*carrusel*/
+
 .detail main section a.arrow{
     color: rgba(0, 255, 255, 0);
     font-size: 50px;
@@ -22,6 +24,8 @@
     justify-content: space-around;
     align-items: center;
 }
+
+/*producto*/
 
 .deatil main section article.producto{
     display: flex;
@@ -95,6 +99,8 @@
     background-color: var(--fucsia);
     border-radius: 25px;
 }
+
+/*productos relacionados*/
 
 .detail main .relacionados{
     display: flex;

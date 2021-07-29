@@ -8,118 +8,145 @@
       src="https://kit.fontawesome.com/af21a12db7.js"
       crossorigin="anonymous"
     ></script>
+    <link href="/images/logo.webp" type="image/x-icon" rel="shortcut icon" />
     <link rel="stylesheet" href="/css/styles.css" />
     <title>Carrito de Compras</title>
   </head>
   <body class="cart">
     <header>
       <div class="head">
-        <div class="logo">
-          <img src="/images/logo.webp" alt="logo" />
-        </div>
-        <div class="buscar">
-          <input class="search" type="text" placeholder="Buscar producto" />
-          <a class="lupa" href=""><i class="fas fa-search"></i></a>
-        </div>
+          <div class="logo">
+              <img src="/images/logo.webp" alt="logo">
+          </div>
+          <div class="buscar">
+              <input class="search" type="text" placeholder="Buscar producto">
+              <a class="lupa" href=""><i class="fas fa-search"></i></a>
+          </div>
+          <div class="iconos">
+              <a class="carrito" href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+              <a class="burger" href="#"><i class="fas fa-bars"></i></a>
+          </div>
       </div>
       <nav>
-        <div class="iconos">
-          <a class="carrito" href="#"><i class="fas fa-shopping-cart"></i></a>
-          <a class="burger" href="#"><i class="fas fa-bars"></i></a>
-        </div>
-        <ul class="menu">
-          <li><a href="">Inicio</a></li>
-          <li><a href="">Productos</a></li>
-          <li><a href="">Carrito</a></li>
-          <li><a href="">Contacto</a></li>
-        </ul>
-        <ul class="info">
-          <li><a href="">Login</a></li>
-          <li><a href="">Registro</a></li>
-        </ul>
+          <ul class="menu">
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/productDetail">Productos</a></li>
+              <li><a href="/contact">Contacto</a></li>
+          </ul>
+          <ul class="info">
+              <li><a href="/login">Login</a></li>
+              <li><a href="/register">Registro</a></li>
+          </ul>
       </nav>
-    </header>
+  </header>
     <main>
-      <h1>Carrito de compras</h1>
+      <div class="titulo">
+        <h1>Carrito de compras</h1>
+      </div>
       <section class="carrito">
         <div class="prod-select">
-          <h2>productos seleccionados</h2>
-          <article>
-            <h4>Nombre del producto</h4>
-            <img src="/images/guaymallen.png" alt="" width="20%" />
-            <label for="cantidad">Cantidad</label>
-            <input type="number" id="cantidad" name="cantidad" min="1" max="100">
-            <i class="far fa-trash-alt"></i>
-          </article>
-          <article>
-            <h4>Nombre del producto</h4>
-            <img src="/images/guaymallen.png" alt="" width="20%" />
-            <label for="cantidad">Cantidad</label>
-            <input type="number" id="cantidad" name="cantidad" min="1" max="100">
-            <i class="far fa-trash-alt"></i>
-          </article>
-          <article>
-            <h4>Nombre del producto</h4>
-            <img src="/images/guaymallen.png" alt="" width="20%" />
-            <label for="cantidad">Cantidad</label>
-            <input type="number" id="cantidad" name="cantidad" min="1" max="100">
-            <i class="far fa-trash-alt"></i>
-          </article>
-          <article>
-            <h4>Nombre del producto</h4>
-            <img src="/images/guaymallen.png" alt="" width="20%" />
-            <label for="cantidad">Cantidad</label>
-            <input type="number" id="cantidad" name="cantidad" min="1" max="100">
-            <i class="far fa-trash-alt"></i>
-          </article>
-        </div>
-      </section>
-      <section class="pago">
-        <h2>Formas de pago</h2>
-        <input type="radio" name="medio-de-pago" value="efectivo"><i class="fas fa-money-bill-wave">Efectivo</i>
-        <input type="radio" name="medio-de-pago" value="debito" checked><i class="fas fa-university">Debito</i>
-        <input type="radio" name="medio-de-pago" value="tarjeta"><i class="far fa-credit-card">Tarjeta</i>
-        <div class="form-pago">
-          <form action="" method="POST">
-            <label for="nombre">Nombre y apellido</label>
-            <input type="text" id="nombre" placeholder="Como figura en la tarjeta">
-            <label for="tarjeta">Numero tarjeta</label>
-            <input type="text" id="tarjeta" placeholder="Numero tarjeta">
-            <label for="cod-seg">Cod.Seguridad</label>
-            <input type="text" id="cod-seg" placeholder="Cod.seg">
-            <label for="fecha">Fecha venc. tarjeta</label>
-            <input type="text" id="fecha" placeholder="MM/AA">
-            <input type="checkbox" id="terminos" name="terminos" value="1">
-                <label for="terminos"><a href="">Acepto los Terminos y Condiciones</a></label>
-                <small>(Obligatorio)</small>
-              </form>
-        </div>
-      </section>
-      <section class="entrega">
-        <h2>Formas de entrega</h2>
-        <form action="" method="POST">
-        <div class="formas-entrega">
-          <input type="radio" name="entrega" value="correo"><i class="fas fa-mail-bulk">Retiro en correo</i>
-          <input type="radio" name="entrega" value="domicilio" checked><i class="fas fa-truck">Envio a domicilio</i>
-          <input type="radio" name="entrega" value="sucursal"><i class="fas fa-home">Retiro en Sucursal</i>
-        </div>
-        <div class="instrucciones-envio">
-          <h3>Datos para el envio</h3>
-            <label for="dom">Domicilio:</label>
-            <input type="text" name="domicilio" id="dom" placeholder="Domicilio">
-            <label for="cod-post">Codigo Postal:</label>
-            <input type="text" name="cod-postal" id="cod-post" placeholder="Codigo Postal">
-            <label for="tel">Telefono:</label>
-            <input type="text" name="telefono" id="tel" placeholder="Telefono">
-            <label for="instrucciones">Instrucciones para la entrega:</label>
-            <textarea name="instrucciones" id="instrucciones" cols="30" rows="5" placeholder="Ejemplo: Puerta color negra/No Hay timbre/Quien Recibe" style="resize: none"></textarea>
-            <div class="box-button">
-              <input type="submit" value="Comprar">
-              <input type="reset" value="Cancelar">
+          <h2>Productos seleccionados</h2>
+          <div class="articulos">
+            <article>
+              <h4>Nombre del producto</h4>
+              <img src="/images/guaymallen.png" alt="" width="20%" />
+              <div class="cantidad">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="100">
+                <i class="far fa-trash-alt"></i>
+              </div>
+            </article>
+            <article>
+              <h4>Nombre del producto</h4>
+              <img src="/images/guaymallen.png" alt="" width="20%" />
+              <div class="cantidad">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="100">
+                <i class="far fa-trash-alt"></i>
+              </div>
+            </article>
+            <article>
+              <h4>Nombre del producto</h4>
+              <img src="/images/guaymallen.png" alt="" width="20%" />
+              <div class="cantidad">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="100">
+                <i class="far fa-trash-alt"></i>
+              </div>
+            </article>
+            <article>
+              <h4>Nombre del producto</h4>
+              <img src="/images/guaymallen.png" alt="" width="20%" />
+              <div class="cantidad">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="100">
+                <i class="far fa-trash-alt"></i>
+              </div>
+            </article>
           </div>
-          </form>
         </div>
       </section>
+      <div class="sections">
+        <section class="pago">
+          <h2>Formas de pago</h2>
+          <div class="inputs">
+            <input type="radio" name="medio-de-pago" value="efectivo" id="efec"><i class="fas fa-money-bill-wave"></i>
+            <label for="efec">Efectivo</label>
+            <input type="radio" name="medio-de-pago" value="debito" id="deb" checked ><i class="fas fa-university"></i>
+            <label for="deb">Debito</label>  
+            <input type="radio" name="medio-de-pago" value="tarjeta" id="tarj"><i class="far fa-credit-card"></i>
+            <label for="tarj">Tarjeta</label>
+          </div>
+          <div class="form-pago">
+            <form action="" method="POST">
+              <label for="nombre">Nombre y apellido:</label>
+              <input type="text" id="nombre" placeholder="Como figura en la tarjeta">
+              <label for="tarjeta">Numero tarjeta:</label>
+              <input type="text" id="tarjeta" placeholder="Numero tarjeta">
+              <div class="cod-venc">
+                <label for="cod-seg">Cod.Seguridad:</label>
+                <input type="text" id="cod-seg" placeholder="Cod.seg">
+                <label for="fecha">Fecha venc.:</label>
+                <input type="text" id="fecha" placeholder="MM/AA" >
+              </div>
+              <div class="term">
+                <input type="checkbox" id="terminos" name="terminos" value="1">
+                    <label for="terminos"><a href="">Acepto los Terminos y Condiciones</a></label>
+                    <small>(Obligatorio)</small>
+              </div>
+                </form>
+          </div>
+        </section>
+        <section class="entrega">
+          <h2>Formas de entrega</h2>
+          <form action="" method="POST">
+          <div class="formas-entrega">
+            <input type="radio" name="entrega" value="correo" id="correo"><i class="fas fa-mail-bulk"></i>
+            <label for="correo">Retiro en correo</label>
+            <input type="radio" name="entrega" value="domicilio" id="dom" checked><i class="fas fa-truck"></i>
+            <label for="dom">Envio a domicilio</label>
+            <input type="radio" name="entrega" value="sucursal" id="suc"><i class="fas fa-home"></i>
+            <label for="suc">Retiro en Sucursal</label>
+          </div>
+          <h3>Datos para el envio</h3>
+          <div class="instrucciones-envio">
+              <label for="dom">Domicilio:</label>
+              <input type="text" name="domicilio" id="dom" placeholder="Domicilio">
+              <label for="cod-post">Codigo Postal:</label>
+              <input type="text" name="cod-postal" id="cod-post" placeholder="Codigo Postal">
+              <label for="tel">Telefono:</label>
+              <input type="text" name="telefono" id="tel" placeholder="Telefono">
+              <label for="instrucciones">Instrucciones para la entrega:</label>
+              <textarea name="instrucciones" id="instrucciones" cols="30" rows="5" placeholder="Ejemplo: Puerta color negra/No Hay timbre/Quien Recibe" style="resize: none"></textarea>
+              </div>
+              <div class="box-button">
+                <input type="submit" value="Comprar">
+                <input type="reset" value="Cancelar">
+            </div>
+            </form>
+          </div>
+        </section>
+      </ class="sections">
     </main>
     <footer class="principal">
       <nav class="menup">
