@@ -1,43 +1,57 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v55/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2')
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased
+}
+
+.material-icons {
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: 'liga';
+  -moz-font-feature-settings: 'liga';
+  font-feature-settings: 'liga'
+}
+
 #register * {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-	    --marron: #eFc27F;
-	    --fucsia: #eF61aE;
-	    --fucsia-oscuro:#ea006a;
-	    --rosa: #eFbDd8;
-	    --azul: #29a8eF;
-	    --amarillo: #eCeF72;
-	    --blanco: #e2e2e2;
-	    --gris: #c1c1c1;
-	    --negro: #313131;
-	 }
-	#register body, #register main * {
-		background: var(--negro);
-		color: white;
-	}
+body > #register, #register *, .lupa i {
+  background:  var(--blanco);
+  color: var(--negro);
 }
 
-@media (prefers-color-scheme: light) {
-	#register body, #register main * {
-		background:  white;
-  		color: var(--negro);
-	}
-}
-
-#register main {
-    width: 90%;
-    margin: 4px 3.5%;
-    height: 100vh;
+#register {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #register form {
-	padding: 15vh 0;
+	margin: 15vh 0;
+}
+
+#register h1 {
+  text-align: left;
 }
 
 #register .element{
@@ -57,7 +71,6 @@
   border: none;
   font-size: 17px;
   border-bottom: 2px solid silver;
-  outline: none;
 }
 #register .input-data input:focus ~ label,
 #register .input-data input:valid ~ label{
@@ -104,17 +117,25 @@
   border: none;
   width: 250px;
   height: 40px;
+  border: 1px solid var(--negro);
+  color: var(--negro);
+}
+
+#register input {
+  outline: none;
+  background-color: var(--blanco);
 }
 
 #register [type=submit]#c{
   background-color: var(--fucsia);
+  color: #222;
 }
 #register [type=submit]#g{
-  background-color: white;
+  background-color: #fefefe;
   color: #222;
 }
 #register [type=submit]#f{
-  background-color: blue;
+  background-color: var(--azul-facebook);
 }
 #register [type=submit]:active {
   position: relative;
@@ -128,7 +149,7 @@
   background-color: var(--gris);
 }
 #register [type=submit]#f:active {
-  background-color: darkblue;
+  background-color: blue;
 }
 
 #register [type=checkbox]{
@@ -163,6 +184,12 @@
 	    max-width: 420px;
       box-shadow: rgb(0 0 0 / 50%) 0px 10px 20px 1px;
 	}
+  #register header div.head {
+    height: auto;
+  }
+  #register header {
+    height: 118px;
+  }
 }
 @media (min-width:1200px)/* largue monitor */ {
   #register form {
@@ -181,5 +208,29 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root #register {
+      --marron: #eFc27F;
+      --fucsia: #eF61aE;
+      --fucsia-oscuro:#ea006a;
+      --rosa: #eFbDd8;
+      --azul: #29a8eF;
+      --amarillo: #eCeF72;
+      --negro: #e2e2e2;
+      --gris: #c1c1c1;
+      --blanco: #313131;
+   }
+
+  ::-ms-reveal {
+    filter: invert(100%);
+  }
+
+  #register [type=submit] {
+    border: none;
+  }
+  #register #get #init {
+    text-align: right;
   }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" id="register">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,54 +8,96 @@
     <title>Registro</title>
 </head>
 <body>
-	<header></header>
-	<main>
-	    <center>
-			<form action="">
+    <header>
+        <div class="head">
+            <div class="logo">
+                <img src="/images/logo.webp" alt="logo">
+            </div>
+            <div class="buscar">
+                <input class="search" type="text" placeholder="Buscar producto">
+                <a class="lupa" href=""><i class="material-icons">search</i></a>
+            </div>
+            <div class="iconos">
+                <a class="carrito" href="/productCart"><i class="material-icons">shopping_cart</i></a>
+                <a class="burger" href="#"><i class="material-icons">dehaze</i></a>
+            </div>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/productDetail">Productos</a></li>
+                <li><a href="/contact">Contacto</a></li>
+            </ul>
+            <ul class="info">
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+	<main id="register">
+		<form action="" id="form">
+			<div>
+			  <h1>Crear tu cuenta</h1>
+		      <div class="element">
+		         <div class="input-data">
+		            <input type="text" required name="data-1">
+		            <div class="underline"></div>
+		            <label>Nombre Completo</label>
+		         </div>
+		      </div>
+		      <div class="element">
+		         <div class="input-data">
+		            <input type="email" required name="data-2">
+		            <div class="underline"></div>
+		            <label>Correo electronico</label>
+		         </div>
+		      </div>
+		      <div class="element">
+		         <div class="input-data">
+		            <input type="password" required name="data-3">
+		            <div class="underline"></div>
+		            <label>Contraseña</label>
+		         </div>
+		      </div>
+				<label>Acepto los <a href="#!">terminos y condiciones</a></label>
+					<input required type="checkbox" name="data-5"><br>
+				<label>Recibir notificaciones de ofertas</label>
+					<input type="checkbox" name="datsa-6"><br>
+				<br>
+				<input required type="submit" id="c" name="data-6" id="acept" value="Registrarse">
+			</div>
+			<div id="get">
+				<div></div>
 				<div>
-				  <h1>Crear tu cuenta</h1>
-			      <div class="element">
-			         <div class="input-data">
-			            <input type="text" required name="data-1">
-			            <div class="underline"></div>
-			            <label>Nombre Completo</label>
-			         </div>
-			      </div>
-			      <div class="element">
-			         <div class="input-data">
-			            <input type="email" required name="data-2">
-			            <div class="underline"></div>
-			            <label>Correo electronico</label>
-			         </div>
-			      </div>
-			      <div class="element">
-			         <div class="input-data">
-			            <input type="password" required name="data-3">
-			            <div class="underline"></div>
-			            <label>Contraseña</label>
-			         </div>
-			      </div>
-					<label>Acepto los <a href="#!">terminos y condiciones</a></label>
-						<input required type="checkbox" name="data-5"><br>
-					<label>Recibir notificaciones de ofertas</label>
-						<input type="checkbox" name="datsa-6"><br>
-					<br>
-					<input required type="submit" id="c" name="aceptC" id="acept" value="Registrarse">
+					<hr>
+					<input required type="submit" id="g" name="aceptG" id="acept" value="Registrarse con Google">
+					<p></p>
+					<input required type="submit" id="f" name="aceptF" id="acept" value="Registrarse con Facebook">	
 				</div>
-				<div id="get">
-					<div>
-						<hr>
-						<input required type="submit" id="g" name="aceptG" id="acept" value="Registrarse con Google">
-						<p></p>
-						<input required type="submit" id="f" name="aceptF" id="acept" value="Registrarse con Facebook">	
-					</div>
-					<div id="init">
-						<a href="#">Iniciar seción</a>
-					</div>
+				<div id="init">
+					<a href="/login">Iniciar tu cuenta</a>
 				</div>
-			</form>
-	    </center>
+			</div>
+		</form>
 	</main>
-	<footer></footer>
+	<footer>
+        <nav class="menup">
+
+            <ul class="menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/productDetail">Productos</a></li>
+                <li><a href="/productCart">Carrito</a></li>
+                <li><a href="/contact">Contacto</a></li>
+            </ul>
+        </nav>
+        <nav class="redes">
+            <h4>Seguinos en nuestras redes</h4>
+            <ul>
+                <li class="facebook"><a href=""><i class="fab fa-facebook"></i></a></li>
+                <li class="instagram"><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li class="twitter"><a href=""><i class="fab fa-twitter-square"></i></a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>
