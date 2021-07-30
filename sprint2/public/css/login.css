@@ -192,6 +192,9 @@ body > #login, #login *, .lupa i {
   }
 }
 @media (min-width:1200px)/* largue monitor */ {
+  #login {
+    height: 96vh;
+  }
   #login form {
     margin: calc(17vh - 50px) 0px;
     max-width: 840px;

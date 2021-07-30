@@ -192,6 +192,9 @@ body > #register, #register *, .lupa i {
   }
 }
 @media (min-width:1200px)/* largue monitor */ {
+  #register {
+    height: 96vh;
+  }
   #register form {
     margin: calc(17vh - 50px) 0px;
     max-width: 840px;
