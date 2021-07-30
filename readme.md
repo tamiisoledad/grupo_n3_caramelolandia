@@ -1,4 +1,4 @@
-# grupo_n3_caramelolandia
+# **GRUPO N3:** *Caramelolandia*
 "Siempre que una persona se va de viaje, algun familiar o amigo le pide que traiga chocolates o alfajores de la zona visitada.. Caramelolandia surje de la idea de tener todos esos dulces en un mismo lugar.. Ya no tendras que viajar a Suiza para probar sus caracteristicos chocolates ,o viajar a mexico para probar sus exhorbitantes chupetines, o a EE:UU para probar sus famosos confites .. TODO LO TENES ACA!! A todos los amantes de la dulzura los invitamos a visitar esta isla de dulces de todo el mundo llamado CARAMELOLANDIA!!!"
 
 ## Integrantes del grupo
