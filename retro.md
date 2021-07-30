@@ -9,6 +9,6 @@
 
 ### Que hicimos bien
 
+* Compartir datos.
 * Apoyar los progresos.
-* Compartir conocimientos.
 * Respetarnos entre nosotros.
