@@ -8,5 +8,5 @@
 ### Que hicimos bien
 
 * Apoyar los progresos.
-* Comunicarnos abiertamente.
 * Respetarnos entre nosotros.
+* Compartir consocimientos.
