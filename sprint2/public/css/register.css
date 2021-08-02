@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-
 #register * {
-  font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -79,48 +76,49 @@ body > #register, #register *, .lupa i {
 #register .input-data input:valid ~ .underline:before{
   transform: scaleX(1);
 }
-#register [type=submit]{
+#register [type=submit], #register [type=button]{
 	text-align: center;
 	letter-spacing: .5px;
-	-webkit-transition: background-color .2s ease-out;
-	transition: background-color .2s ease-out;
+	-webkit-transition: background .2s ease-out;
+	transition: background .2s ease-out;
 	cursor: pointer;
   border: none;
   width: 250px;
   height: 40px;
-  border: 1px solid var(--negro);
   color: var(--negro);
 }
 
 #register input {
   outline: none;
-  background-color: var(--blanco);
+  background: var(--blanco);
 }
 
-#register [type=submit]#c{
-  background-color: var(--fucsia);
+#register #c{
+  background: var(--fucsia);
   color: #222;
 }
-#register [type=submit]#g{
-  background-color: #fefefe;
+#register #g{
+  background: #fefefe;
+  border: 1px solid rgba(0, 0, 0, 0.33);
   color: #222;
 }
-#register [type=submit]#f{
-  background-color: var(--azul-facebook);
+#register #f{
+  background: var(--azul-facebook);
+  color: var(--blanco);
 }
-#register [type=submit]:active {
+#register [type=submit]:active, #register [type=button]:active {
   position: relative;
   top: 3px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 12px -6px;
 }
-#register [type=submit]#c:active {
-  background-color: var(--fucsia-oscuro);
+#register #c:active {
+  background: var(--fucsia-oscuro);
 }
-#register [type=submit]#g:active {
-  background-color: var(--gris);
+#register #g:active {
+  background: var(--gris);
 }
-#register [type=submit]#f:active {
-  background-color: blue;
+#register #f:active {
+  background: blue;
 }
 
 #register [type=checkbox]{
@@ -182,29 +180,5 @@ body > #register, #register *, .lupa i {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root #register {
-      --marron: #eFc27F;
-      --fucsia: #eF61aE;
-      --fucsia-oscuro:#ea006a;
-      --rosa: #eFbDd8;
-      --azul: #29a8eF;
-      --amarillo: #eCeF72;
-      --negro: #e2e2e2;
-      --gris: #c1c1c1;
-      --blanco: #313131;
-   }
-
-  ::-ms-reveal {
-    filter: invert(100%);
-  }
-
-  #register [type=submit] {
-    border: none;
-  }
-  #register #get #init {
-    text-align: right;
   }
 }

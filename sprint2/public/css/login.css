@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-
 #login * {
-  font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -79,48 +76,54 @@ body > #login, #login *, .lupa i {
 #login .input-data input:valid ~ .underline:before{
   transform: scaleX(1);
 }
-#login [type=submit]{
-	text-align: center;
-	letter-spacing: .5px;
-	-webkit-transition: background-color .2s ease-out;
-	transition: background-color .2s ease-out;
-	cursor: pointer;
+
+#login .input-data input:focus ~ .underline:before,
+#login .input-data input:valid ~ .underline:before{
+  transform: scaleX(1);
+}
+#login [type=submit], #login [type=button] {
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-transition: background .2s ease-out;
+  transition: background .2s ease-out;
+  cursor: pointer;
   border: none;
   width: 250px;
   height: 40px;
-  border: 1px solid var(--negro);
   color: var(--negro);
 }
 
 #login input {
   outline: none;
-  background-color: var(--blanco);
+  background: var(--blanco);
 }
 
-#login [type=submit]#c{
-  background-color: var(--fucsia);
+#login #c{
+  background: var(--fucsia);
   color: #222;
 }
-#login [type=submit]#g{
-  background-color: #fefefe;
+#login #g{
+  background: #fefefe;
+  border: 1px solid rgba(0, 0, 0, 0.33);
   color: #222;
 }
-#login [type=submit]#f{
-  background-color: var(--azul-facebook);
+#login #f{
+  background: var(--azul-facebook);
+  color: var(--blanco);
 }
-#login [type=submit]:active {
+#login [type=submit]:active, #login [type=button]:active {
   position: relative;
   top: 3px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 12px -6px;
 }
-#login [type=submit]#c:active {
-  background-color: var(--fucsia-oscuro);
+#login #c:active {
+  background: var(--fucsia-oscuro);
 }
-#login [type=submit]#g:active {
-  background-color: var(--gris);
+#login #g:active {
+  background: var(--gris);
 }
-#login [type=submit]#f:active {
-  background-color: blue;
+#login #f:active {
+  background: blue;
 }
 
 #login [type=checkbox]{
@@ -182,29 +185,5 @@ body > #login, #login *, .lupa i {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root #login {
-      --marron: #eFc27F;
-      --fucsia: #eF61aE;
-      --fucsia-oscuro:#ea006a;
-      --rosa: #eFbDd8;
-      --azul: #29a8eF;
-      --amarillo: #eCeF72;
-      --negro: #e2e2e2;
-      --gris: #c1c1c1;
-      --blanco: #313131;
-   }
-
-  ::-ms-reveal {
-    filter: invert(100%);
-  }
-
-  #login [type=submit] {
-    border: none;
-  }
-  #login #get #init {
-    text-align: right;
   }
 }
