@@ -15,7 +15,7 @@ body > #register, #register *, .lupa i {
 }
 
 #register form {
-	margin: 15vh 0;
+	margin: 7vh 0;
 }
 
 #register h1 {
@@ -143,11 +143,13 @@ body > #register, #register *, .lupa i {
 }
 
 @media (min-width:481px) /* tablet */ {
+  #register form {
+    margin: 9vh 0;
+  }
 }
 
 @media (min-width:769px) /* desktop */ {
 	#register form {
-    	margin: 17vh 0px;
 	    padding: 50px;
 	    width: 100%;
 	    max-width: 420px;
@@ -161,6 +163,9 @@ body > #register, #register *, .lupa i {
   }
 }
 @media (min-width:1200px)/* largue monitor */ {
+  #register form {
+      margin: 17vh 0px;
+  }
   #register {
     height: 96vh;
   }
