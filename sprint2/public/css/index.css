@@ -7,6 +7,8 @@
     background-image: url("../images/fondo.webp");
     background-size: cover;
     border-bottom:1px solid rgba(0, 0, 0, 0.3);
+    border: solid 1px black;
+    margin: 300px 0px;
 }
 .home main section.carrusel article {
     margin: 5%;
