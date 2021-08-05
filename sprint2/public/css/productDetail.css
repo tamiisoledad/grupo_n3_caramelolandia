@@ -175,3 +175,14 @@
         margin: 20px 20% 20px 20% ;
     }
 }
+
+@media (min-width : 1240px){
+    .detail main .box-detail{
+        display: flex;
+        align-items: center;
+    }
+
+    .detail main .carrusel{
+        width: 273%;
+    }
+}
