@@ -18,26 +18,34 @@ header{
     z-index: 15;
 
 }
+header div.menu{
+    display: flex;
+    align-items: center;
+}
 
-header img{
-    display: block;
+header div.img img{
+    /* display: block; */
     border-radius: 50%;
     border: 1px solid #bbbfbe;
-    margin: 15px auto 30px;
-    width: 180px;
+    /* margin: 15px auto 30px; */
+    width: 100px;
 }
 header .container{
-    display: inline-block;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* position: relative; */
 }
 header a.carrito i{
     background-color: var(--rosa);
-    padding: 3px;
+    padding: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    border-radius: 18%;
+    border-radius: 4px;
     margin: 3px;
     right: 0;
-    position: absolute;
+    /* position: absolute; */
+}
+header div.buscar input.search{
+    display: none;
 }
 
 header a.burger {
@@ -47,18 +55,19 @@ header a.burger {
     color: white;
     padding: 8px;
     border-radius: 4px;
-    margin-bottom: 30px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    /* margin-bottom: 30px; */
 }
 
-header nav ul,header nav input{
+header div.container nav ul,header nav input{
     display: none;
 }
 
-header nav input:checked ~ ul{
+header div.container nav input:checked ~ ul{
     display: block;
 }
 
-header nav label{
+header div.container nav label{
     display: block;
     width: 35px;
     background-color: var(--azul);
@@ -69,13 +78,13 @@ header nav label{
     text-align: center;
 }
 
-header nav ul li {
+header div.container nav ul li {
     width: 100%;
     background-color: var(--azul);
     margin-bottom: 1px;
 }
 
-header nav ul li a{
+header div.container nav ul li a{
     display: inline-block;
     color: white;
     text-transform: uppercase;
