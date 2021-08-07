@@ -1,1 +1,1 @@
-![Retro](/images/retro.png)
+![Retro](/sprint2/public/images/retro.png)
