@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/images/logo.webp" type="image/x-icon" rel="shortcut icon" />
     <title>Contacto</title>
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -12,39 +13,47 @@
 </head>
 
 <body class="contacto">
-    <header>
-        <div class="head">
-            <div class="logo">
-                <img src="/images/logo.webp" alt="logo">
+    <header class="header">
+        
+        
+        <div class="container">
+           <div class="img">
+               <a href="#"><img src="/images/logo.webp" width="45%" class="logo" alt="logo"></a> 
             </div>
-            <div class="buscar">
+            <div class="menu">
+               <div class="buscar">
                 <input class="search" type="text" placeholder="Buscar producto">
                 <a class="lupa" href=""><i class="fas fa-search"></i></a>
             </div>
             <div class="iconos">
                 <a class="carrito" href="/productCart"><i class="fas fa-shopping-cart"></i></a>
-                <a class="burger" href="#"><i class="fas fa-bars"></i></a>
             </div>
+            <nav>
+                <div class="burger">
+                <input type="checkbox" id="menu">
+                <label for="menu"><i class="fas fa-bars"></i></label>
+                <ul class="info">
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Registro</a></li>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/productDetail">Productos</a></li>
+                    <li><a href="/contact">Contacto</a></li>
+                </ul>
+                </div>
+                </nav> 
         </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/productDetail">Productos</a></li>
-                <li><a href="/contact">Contacto</a></li>
-            </ul>
-            <ul class="info">
-                <li><a href="/login">Login</a></li>
-                <li><a href="/register">Registro</a></li>
-            </ul>
-        </nav>
+    </div>
     </header>
     <main>
         <section class="form">
             <article>
-            <h1>Dejanos tu consulta</h1>
+            
             <form action="">
+                <h1>Dejanos tu consulta</h1>
+                <div class="datos">
                 <input type="text" placeholder="Nombre completo" id="name">
                 <input type="email" placeholder="Ingrese su email" id="mail">
+            </div>
                 <textarea name="comentario" maxlength="1200" id="comentario" cols="30" rows="10"
                     placeholder="Deje su comentario"></textarea>
                 <div class="botones">
