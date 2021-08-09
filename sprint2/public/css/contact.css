@@ -1,0 +1,42 @@
+.contacto main{
+    text-align: center;
+    padding: 20px 0 20px 0;
+    background-color: var(--marron);
+}
+.contacto main section.form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 100%;
+}
+.contacto main section.form article{
+    padding: 10px;
+    width: 100%;
+    /*  */
+}
+.contacto main section.form article h1{
+    font-size: 18px;
+}
+.contacto main section.form article form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.contacto main section.form article form div.g-recaptcha{
+   width: 100%;
+   padding: 20px;
+   display: flex;
+    justify-content: center;
+}
+.contacto main section.form article form input{
+    margin: 8px;
+}
+.contacto main section.form article form textarea{
+    resize: none;
+    margin: 8px;
+}
+.contacto main section.form article form div.botones button{
+    margin: 3px;   
+    border-radius: 20%;
+}
