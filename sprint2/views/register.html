@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Crear tu cuenta</title>
-    <script src="https://kit.fontawesome.com/af21a12db7.js" crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/styles.css">
+	<title>Crear tu cuenta</title>
+	<script src="https://kit.fontawesome.com/af21a12db7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<header>
-		<div class="head">
-			<div class="logo">
-				<img src="/images/logo.webp" alt="logo">
+	<header class="header">
+		<div class="container">
+		   <div class="img">
+			   <a href="/"><img src="/images/logo.webp" width="45%" class="logo" alt="logo"></a> 
 			</div>
-			<div class="buscar">
-				<input class="search" type="text" placeholder="Buscar producto">
-				<a class="lupa" href=""><i class="fas fa-search"></i></a>
-			</div>
-			<div class="iconos">
-				<a class="carrito" href="/productCart"><i class="fas fa-shopping-cart"></i></a>
-				<a class="burger" href="#"><i class="fas fa-bars"></i></a>
+			<div class="menu">
+				<div class="buscar">
+					<input class="search" type="text" placeholder="Buscar producto">
+					<a class="lupa" href=""><i class="fas fa-search"></i></a>
+				</div>
+				<div class="iconos">
+					<a class="carrito" href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+				</div>
+				<nav>
+					<div class="burger">
+						<input type="checkbox" id="menu">
+						<label for="menu"><i class="fas fa-bars"></i></label>
+						<ul class="info">
+							<li><a href="/login">Login</a></li>
+							<li><a href="/register">Registro</a></li>
+							<li><a href="/">Inicio</a></li>
+							<li><a href="/productDetail">Productos</a></li>
+							<li><a href="/contact">Contacto</a></li>
+						</ul>
+					</div>
+				</nav> 
 			</div>
 		</div>
-		<nav>
-			<ul class="menu">
-				<li><a href="/">Inicio</a></li>
-				<li><a href="/productDetail">Productos</a></li>
-				<li><a href="/contact">Contacto</a></li>
-			</ul>
-			<ul class="info">
-				<li><a href="/login">Login</a></li>
-				<li><a href="/register">Registro</a></li>
-			</ul>
-		</nav>
 	</header>
 	<main id="register">
 		<form action="" id="form">
 			<div>
 			  <h1>Crear tu cuenta</h1>
-		      <div class="element">
-		         <div class="input-data">
-		            <input type="text" required name="data-1">
-		            <div class="underline"></div>
-		            <label>Nombre Completo</label>
-		         </div>
-		      </div>
-		      <div class="element">
-		         <div class="input-data">
-		            <input type="email" required name="data-2">
-		            <div class="underline"></div>
-		            <label>Correo electronico</label>
-		         </div>
-		      </div>
-		      <div class="element">
-		         <div class="input-data">
-		            <input type="password" required name="data-3">
-		            <div class="underline"></div>
-		            <label>Contraseña</label>
-		         </div>
-		      </div>
+			  <div class="element">
+				<div class="input-data">
+					<input type="text" required name="name" id="name">
+					<div class="underline"></div>
+					<label>Nombre Completo</label>
+				</div>
+			  </div>
+			  <div class="element">
+				<div class="input-data">
+					<input type="email" required name="email" id="email">
+					<div class="underline"></div>
+					<label>Correo electronico</label>
+				</div>
+			  </div>
+			  <div class="element">
+				<div class="input-data">
+					<input type="password" required name="password" id="password">
+					<div class="underline"></div>
+					<label>Contraseña</label>
+				</div>
+			  </div>
 				<label>Acepto los <a href="#!">terminos y condiciones</a></label>
-					<input required type="checkbox" name="data-5"><br>
+					<input required type="checkbox" name="terms" id="terms"><br>
 				<label>Recibir notificaciones de ofertas</label>
-					<input type="checkbox" name="datsa-6"><br>
+					<input type="checkbox" name="sales" id="sales"><br>
 				<br>
 				<input required type="submit" id="c" name="data-6" id="acept" value="Registrarse">
 			</div>
@@ -81,9 +84,8 @@
 			</div>
 		</form>
 	</main>
-	<footer>
+    <footer>
         <nav class="menup">
-
             <ul class="menu">
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/productDetail">Productos</a></li>
