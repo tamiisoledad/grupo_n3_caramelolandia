@@ -2,6 +2,8 @@
 
 /*carrusel*/
 
+
+
 .detail main section a.arrow{
     color: rgba(0, 255, 255, 0);
     font-size: 50px;
@@ -85,11 +87,18 @@
 .detail main div .agregar{
     display: flex;
     margin: 20px 100px 20px 100px;
-    padding: 10px;
+    padding: 7px;
     background-color: var(--fucsia);
     border-radius: 25px;
     align-content: space-around;
+    text-align: center;
     justify-content: center;
+}
+
+.detail main div .agregar:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 1em var(--azul);
+
 }
 
 .detail main h3{
@@ -113,8 +122,12 @@
     width: 90%;
     text-align: center;
     margin: 20px;
-    box-shadow: 0 0 1.5em var(--azul);
     border: 1px solid var(--rosa);
+}
+
+.detail main section.relacionados article:hover{
+    transform:scale(1.1);
+    box-shadow: 0 0 1em var(--azul);
 }
 
 .detail main section.relacionados article a{

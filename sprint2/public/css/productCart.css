@@ -20,6 +20,10 @@
 
 /*carrito*/
 
+.cart main section.carrito input{
+    width: 50px;
+}
+
 .cart main section.carrito h2{
     margin: 20px;
     background-color: var(--fucsia);
