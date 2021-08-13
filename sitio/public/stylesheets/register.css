@@ -1,0 +1,184 @@
+#register * {
+  scroll-behavior: smooth;
+}
+
+body > #register, #register *, .lupa i {
+  background:  var(--blanco);
+  color: var(--negro);
+}
+
+#register {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#register form {
+	margin: 15vh 0;
+}
+
+#register h1 {
+  text-align: left;
+}
+
+#register .element{
+  min-width: 300px;
+  width: 100%;
+  max-width: 450px;
+  padding: 10px;
+}
+#register .element .input-data{
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+#register .element .input-data input{
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid silver;
+}
+#register .input-data input:focus ~ label,
+#register .input-data input:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: var(--fucsia);
+}
+#register .element .input-data label{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+#register .input-data .underline{
+  background: grey;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  text-align: start;
+}
+#register .input-data .underline:before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: var(--fucsia);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+#register .input-data input:focus ~ .underline:before,
+#register .input-data input:valid ~ .underline:before{
+  transform: scaleX(1);
+}
+#register [type=submit], #register [type=button]{
+	text-align: center;
+	letter-spacing: .5px;
+	-webkit-transition: background .2s ease-out;
+	transition: background .2s ease-out;
+	cursor: pointer;
+  border: none;
+  width: 250px;
+  height: 40px;
+  color: var(--negro);
+}
+
+#register input {
+  outline: none;
+  background: var(--blanco);
+}
+
+#register #c{
+  background: var(--fucsia);
+  color: #222;
+}
+#register #g{
+  background: #fefefe;
+  border: 1px solid rgba(0, 0, 0, 0.33);
+  color: #222;
+}
+#register #f{
+  background: var(--azul-facebook);
+  color: var(--blanco);
+}
+#register [type=submit]:active, #register [type=button]:active {
+  position: relative;
+  top: 3px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 12px -6px;
+}
+#register #c:active {
+  background: var(--fucsia-oscuro);
+}
+#register #g:active {
+  background: var(--gris);
+}
+#register #f:active {
+  background: blue;
+}
+
+#register [type=checkbox]{
+	margin: 0 5px;
+}
+
+#register form hr {
+  border: none;
+  background: none;
+  margin: 15px;
+}
+#register form p {
+  height: 6px;
+}
+
+#register #get #init {
+  margin-top: 20px;
+}
+#register #get #init a {
+  color: gray;
+  text-decoration: none;
+}
+
+@media (min-width:481px) /* tablet */ {
+}
+
+@media (min-width:769px) /* desktop */ {
+	#register form {
+    	margin: 17vh 0px;
+	    padding: 50px;
+	    width: 100%;
+	    max-width: 420px;
+      box-shadow: rgb(0 0 0 / 50%) 0px 10px 20px 1px;
+	}
+  #register header div.head {
+    height: auto;
+  }
+  #register header {
+    height: 118px;
+  }
+}
+@media (min-width:1200px)/* largue monitor */ {
+  #register {
+    height: 96vh;
+  }
+  #register form {
+    margin: calc(17vh - 50px) 0px;
+    max-width: 840px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #register form div hr {
+    display: none;
+  }
+  #register #get {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}

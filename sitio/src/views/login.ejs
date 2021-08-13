@@ -1,0 +1,104 @@
+<!DOCTYbuttonl>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <script src="https://kit.fontawesome.com/af21a12db7.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="login">
+	<header class="header">
+        
+        
+        <div class="container">
+           <div class="img">
+               <a href="/"><img src="/images/logo.webp" width="45%" class="logo" alt="logo"></a> 
+            </div>
+            <div class="menu">
+               <div class="buscar">
+                <input class="search" type="text" placeholder="Buscar producto">
+                <a class="lupa" href=""><i class="fas fa-search"></i></a>
+            </div>
+            <div class="iconos">
+                <a class="carrito" href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <nav>
+                <div class="burger">
+                <input type="checkbox" id="menu">
+                <label for="menu"><i class="fas fa-bars"></i></label>
+                <ul class="info">
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Registro</a></li>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/productDetail">Productos</a></li>
+                    <li><a href="/contact">Contacto</a></li>
+                </ul>
+                </div>
+                </nav> 
+        </div>
+    </div>
+    </header>
+    <main id="login">
+		<form action="" id="form">
+			<div>
+			  <h1>Iniciar cuenta</h1>
+		      <div class="element">
+		         <div class="input-data">
+		            <input type="email" required name="data-1">
+		            <div class="underline"></div>
+		            <label>Correo electronico</label>
+		         </div>
+		      </div>
+		      <div class="element">
+		         <div class="input-data">
+		            <input type="password" required name="data-2">
+		            <div class="underline"></div>
+		            <label>Contraseña</label>
+		         </div>
+		      </div><br>
+				<input required type="submit" id="c" name="data-3" id="acept" value="Continuar">
+			</div>
+			<div id="get">
+				<div></div>
+				<div>
+					<hr>
+					<input type="button" id="g" name="aceptG" id="acept" value="Continuar con Google">
+					<p></p>
+					<input type="button" id="f" name="aceptF" id="acept" value="Continuar con Facebook">	
+				</div>
+				<div id="init">
+					<a href="">Recuperar cuenta</a><br>
+					<a href="/register">Crear tu cuenta</a>
+				</div>
+			</div>
+		</form>
+	</main>
+    <footer>
+        <nav class="menup">
+
+            <ul class="menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/productDetail">Productos</a></li>
+                <li><a href="/productCart">Carrito</a></li>
+                <li><a href="/contact">Contacto</a></li>
+            </ul>
+        </nav>
+        <nav class="redes">
+            <h4>Seguinos en nuestras redes</h4>
+            <ul>
+                <li class="facebook"><a href=""><i class="fab fa-facebook"></i></a></li>
+                <li class="instagram"><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li class="twitter"><a href=""><i class="fab fa-twitter-square"></i></a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

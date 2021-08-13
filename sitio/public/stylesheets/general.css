@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Signika Negative', sans-serif;
+    color: black;
+}
+:root {
+    --marron: #FFD28F;
+    --fucsia: #FF71BE;
+    --fucsia-oscuro:#fa0a7a;
+    --rosa: #FFCDE8;
+    --azul: #39B8FF;
+    --amarillo: #FCFF82;
+    --blanco: #FcFcFc;;
+    --negro: #414141;
+    --azul-facebook:  #3b5998;
+ }
+ ul li{
+    list-style: none;
+ }
+ a{
+     text-decoration: none;
+ }
