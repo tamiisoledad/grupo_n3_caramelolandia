@@ -34,6 +34,42 @@ header div.img {
 header div.img img{
     width: 100%;
 }
+header div.container div.izq div.lista{
+    display: none;
+}
+header div.container div.izq div.lista input{
+    display: none;
+}
+header div.container div.izq div.lista label{
+    display: none;
+    width: 90px;
+    font-size: 25px;
+    margin-left: 15px;
+    text-align: center;
+}
+header div.container div.izq div.lista ul.lista{
+    display: none;
+}
+header div.container div.izq div.lista input:checked ~ ul{
+    display: block;
+    position: absolute;
+    /* right: 15px; */
+    z-index: 1;
+    top: 89px;
+}
+header div.container div.izq div.lista ul li{
+    width: 100%;
+    background-color: var(--fucsia);
+    margin-bottom: 1px;
+    
+    border: 1px solid rgb(0, 0, 0);
+}
+header div.container div.izq div.lista ul li a{
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+}
 header .container{
     display: flex;
     justify-content: space-between;
@@ -115,8 +151,18 @@ header div.container nav ul li a{
     header .container{
         height: 90px;
     }
+    header div.container div.izq{
+        display: flex;
+        align-items: center;
+    }
     header div.img{
         width: 125px;
+    }
+    header div.container div.izq div.lista label{
+        display: inline-block;
+    }
+    header div.container div.izq div.lista{
+        display: block;
     }
     header div.container div.menu a.lupa i{
         width: 35px;
@@ -131,6 +177,7 @@ header div.container nav ul li a{
         font-size: 21px;
     }
     header div.container nav label{
+        display: none;
         width: 35px;
         padding: 7px;
         height: 35px;
@@ -147,12 +194,26 @@ header div.container nav ul li a{
     header div.img{
         width: 180px;
     }
+    header div.container div.izq div.lista label{
+        width: 141px;
+        font-size: 40px;
+        margin-left: 30px;
+    }
+    header form.buscar{
+        display: none;
+    }
+    header div.container div.izq div.lista input:checked ~ ul{
+        top: 118px
+    }
     header div.container div.menu a.lupa i{
         width: 50px;
         padding: 9px;
         height: 50px;
         font-size: 30px;
         border-radius: 10px;
+    }
+    header div.container div.izq div.lista ul li a{
+        font-size: 27px;
     }
     header a.carrito i{
         width: 50px;
