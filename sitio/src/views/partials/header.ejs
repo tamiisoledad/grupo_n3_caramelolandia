@@ -1,44 +1,54 @@
 <header class="header">
     <div class="container">
         <div class="izq">
-       <div class="img">
-           <a href="/"><img src="/images/logo.webp" width="45%" class="logo" alt="logo"></a> 
-        </div>
-        <div class="lista">
-            <input type="checkbox" id="lista">
-            <label for="lista">Menú  <i class="fas fa-chevron-down"></i></label>
-            <ul class="lista">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/products/Detail">Productos</a></li>
-                <li><a href="/contact">Contacto</a></li>
-            </ul>
-        </div>
-        <form class="buscar" action="">
-            <input type="text" name="buscar" id="buscar">
-            <label for="buscar">Buscar</label>
-        </form>
-    </div>
-        <div class="menu">
-           <div class="buscar">
-            <input class="search" type="text" placeholder="Buscar producto">
-            <a class="lupa" href=""><i class="fas fa-search"></i></a>
-        </div>
-        <div class="iconos">
-            <a class="carrito" href="/products/Cart"><i class="fas fa-shopping-cart"></i></a>
-        </div>
-        <nav>
-            <div class="burger">
-            <input type="checkbox" id="menu">
-            <label for="menu"><i class="fas fa-bars"></i></label>
-            <ul class="info">
-                <li><a href="/users/login">Login</a></li>
-                <li><a href="/users/register">Registro</a></li>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/products/Detail">Productos</a></li>
-                <li><a href="/contact">Contacto</a></li>
-            </ul>
+            <div class="img">
+                <a href="/"><img src="/images/logo.webp" width="45%" class="logo" alt="logo"></a>
             </div>
-            </nav> 
+            <div class="lista">
+                <input type="checkbox" id="lista">
+                <label for="lista">Menú <i class="fas fa-chevron-down"></i></label>
+                <ul class="lista">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/products/Detail">Productos</a></li>
+                    <li><a href="/contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="form">
+            <form class="buscar" action="">
+                <input type="text" name="buscar" id="buscar" placeholder="Buscar producto">
+                <label for="buscar">Buscar</label>
+            </form>
+        </div>
+        <div class="menu">
+            <div class="buscar">
+                <input class="search" type="text" placeholder="Buscar producto">
+                <a class="lupa" href=""><i class="fas fa-search"></i></a>
+            </div>
+            <div class="iconos">
+                <a class="carrito" href="/products/Cart"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <div class="users">
+                <input type="checkbox" id="users">
+                <label for="users"><i class="fas fa-user"></i></label>
+                <ul>
+                    <li><a href="/users/login">Iniciar sesión</a></li>
+                    <li><a href="/users/register">Registrarse</a></li>
+                </ul>
+            </div>
+            <nav>
+                <div class="burger">
+                    <input type="checkbox" id="menu">
+                    <label for="menu"><i class="fas fa-bars"></i></label>
+                    <ul class="info">
+                        <li><a href="/users/login">Iniciar sesión</a></li>
+                        <li><a href="/users/register">Registrarse</a></li>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/products/Detail">Productos</a></li>
+                        <li><a href="/contact">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </div>
-</div>
 </header>
