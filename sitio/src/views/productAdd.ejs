@@ -3,18 +3,18 @@
 
 <%- include('partials/head')%>
 
-<body class="login">
+<body class="edit">
     <%- include('partials/header') %>
    <main>
-       <h1>agregar producto</h1>
+       <h1>Agregar Producto</h1>
        <form action="" method="POST">
            <div class="box-form ">
-               <label for="nombre">Nombre del producto</label>
+               <label for="nombre">Nombre del Producto</label>
                <input type="text" name="nombre" placeholder="ej: alfajor">
            </div>
 
            <div class="box-form">
-               <label for="informacion">informacion nutricional</label> 
+               <label for="informacion">Informacion Nutricional</label> 
                <textarea name="informacion" id="informacion" cols="30" rows="10"></textarea>
            </div>
            <div class="box-form">
@@ -22,42 +22,35 @@
                <input type="text" name="marca" placeholder="marca">
            </div>
             <div class="box-form">
-                <label for="variedad">variedad</label>
+                <label for="variedad">Variedad</label>
                 <input type="text" name="variedad" placeholder="ej: sabor, caracteristica">
-            
-
             </div>
             <div class="box-form">
                 <label for="precio">Precio</label>
                 <input type="number" name="precio" id="precio">
-
             </div>
             <div class="box-form">
-                <label for="stock">stock</label>
+                <label for="stock">Stock</label>
                 <input type="number" name="stock" id="stock" >
-
             </div>
             <div class="box-form">
                 <label for="descuento">Descuento</label>
                 <input type="number" name="descuento" id="descuento">
-
             </div>
-            <div class="box-form">
-                <label for="imagen"></label>
+            <div class="box-img">
+                <label for="imagen">Subir Imagen</label>
                 <input type="file" name="imagen" id="imagen">
-
-
             </div>
             <div class="box-form">
-                <label for="vegano">Apto vegano</label>
-                <select name="vegano" id="vegano"></select>
+                <label for="vegano">Apto Vegano</label>
+                <select name="vegano" id="vegano">
                 <option value="si">Si</option>
                 <option value="si">No</option>
-
+            </select>
             </div>
             <div class="box-button">
-                <button type="submit">Agregar producto</button>
-                <button type="reset">Borrar</button>
+                <button type="submit">Agregar Producto</button>
+                <button type="reset">Cancelar</button>
 
             </div>
 

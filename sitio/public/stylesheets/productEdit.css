@@ -1,0 +1,102 @@
+.edit main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.edit main h1{
+    background-color: var(--fucsia);
+    margin: 20px 0 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 0.5em var(--azul);
+}
+
+.edit main form{
+    box-shadow: 0 0 0.5em black;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0 20px 0;
+    padding: 10px 0 10px 0;
+}
+
+.edit main form div.box-form{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.edit main form div.box-form label{
+    background-color: var(--azul);
+    padding: 15px 10px 15px 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.edit main form div.box-img{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+.edit main form div.box-img label{
+    background-color: var(--azul);
+    padding: 15px 10px 15px 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.edit main form div.box-form input{
+    padding: 15px;
+}
+
+.edit main form div.box-form textarea{
+    height: 50px;
+    resize: none;
+}
+
+.edit main form div.box-button button{
+    background-color: var(--fucsia);
+    padding: 5px;
+    margin: 5px;
+}
+
+.edit main form div.box-button button:focus{
+    background-color: var(--fucsia-oscuro);
+    padding: 5px;
+    margin: 5px;
+}
+
+/*tablet*/
+
+@media (min-width : 481px) {
+    
+    .edit main {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .edit main form{
+        width: 70%;
+    }
+}
+
+
+/*Desktop*/
+
+@media (min-width : 1240px){
+
+    .edit main form{
+        width: 40%;
+    }
+}
