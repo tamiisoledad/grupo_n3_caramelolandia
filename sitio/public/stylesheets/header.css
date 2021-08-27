@@ -150,10 +150,13 @@ header a.carrito i{
     /* right: 0; */
     /* position: absolute; */
 }
-header div.buscar input.search{
+header div.buscar form input{
     display: none;
 }
-header div.container div.menu a.lupa i{
+header div.container div.menu form input::selection{
+    display: block;
+}
+header div.container div.menu form label i{
     display: block;
     background-color: var(--rosa);
     width: 28px;
