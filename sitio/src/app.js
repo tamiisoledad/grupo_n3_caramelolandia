@@ -1,3 +1,4 @@
+const methodOverride = require('method-override');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -9,6 +10,9 @@ var usersRouter = require('./routes/users');
 var productRouter = require("./routes/product");
 
 var app = express();
+
+/* configura métodos PUT y DELETE */
+app.use(methodOverride('_method'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
