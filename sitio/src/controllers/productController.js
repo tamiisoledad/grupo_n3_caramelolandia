@@ -5,13 +5,31 @@ const capitalizeOneLetter = require('../utils/capitalizeOneLetter');
 
 
 module.exports = {
-    productDetail : (req,res) => res.render("productDetail",{title:"Detalle de producto"}),
+    productDetail : (req,res) => {
+        let producto = productos.find(producto => producto.id === +req.params.id)
+        return res.render("productDetail",{
+            producto,
+            capitalizeOneLetter
+        })
+    },
 
-    productCart : (req,res) => res.render("productCart", {title: "Carrito"}),
+    productCart : (req,res) => res.render("productCart"),
 
-    productAdd : (req,res)=> res.render("productAdd", {title: "Agregar producto"}),
+    productAdd : (req,res) => {
+       return res.render("productAdd",{
+           categorias,
+           productos,
+       } )
+    },
 
-    productEdit : (req,res)=> res.render("productEdit", {title: "Editar producto"}),
+    productEdit : (req,res)=>{
+        let producto = productos.find(producto => producto.id === +req.params.id)
+      return res.render("productEdit",{
+          productos,
+          categorias,
+          producto,
+      })
+    },
 
     store : (req,res) => {
             let producto = {

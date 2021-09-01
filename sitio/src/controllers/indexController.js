@@ -1,4 +1,4 @@
 module.exports = {
-    index : (req,res) => res.render("index", {title: "Caramelolandia"}),
-    contacto : (req,res) => res.render("contact",{title:"Contacto"}) 
+    index : (req,res) => res.render("index"),
+    contacto : (req,res) => res.render("contact") 
 }
