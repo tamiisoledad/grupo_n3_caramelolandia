@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html lang="es">
-<%- include('partials/head')%>
+<html lang="en">
+
+<%- include('partials/head', {title:"Registrarse"})%>
+
 <body>
-    <%- include('partials/header') %>
+	<%- include('partials/header') %>
 	<main id="register">
 		<form action="" id="form">
 			<div>
-			  <h1>Crear tu cuenta</h1>
-			  <div class="element">
-				<div class="input-data">
-					<input type="text" required name="name" id="name">
-					<div class="underline"></div>
-					<label>Nombre Completo</label>
+				<h1>Crear tu cuenta</h1>
+				<div class="element">
+					<div class="input-data">
+						<input type="text" required name="name" id="name">
+						<div class="underline"></div>
+						<label>Nombre Completo</label>
+					</div>
 				</div>
-			  </div>
-			  <div class="element">
-				<div class="input-data">
-					<input type="email" required name="email" id="email">
-					<div class="underline"></div>
-					<label>Correo electronico</label>
+				<div class="element">
+					<div class="input-data">
+						<input type="email" required name="email" id="email">
+						<div class="underline"></div>
+						<label>Correo electronico</label>
+					</div>
 				</div>
-			  </div>
-			  <div class="element">
-				<div class="input-data">
-					<input type="password" required name="password" id="password">
-					<div class="underline"></div>
-					<label>Contraseña</label>
+				<div class="element">
+					<div class="input-data">
+						<input type="password" required name="password" id="password">
+						<div class="underline"></div>
+						<label>Contraseña</label>
+					</div>
 				</div>
-			  </div>
 				<label>Acepto los <a href="#!">terminos y condiciones</a></label>
 					<input required type="checkbox" name="terms" id="terms"><br>
 				<label>Recibir notificaciones de ofertas</label>
@@ -44,11 +46,11 @@
 					<input type="button" id="f" name="aceptF" id="acept" value="Registrarse con Facebook">	
 				</div>
 				<div id="init">
-					<a href="/login">Iniciar tu cuenta</a>
+					<a href="/users/login">Iniciar tu cuenta</a>
 				</div>
 			</div>
 		</form>
 	</main>
-	    <%- include('partials/footer') %>
+	<%- include('partials/footer') %>
 </body>
 </html>
