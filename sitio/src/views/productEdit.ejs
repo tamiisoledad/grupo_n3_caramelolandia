@@ -1,61 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head',{{title: "Editar Producto"}})%>
+<%- include('partials/head',{title: "Editar Producto"})%>
 
 <body class="edit">
     <%- include('partials/header') %>
    <main>
        <h1>Editar Producto</h1>
-       <form action="/products/edit" method="POST">
+       <form action="/products/detail/<%= producto.id %>" method="POST">
            <div class="box-form ">
-               <label for="nombre">Nombre del Producto</label>
-               <input type="text" name="nombre" placeholder="Ej: Alfajor">
+               <label for="producto">Nombre del Producto</label>
+               <input type="text" name="nombre" id="producto" value="<%= producto.Producto %>">
            </div>
 
            <div class="box-form">
                <label for="informacion">Informacion Nutricional</label> 
-               <textarea name="informacion" id="informacion" cols="30" rows="10"></textarea>
+               <textarea name="informacion" id="informacion" cols="30" rows="10"><%= producto.Informacion %></textarea>
            </div>
            <div class="box-form">
                <label for="marca">Marca</label>
-               <input type="text" name="marca" placeholder="Marca">
+               <input type="text" name="marca" id="marca" value="<%= producto.Marca %>">
            </div>
             <div class="box-form">
                 <label for="variedad">Variedad</label>
-                <input type="text" name="variedad" placeholder="Ej: Sabor, Caracteristica">
+                <input type="text" name="variedad" id="variedad" value="<%= producto.Variedad %>">
             </div>
             <div class="box-form">
                 <label for="precio">Precio</label>
-                <input type="number" name="precio" id="precio">
+                <input type="number" name="precio" id="precio" value="<%= producto.Precio %>">
             </div>
             <div class="box-form">
                 <label for="stock">Stock</label>
-                <input type="number" name="stock" id="stock" >
+                <input type="number" name="stock" id="stock" value="<%= producto.Stock %>">
             </div>
             <div class="box-form">
                 <label for="descuento">Descuento</label>
-                <input type="number" name="descuento" id="descuento">
+                <input type="number" name="descuento" id="descuento" value="<%= producto.Descuento %>">
             </div>
             <div class="box-form">
                 <label for="imagen">Subir Imagen</label>
-                <input type="file" name="imagen" id="imagen">
+                <input type="file" name="imagen" id="imagen" value="<%= producto.Imagen %>">
             </div>
             <div class="box-form">
                 <label for="vegano">Apto Vegano</label>
                 <select name="vegano" id="vegano">
-                <option value="si">Si</option>
-                <option value="si">No</option>
+                    <option value= false>No</option>
+                        <option value= true>Si</option>
+            </select>
+            </div>
+            <div class="box-form">
+                <label for="celiaco">Sin Tacc</label>
+                <select name="celiaco" id="celiaco">
+                        <option value= false>No</option>
+                        <option value= true>Si</option>
             </select>
             </div>
             <div class="box-button">
-                <button type="submit">Agregar Producto</button>
+                <button type="submit">Actualizar Producto</button>
                 <button type="reset">Cancelar</button>
 
             </div>
 
        </form>
-       <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
+       <form class="delete" action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
          <button  type='submit'></button>
          </form>
    </main>

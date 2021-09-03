@@ -47,6 +47,7 @@ body > #register, #register *, .lupa i {
   color: var(--fucsia);
 }
 #register .element .input-data label{
+  user-select: none;
   position: absolute;
   bottom: 10px;
   left: 0;
@@ -110,15 +111,6 @@ body > #register, #register *, .lupa i {
   position: relative;
   top: 3px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 12px -6px;
-}
-#register #c:active {
-  background: var(--fucsia-oscuro);
-}
-#register #g:active {
-  background: var(--gris);
-}
-#register #f:active {
-  background: blue;
 }
 
 #register [type=checkbox]{

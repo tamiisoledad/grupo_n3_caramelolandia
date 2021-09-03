@@ -14,6 +14,7 @@ module.exports = {
         let producto = productos.find(producto => producto.id === +req.params.id)
         return res.render("productDetail",{
             producto,
+            productos,
             capitalizeOneLetter
         })
     },
@@ -25,35 +26,32 @@ module.exports = {
            productos,
        } )
     },
+    store : (req,res) => {
+        let productoNuevo = {
+            id: productos[productos.length - 1].id + 1,
+            Producto,
+            categoria,
+            Informacion,
+            Marca,
+            Precio : +Precio,
+            Variedad,
+            Stock,
+            Descuento,
+            imagen : req.file ? req.file.filename : 'default-image.png',
+            Vegano,
+            Celiaco,
+        }
+        productos.push(productoNuevo)
+        fs.writeFileSync(path.join(__dirname,'..','data','productos.json'),JSON.stringify(productos,null,2),'utf-8');
+        return res.redirect('/admin')
+    },
 
     productEdit : (req,res)=>{
         let producto = productos.find(producto => producto.id === +req.params.id)
       return res.render("productEdit",{
           productos,
-          categorias,
           producto,
       })
-    },
-
-    store : (req,res) => {
-            let productoNuevo = {
-                id: productos[productos.length - 1].id + 1,
-                Producto,
-                categoria,
-                Informacion,
-                Marca,
-                Precio : +Precio,
-                Variedad,
-                Stock,
-                Descuento,
-                imagen : req.file ? req.file.filename : 'default-image.png',
-                Vegano,
-                Celiaco,
-            }
-     
-            productos.push(productoNuevo)
-            fs.writeFileSync(path.join(__dirname,'..','data','productos.json'),JSON.stringify(productos,null,2),'utf-8');
-            return res.redirect('/admin')
     },
     update : (req,res) => {    
             const {nombre,informacion,marca,variedad,precio,stock,descuento,vegano,celiaco,descripcion,} = req.body;
