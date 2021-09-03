@@ -2,7 +2,7 @@
     {
         "id": 1,
         "Producto": "Alfajor Fantoche CH",
-        "categoria": "Alfajores",
+        "Categoria": "Alfajores",
         "Informacion" : "dfljksldkjflksjdlkjdsfj slkdjflksdflksjdflksjdflksdjflksdjfskdljf sdlkfjsdlkfjsdlkfjslkdfjdsk sdlf sdlkjfldskjfldskfjdsklg", 
         "Marca":"Fantoche" ,
         "Precio":878 ,       
