@@ -6,9 +6,8 @@
 <body>
     <%- include('../partials/header') %>
     <main id="admin">
-    	<section>
-    		<h1>Productos</h1>
-            <hr>
+        <section>
+            <h1>Productos</h1>
             <table id="table">
                 <thead>
                     <tr>
@@ -18,63 +17,74 @@
                             oninput="search()"
                             placeholder="Alfajor, caramelo..."></th>
                         <th></th>
+                        <th><button title="Nuevo">+</button></th>
                         <th>PRECIO</th>
-                        <th>VISIBILIDAD</th>
+                        <th>DESCUENTO</th>
                         <th>STOCK</th>
                     </tr>
                 </thead>
                 <tr>
-                    <td>Alfajor</td>
-                    <td><button>:</button></td>
+                    <td>`categoria` `marca` de `sabor`</td>
+                    <td><img class="tag" src="images/celiacos-1.jpg"></td>
+                    <td><button title="Editar">:</button></td>
                     <td>25</td>
-                    <td>Publica</td>
+                    <td>5</td>
                     <td>224</td>
                 </tr>
                 <tr>
-                    <td>Caramelo</td>
-                    <td><button>:</button></td>
+                    <td>Caramelo Arcor de Babana</td>
+                    <td><img class="tag" src="images/descarga.png"></td>
+                    <td><button title="Editar">:</button></td>
                     <td>5</td>
-                    <td>Privada</td>
+                    <td>10</td>
                     <td>723</td>
                 </tr>
                 <tr>
-                    <td>Chupetin</td>
-                    <td><button>:</button></td>
+                    <td>Chupetin TNT de Sandia</td>
+                    <td><img class="tag" src="images/celiacos-1.jpg"></td>
+                    <td><button title="Editar">:</button></td>
                     <td>10</td>
-                    <td>Publica</td>
+                    <td>5</td>
                     <td>12</td>
                 </tr>
                 <tr>
-                    <td>Gomitas</td>
-                    <td><button>:</button></td>
+                    <td>Gomitas Sugar de Frutilla</td>
+                    <td>
+                        <img class="tag" src="images/celiacos-1.jpg">
+                        <img class="tag" src="images/descarga.png">
+                    </td>
+                    <td><button title="Editar">:</button></td>
                     <td>2</td>
-                    <td>Publica</td>
+                    <td>5</td>
                     <td>535</td>
                 </tr>
                 <tr>
-                    <td>Chicle</td>
-                    <td><button>:</button></td>
+                    <td>Chicle Bubalu de Menta</td>
+                    <td></td>
+                    <td><button title="Editar">:</button></td>
                     <td>20</td>
-                    <td>Privada</td>
+                    <td>10</td>
                     <td>25</td>
                 </tr>
                 <tr>
-                    <td>Confites</td>
-                    <td><button>:</button></td>
+                    <td>Confites Cirujas de Chocolate</td>
+                    <td><img class="tag" src="images/descarga.png"></td>
+                    <td><button title="Editar">:</button></td>
                     <td>30</td>
-                    <td>Publica</td>
+                    <td>5</td>
                     <td>85</td>
                 </tr>
                 <tr>
-                    <td>Turron</td>
-                    <td><button>:</button></td>
+                    <td>Turron Malvoro de Mani</td>
+                    <td><img class="tag" src="images/celiacos-1.jpg"></td>
+                    <td><button title="Editar">:</button></td>
                     <td>20</td>
-                    <td>Publica</td>
+                    <td>5</td>
                     <td>813</td>
                 </tr>
             </table>
-    	</section>
-	</main>
+        </section>
+    </main>
     <%- include('../partials/footer') %>
 
 </body>
@@ -109,6 +119,10 @@
     vertical-align: middle;
     border-radius: 2px
 }
+#admin .tag {
+    height: 19px;
+    margin: 0px 5px -5px 0px;
+}
 #admin button {
     width: 1.5rem;
     height: 1.5rem;
@@ -133,17 +147,23 @@
     border-bottom: 1px solid rgb(0 0 0 / 12%);
     margin: 3px 0px 4px;
 }
-td:nth-child(3):before {
+#admin td:nth-child(4):before {
     content: "$";
+}
+#admin td:nth-child(5):after {
+    content: "%";
+}
+#admin td:nth-child(4),
+#admin th:nth-child(4),
+#admin td:nth-child(5),
+#admin th:nth-child(5),
+#admin td:nth-child(6),
+#admin th:nth-child(6){
+    text-align: center !important;
 }
 </style>
 <script>
 const $ = x => document.querySelectorAll(x);
-
-for (let i = 0;i < $('button').length; i++){ 
-    $('button')[i].setAttribute('title', 'Editar');
-}
-
 
 function search() {
     let input, filter, table, tr, td, i, txtValue;
