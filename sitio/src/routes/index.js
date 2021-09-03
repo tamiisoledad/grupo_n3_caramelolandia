@@ -1,5 +1,5 @@
 var express = require('express');
-const {index, admin} = require("../controllers/indexController")
+const {index, admin, contacto, search} = require("../controllers/indexController")
 
 /** Obtener las paginas
  * URL
@@ -9,4 +9,6 @@ const {index, admin} = require("../controllers/indexController")
 module.exports = express.Router()
 	.get('/', index)
 	.get('/admin',admin)
+	.get("/contact", contacto)
+	.get("/search", search)
 ;

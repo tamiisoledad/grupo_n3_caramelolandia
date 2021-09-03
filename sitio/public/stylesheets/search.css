@@ -1,0 +1,43 @@
+.busqueda section{
+    margin: 25px 0;
+}
+.busqueda section div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.busqueda section div article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    width: 24%;
+    max-height: 70vh;
+}
+.busqueda section div article a img{
+    width: 100%;
+    max-height: 45vh;
+}
+.busqueda section div article div{
+    text-align: center;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: rgba(128, 128, 128, 0.3);
+}
+.busqueda section div article h4{  
+    text-transform: uppercase;
+}
+
+.busqueda section div article a.carrito{
+    background-color: var(--fucsia);
+    margin: 8px;
+    padding: 8px;
+    border-radius: 12%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}

@@ -6,6 +6,12 @@ module.exports = {
     index : (req,res) => res.render("index",{
         productos
     }),
+    search: (req, res) => {
+        let resultado = productos.filter(producto => producto.Producto.toLowerCase().includes(req.query.buscar.toLowerCase()))
+        return res.render("search",{
+            productos: resultado
+        })
+    },
     admin : (req,res) => res.render("admin/admin"),
     contacto : (req,res) => res.render("contact") 
 }
