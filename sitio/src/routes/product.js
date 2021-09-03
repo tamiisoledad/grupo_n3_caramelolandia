@@ -6,15 +6,15 @@ const { productDetail,productCart,update,store,destroy,productAdd,productEdit } 
 
 
 /* GET users listing. */
-router.get('/Detail', productDetail);
-router.get('/Cart', productCart);
+router.get('/detail/:id', productDetail);
+router.get('/cart', productCart);
 
 /* ADD */
-router.get('/Add', productAdd);
+router.get('/add', productAdd);
 router.post('/add',store);
 
 /* EDIT & UPDATE */
-router.get('/Edit', productEdit);
+router.get('/edit/:id', productEdit);
 router.put('/edit/:id',update);
 
 /* DELETE */

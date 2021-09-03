@@ -17,7 +17,6 @@ module.exports = {
 
     productAdd : (req,res) => {
        return res.render("productAdd",{
-           categorias,
            productos,
        } )
     },
@@ -32,22 +31,22 @@ module.exports = {
     },
 
     store : (req,res) => {
-            let producto = {
+            let productoNuevo = {
                 id: productos[productos.length - 1].id + 1,
-                nombre,
-                informacion,
-                marca,
-                variedad,
-                precio : +precio,
-                stock,
-                descuento,
-                vegano,
-                celiaco,
-                descripcion,
-                imagen : req.file ? req.file.filename : 'default-image.png'
+                Producto,
+                categoria,
+                Informacion,
+                Marca,
+                Precio : +Precio,
+                Variedad,
+                Stock,
+                Descuento,
+                imagen : req.file ? req.file.filename : 'default-image.png',
+                Vegano,
+                Celiaco,
             }
      
-            productos.push(producto)
+            productos.push(productoNuevo)
             fs.writeFileSync(path.join(__dirname,'..','data','productos.json'),JSON.stringify(productos,null,2),'utf-8');
             return res.redirect('/admin')
     },
