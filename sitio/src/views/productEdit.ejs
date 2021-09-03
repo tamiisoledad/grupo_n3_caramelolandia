@@ -7,7 +7,7 @@
     <%- include('partials/header') %>
    <main>
        <h1>Editar Producto</h1>
-       <form action="/products/edit/<%= producto.id %>" method="POST">
+       <form action="/products/detail/<%= producto.id %>" method="POST">
            <div class="box-form ">
                <label for="producto">Nombre del Producto</label>
                <input type="text" name="nombre" id="producto" value="<%= producto.Producto %>">
@@ -44,17 +44,15 @@
             <div class="box-form">
                 <label for="vegano">Apto Vegano</label>
                 <select name="vegano" id="vegano">
-                    <% productos.forEach(producto => { %>
-                        <option value="<%= producto.Vegano %> "><%= producto.Vegano %></option>
-                    <% }) %>
+                    <option value= false>No</option>
+                        <option value= true>Si</option>
             </select>
             </div>
             <div class="box-form">
                 <label for="celiaco">Sin Tacc</label>
                 <select name="celiaco" id="celiaco">
-                    <% productos.forEach(producto => { %>
-                        <option value="<%= producto.Celiaco %> "><%= producto.Celiaco %></option>
-                    <% }) %>
+                        <option value= false>No</option>
+                        <option value= true>Si</option>
             </select>
             </div>
             <div class="box-button">
