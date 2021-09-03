@@ -7,14 +7,17 @@
         <section>
             <div>
                 <% productos.forEach(producto => { %>
+                    <% if (!producto) { %>
+                        <h3>No hay resultados para su busqueda</h3>
+                    <% }%>
                     <article>
-                         <a class="product" href="/products/detail/<%= producto.id %> "><img src="/images/productos/<%= producto.Imagen%>" alt=""></a>
-                         <div>
-                         <h4><%= producto.Producto %> </h4>
-                        </div>
-                         <p>$<%= producto.Precio %> </p>
-                         <a class="carrito" href="/products/cart">añadir al carrito</a>
-                    </article>
+                        <a class="product" href="/products/detail/<%= producto.id %> "><img src="/images/productos/<%= producto.Imagen%>" alt=""></a>
+                        <div>
+                        <h4><%= producto.Producto %> </h4>
+                       </div>
+                        <p>$<%= producto.Precio %> </p>
+                        <a class="carrito" href="/products/cart">añadir al carrito</a>
+                   </article> 
                 <% }) %>
             </div>
         

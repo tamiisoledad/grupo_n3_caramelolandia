@@ -7,7 +7,7 @@ module.exports = {
         productos
     }),
     search: (req, res) => {
-        let resultado = productos.filter(producto => producto.Producto.toLowerCase().includes(req.query.buscar.toLowerCase()))
+        let resultado = productos.filter(producto => producto.Producto.toLowerCase().includes(req.query.buscar.toLowerCase()) || producto.categoria.toLowerCase().includes(req.query.buscar.toLowerCase()))
         return res.render("search",{
             productos: resultado
         })
