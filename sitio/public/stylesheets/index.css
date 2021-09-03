@@ -1,52 +1,53 @@
 /* main */
+.home{
+    overflow-x: hidden;
+}
 .home main section.carrusel {
-    text-align: center;
-    display: flex;
-    justify-content: center;
     width: 100%;
     background-image: url("../images/fondo.webp");
-    background-size: cover;
+    background-repeat: repeat;
     border-bottom:1px solid rgba(0, 0, 0, 0.3);
     border: solid 1px black;
-    /* margin: 300px 0px; */
 }
-.home main section.carrusel {
-    max-height: 800px !important;
-    
-}
-.home main section.carrusel article {
-    margin: 5%;
-    position: relative;
+.home .carrusel{
     width: 90%;
+    max-width: 120em;
+    padding: 2em;
 }
-.home main section.carrusel article img{
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+.home .carrusel .grande{
+    width: 200%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease;
+    transform: translateX(0%);
+}
+.home .carrusel .img{
+    width: calc(100% / 2 - 2em);
+    min-height: 10vh;
+}
+.home .carrusel .puntos{
     width: 100%;
+    padding: .4em;
+    margin: 1em 0 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
 }
-.home main section.carrusel article p.titulo{
-    position: absolute;
-    text-transform: uppercase;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    bottom: 65%;
-    left: 23%;
+.home .carrusel .punto{
+    width: 2em;
+    height: 2em;
+    background-color: rgb(219, 105, 210);
+    margin: 1em 1em 0;
+    border-radius: 50%;
+    list-style: none;
 }
-.home main section.carrusel article p.parrafo{
-    position: absolute;
-    text-transform: uppercase;
-    color: white;
-    font-size: 14px;
-    background-color: rgba(0, 0, 0, 0.5);
-    bottom: 30%;
-    left: 12%;
+.home .carrusel .punto.activo{
+    background-color: rgb(250, 135, 240);
 }
-.home main section.carrusel article a{
-    display: inline-block;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    background-color: seagreen;
-    text-transform: capitalize;
-}
+
 .home main div h2{
     text-transform: capitalize;
     text-align: center;
@@ -101,12 +102,6 @@
 }
 /* laptops */
 @media (min-width:769px){
-    .home main section.carrusel article p.titulo{
-        left: 36%;
-    }
-    .home main section.carrusel article p.parrafo{
-        left: 22%;
-    }
     .home main section.productos{
         display: flex;
         flex-direction: column;
@@ -122,21 +117,7 @@
 /* desktop */
 @media (min-width:1280px){
     .home main section.carrusel{
-        height: 900px;
-    }
-    .home main section.carrusel article{
-        width: 80%;
-    }
-    .home main section.carrusel article p.titulo{
-        left: 34%;
-        font-size: 40px;
-    }
-    .home main section.carrusel article p.parrafo{
-        left: 22%;
-        font-size: 30px;
-    }
-    .home main section.carrusel article a{
-        font-size: 22px;
+        height: 850px;
     }
     .home main section.productos article{
         width: 600px;
