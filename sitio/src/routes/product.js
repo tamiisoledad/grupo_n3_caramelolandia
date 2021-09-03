@@ -7,7 +7,7 @@ const { productDetail,productCart,update,store,destroy,productAdd,productEdit } 
 
 /* GET users listing. */
 router.get('/detail/:id', productDetail);
-router.get('/Cart', productCart);
+router.get('/cart', productCart);
 
 /* ADD */
 router.get('/add', productAdd);
