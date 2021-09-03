@@ -11,7 +11,7 @@
             <article class="producto">
               <div class="carruselarrow">
                 <a href="" class="arrow"><i class="fas fa-chevron-left"></i></a>
-                <img src="/images/guaymallen.png" alt="" width="80%"/>
+                <img src="/images/productos/<%= producto.Imagen %>" alt="" width="80%"/>
                 <a href="" class="arrow"><i class="fas fa-chevron-right"></i></a>
               </div>
               <div class="nav">
@@ -25,39 +25,35 @@
             <article class="descripcion">
               <div class="nombre">
                 <h4>nombre del producto:</h4>
-                <p>Alfajor Guaymallen(Simple)</p>
+                <p><%= producto.Producto %></p>
               </div>
               <div class="stock">
                 <h4>Disponible en:</h4>
-                <p>Chocolate, Dulce de leche y Membrillo</p>
+                <p><%= producto.Variedad %></p>
               </div>
               <div class="marca">
                 <h4>Marca:</h4>
-                <p>Guaymallen</p>
+                <p><%= producto.Marca %></p>
               </div>
               <div class="info">
                 <h4>Informacion nutricional:</h4>
-                <p>
-                  Alfajor de Chocolate 1 alfajor (38g) 162 kcal<br />
-                  Alfajor Blanco 1 alfajor (38g) 161 kcal<br />
-                  Alfajor de Membrillo 1 porción (38g) 156 kcal
-                </p>
+                <p><%= producto.Informacion %></p>
               </div>
               <div class="vegan">
                 <h4>Apto vegano:</h4>
-                <p>No</p>
+                <p><%= producto.Vegano %></p>
               </div>
               <div class="vegan">
                 <h4>Sin Tacc:</h4>
-                <p>No</p>
+                <p><%= producto.Celiaco %></p>
               </div>
               <div class="precio">
                 <h4>Precio:</h4>
-                <p>$150</p>
+                <p>$<%= producto.Precio %></p>
               </div>
               <div class="desc">
                 <h4>Descuento:</h4>
-                <p>50%</p>
+                <p><%= producto.Descuento %>%</p>
               </div>
             </article>
           </section>
