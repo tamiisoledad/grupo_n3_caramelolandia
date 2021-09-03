@@ -22,42 +22,20 @@
         </div>
         <section class="productos">
             <div class="pri">
-            <article class="a">
-                <a class="product" href="/products/Detail"><img src="/images/guaymallen.png" alt=""></a>
-                <div>
-                    <h4>Alfajor</h4>
-                    <p>$50</p>
-                </div>
-                <a class="carrito" href="/products/Cart">añadir al carrito</a>
-            </article>
-            <article class="b">
-                <img src="/images/7790580110796_02.jpg" alt="">
-                <div>
-                    <h4>arcor</h4>
-                    <p>$500</p>
-                </div>
-                <a class="carrito" href="/productCart">añadir al carrito</a>
-            </article>
-        </div>
-        <div class="seg">
-            <article class="c">
-                <img src="/images/jorgito.jpg" alt="">
-                <div>
-                    <h4>Jorgito</h4>
-                    <p>$120</p>
-                </div>
-                <a class="carrito" href="/productCart">añadir al carrito</a>
-            </article>
-            <article class="d">
-                <img src="/images/rockelt.jpg" alt="">
-                <div>
-                    <h4>Rocklet</h4>
-                    <p>$56</p>
-                </div>
-                <a class="carrito" href="/productCart">añadir al carrito</a>
-            </article>
-        </div>
-        </section>
+                <% productos.forEach(producto => { %>
+                    <% if(producto.id < 5){ %>
+                    <article class="a">
+                         <a class="product" href="/products/detail/<%= producto.id %> "><img src="/images/productos/<%= producto.Imagen%>" alt=""></a>
+                         <div>
+                         <h4><%= producto.Producto %> </h4>
+                        </div>
+                         <p>$<%= producto.Precio %> </p>
+                         <a class="carrito" href="/products/cart">añadir al carrito</a>
+                    </article>
+                        <%}%>
+                <% }) %>
+            </div>
+        
     </main>
     <%- include('partials/footer') %>
 </body>

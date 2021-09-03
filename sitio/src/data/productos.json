@@ -159,7 +159,7 @@
         "Variedad":"Tutti-frutti " ,
         "Stock": 105,
         "Descuento": 34,
-        "Imagen": "caramelosFlynnPaff.webp",
+        "Imagen": "carameloFlynnPaff.webp",
         "Vegano": false,
         "Celiaco":false
 
@@ -189,7 +189,7 @@
         "Variedad":"Surtidos " ,
         "Stock": 205,
         "Descuento": 34,
-        "Imagen": "caramelosLaYapa.webp",
+        "Imagen": "caramelosLaYapa-Billiken.webp",
         "Vegano": false,
         "Celiaco":false
 
@@ -219,7 +219,7 @@
         "Variedad":"Surtidos " ,
         "Stock": 205,
         "Descuento": 34,
-        "Imagen": ".webp",
+        "Imagen": "caramelosSugus.webp",
         "Vegano": true,
         "Celiaco":false
 

@@ -13,6 +13,7 @@
     width: 90%;
     max-width: 120em;
     padding: 2em;
+    
 }
 .home .carrusel .grande{
     width: 200%;
@@ -22,10 +23,12 @@
     align-items: center;
     transition: all .5s ease;
     transform: translateX(0%);
+    max-height: 700px !important; 
 }
 .home .carrusel .img{
     width: calc(100% / 2 - 2em);
     min-height: 10vh;
+    max-height: 600px !important;
 }
 .home .carrusel .puntos{
     width: 100%;
@@ -37,12 +40,13 @@
     align-items: center;
 }
 .home .carrusel .punto{
-    width: 2em;
-    height: 2em;
+    width: 1em;
+    height: 1em;
     background-color: rgb(219, 105, 210);
-    margin: 1em 1em 0;
+    margin: 10px;
     border-radius: 50%;
     list-style: none;
+    cursor: pointer;
 }
 .home .carrusel .punto.activo{
     background-color: rgb(250, 135, 240);
@@ -66,7 +70,12 @@
 }
 .home main section.productos article div{
     text-align: center;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
+    margin-bottom: 5px;
     background-color: rgba(128, 128, 128, 0.3);
 }
 .home main section.productos article h4{  
@@ -80,15 +89,6 @@
     border-radius: 12%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-.home main section.productos article.b{
-    display: none;
-}
-.home main section.productos article.c{
-    display: none;
-}
-.home main section.productos article.d{
-    display: none;
-}
 
 /* tablet */
 @media (min-width:481px){
@@ -96,12 +96,17 @@
         margin: 18px auto;
         width: 300px;
     }
-    .home main section.productos article.b{
-        display: flex;
-    }
 }
 /* laptops */
 @media (min-width:769px){
+    .home .carrusel{
+    margin-bottom: 10px;
+    }
+    .home .carrusel .punto{
+        width: 2em;
+    height: 2em;
+    margin: 1em 1em 0;
+    }
     .home main section.productos{
         display: flex;
         flex-direction: column;
@@ -110,7 +115,7 @@
         display: flex;
     }
     .home main section.productos article{
-        margin: 18px auto;
+        margin: 18px;
         width: 350px;
     }
 }
@@ -121,15 +126,6 @@
     }
     .home main section.productos article{
         width: 600px;
-    }
-    .home main section.productos article.c{
-        display: flex;
-    }
-    .home main section.productos article.d{
-        display: flex;
-    }
-    .home main section.productos div.seg{
-        display: flex;
     }
     .home main div h2{
         font-size: 30px;

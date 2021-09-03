@@ -49,6 +49,7 @@ header div.container div.izq div.lista label{
     font-size: 25px;
     margin-left: 15px;
     text-align: center;
+    cursor: pointer;
 }
 header div.container div.izq div.lista ul.lista{
     display: none;
@@ -90,6 +91,7 @@ header div.form form label{
     padding: 7px;
     box-shadow: 0 0 3px rgb(0 0 0 / 50%);
     border-radius: 4px;
+    cursor: pointer;
 }
 header div.users {
     display: none;
@@ -128,6 +130,7 @@ header div.users label {
     padding: 7px;
     height: 35px;
     font-size: 21px;
+    cursor: pointer;
 }
 header div.users ul{
     display: none;
