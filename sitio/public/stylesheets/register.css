@@ -112,15 +112,6 @@ body > #register, #register *, .lupa i {
   top: 3px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 12px -6px;
 }
-#register #c:active {
-  background: var(--fucsia-oscuro);
-}
-#register #g:active {
-  background: var(--gris);
-}
-#register #f:active {
-  background: blue;
-}
 
 #register [type=checkbox]{
 	margin: 0 5px;
