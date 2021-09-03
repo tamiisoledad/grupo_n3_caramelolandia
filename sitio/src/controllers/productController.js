@@ -33,17 +33,17 @@ module.exports = {
     store : (req,res) => {
             let productoNuevo = {
                 id: productos[productos.length - 1].id + 1,
-                producto,
-                informacion,
-                marca,
-                variedad,
-                precio : +precio,
-                stock,
-                descuento,
-                vegano,
-                celiaco,
-                descripcion,
-                imagen : req.file ? req.file.filename : 'default-image.png'
+                Producto,
+                categoria,
+                Informacion,
+                Marca,
+                Precio : +Precio,
+                Variedad,
+                Stock,
+                Descuento,
+                imagen : req.file ? req.file.filename : 'default-image.png',
+                Vegano,
+                Celiaco,
             }
      
             productos.push(productoNuevo)
