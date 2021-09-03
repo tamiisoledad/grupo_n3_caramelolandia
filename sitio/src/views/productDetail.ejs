@@ -40,12 +40,21 @@
                 <p><%= producto.Informacion %></p>
               </div>
               <div class="vegan">
-                <h4>Apto vegano:</h4>
-                <p><%= producto.Vegano %></p>
+                <% if (producto.Vegano === true) { %>
+                  <img src="/images/—Pngtree—icon for vegan vector illustration_5224039.png" width="300px" alt="">
+                <% } else { %>
+                  <h4>Apto vegano:</h4>
+                  <p>No</p>
+                  <% } %>
+                 
               </div>
               <div class="vegan">
-                <h4>Sin Tacc:</h4>
-                <p><%= producto.Celiaco %></p>
+                <% if (producto.Celiaco === true) { %>
+                  <img src="/images/unnamed.png" width="220px" alt="">
+                <% } else { %>
+                  <h4>Apto Celiaco:</h4>
+                  <p>No</p>
+                  <% } %>
               </div>
               <div class="precio">
                 <h4>Precio:</h4>
@@ -64,27 +73,13 @@
       <h3>Productos relacionados</h3>
       <section class="relacionados">
         <article>
-          <a href=""><img src="/images/rockelt.jpg" alt="product1" width="100%"></a>
-          <div class="nombreprod">
-            <span>$200</span>
-            <h4>Rocklets</h4>
-          </div>
-        </article>
-        <article>
-          <a href=""><img src="/images/jorgito.jpg" alt="product2" width="100%"></a>
-          <div class="nombreprod">
-            <span>$250</span>
-            <h4>Alfajorcitos Jorgito</h4>
-          </div>
-        </article>
-        <article>
-          <a href=""
-            ><img src="/images/7790580110796_02.jpg" alt="product3" width="100%"></a>
-          <div class="nombreprod">
-            <span>$1.500</span>
-            <p>15%OFF</p>
-            <h4>Caja Arcor</h4>
-          </div>
+          <% productos.forEach(producto => { %>
+            <a href=""><img src="/images/productos/<%= producto.Imagen %>" alt="product1" width="100%"></a>
+            <div class="nombreprod">
+              <span>$<%= producto.Precio %></span>
+              <h4><%= producto.Producto %></h4>
+            </div>
+          <% }) %>
         </article>
       </section>
       <div class="nav-pages">
