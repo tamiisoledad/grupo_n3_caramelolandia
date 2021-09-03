@@ -23,7 +23,9 @@ header div.menu{
     display: flex;
     align-items: center;
 }
-
+header div.izq{
+    height: 70px;
+}
 header div.img {
     /* display: block; */
     /* border-radius: 50%;
@@ -31,6 +33,7 @@ header div.img {
     /* margin: 15px auto 30px; */
     width: 85px;
 }
+
 header div.img img{
     width: 100%;
 }
@@ -235,7 +238,7 @@ header div.container nav ul li a{
     header div.container div.menu{
         flex-direction: column;
     }
-    header div.container div.menu a.lupa i{
+    header div.container div.menu form label i{
         display: none;
         width: 35px;
         padding: 7px;
