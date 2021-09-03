@@ -47,6 +47,7 @@ body > #register, #register *, .lupa i {
   color: var(--fucsia);
 }
 #register .element .input-data label{
+  user-select: none;
   position: absolute;
   bottom: 10px;
   left: 0;
