@@ -11,11 +11,7 @@
             <table id="table">
                 <thead>
                     <tr>
-                        <th><input
-                            type="search"
-                            id="buscador"
-                            oninput="search()"
-                            placeholder="Alfajor, caramelo..."></th>
+                        <th><buscador></buscador></th>
                         <th></th>
                         <th><button title="Nuevo">+</button></th>
                         <th>PRECIO</th>
@@ -23,65 +19,32 @@
                         <th>STOCK</th>
                     </tr>
                 </thead>
-                <tr>
-                    <td>`categoria` `marca` de `sabor`</td>
-                    <td><img class="tag" src="images/celiacos-1.jpg"></td>
-                    <td><button title="Editar">:</button></td>
-                    <td>25</td>
-                    <td>5</td>
-                    <td>224</td>
-                </tr>
-                <tr>
-                    <td>Caramelo Arcor de Babana</td>
-                    <td><img class="tag" src="images/descarga.png"></td>
-                    <td><button title="Editar">:</button></td>
-                    <td>5</td>
-                    <td>10</td>
-                    <td>723</td>
-                </tr>
-                <tr>
-                    <td>Chupetin TNT de Sandia</td>
-                    <td><img class="tag" src="images/celiacos-1.jpg"></td>
-                    <td><button title="Editar">:</button></td>
-                    <td>10</td>
-                    <td>5</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>Gomitas Sugar de Frutilla</td>
-                    <td>
-                        <img class="tag" src="images/celiacos-1.jpg">
-                        <img class="tag" src="images/descarga.png">
-                    </td>
-                    <td><button title="Editar">:</button></td>
-                    <td>2</td>
-                    <td>5</td>
-                    <td>535</td>
-                </tr>
-                <tr>
-                    <td>Chicle Bubalu de Menta</td>
-                    <td></td>
-                    <td><button title="Editar">:</button></td>
-                    <td>20</td>
-                    <td>10</td>
-                    <td>25</td>
-                </tr>
-                <tr>
-                    <td>Confites Cirujas de Chocolate</td>
-                    <td><img class="tag" src="images/descarga.png"></td>
-                    <td><button title="Editar">:</button></td>
-                    <td>30</td>
-                    <td>5</td>
-                    <td>85</td>
-                </tr>
-                <tr>
-                    <td>Turron Malvoro de Mani</td>
-                    <td><img class="tag" src="images/celiacos-1.jpg"></td>
-                    <td><button title="Editar">:</button></td>
-                    <td>20</td>
-                    <td>5</td>
-                    <td>813</td>
-                </tr>
+
+                <% productos.forEach(producto => { %>
+                    <tr>
+                        <td><%= producto.categoria %> <%= producto.Marca %> de <%= producto.Variedad %></td>
+                        <td>
+                            <% if(producto.Vegano){ %>
+                                <img class="tag" src="images/celiacos-1.jpg">
+                            <% } %>
+                            <% if(producto.Celiaco){ %>
+                                <img class="tag" src="images/descarga.png">
+                            <% } %>
+                        </td>
+                        <td>
+                            <a href="/products/edit/<%= producto.id %>" title="Editar">:</a>
+
+                            <form
+                                action="/products/delete/<%= producto.id %>?_method=DELETE"
+                                method="POST">
+                                <button type='submit'>X</button>
+                            </form>
+                        </td>
+                        <td><%= producto.Precio %></td>
+                        <td><%= producto.Descuento %></td>
+                        <td><%= producto.Stock %></td>
+                    </tr>
+                <% }) %>
             </table>
         </section>
     </main>
@@ -165,6 +128,14 @@
 <script>
 const $ = x => document.querySelectorAll(x);
 
+$('buscador')[0].innerHTML = `
+    <input
+        type="search"
+        id="buscador"
+        oninput="search()"
+        placeholder="Alfajor, caramelo..."
+    >
+`
 function search() {
     let input, filter, table, tr, td, i, txtValue;
     input = $("#buscador")[0];

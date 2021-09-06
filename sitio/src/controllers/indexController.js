@@ -12,6 +12,10 @@ module.exports = {
             productos: resultado
         })
     },
-    admin : (req,res) => res.render("admin/admin"),
+    admin : (req,res) => {
+        return res.render('admin/admin',{
+            productos
+        })
+    },
     contacto : (req,res) => res.render("contact") 
 }
