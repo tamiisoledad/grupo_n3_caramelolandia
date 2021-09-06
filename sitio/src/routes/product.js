@@ -1,26 +1,21 @@
 var express = require('express');
-var router = express.Router();
-
-
 const { productDetail,productCart,update,store,destroy,productAdd,productEdit, products, buscar } = require("../controllers/productController")
 
+module.exports = express.Router()
+	/* GET users listing. */
+	.get('/', products)
+	.get('/category', buscar)
+	.get('/detail/:id', productDetail)
+	.get('/cart', productCart)
 
-/* GET users listing. */
-router.get('/', products);
-router.get('/category', buscar);
-router.get('/detail/:id', productDetail);
-router.get('/cart', productCart);
+	/* ADD */
+	.get('/add', productAdd)
+	.post('/add',store)
 
-/* ADD */
-router.get('/add', productAdd);
-router.post('/add',store);
+	/* EDIT & UPDATE */
+	.get('/edit/:id', productEdit)
+	.put('/edit/:id',update)
 
-/* EDIT & UPDATE */
-router.get('/edit/:id', productEdit);
-router.put('/edit/:id',update);
-
-/* DELETE */
-router.delete('/delete/:id',destroy);
-
-
-module.exports = router;
+	/* DELETE */
+	.delete('/delete/:id',destroy)
+;
