@@ -15,7 +15,7 @@ router.post('/add',store);
 
 /* EDIT & UPDATE */
 router.get('/edit/:id', productEdit);
-router.put('/edit/:id',update);
+router.put('/update/:id',update);
 
 /* DELETE */
 router.delete('/delete/:id',destroy);
