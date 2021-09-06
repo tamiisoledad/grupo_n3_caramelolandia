@@ -27,19 +27,20 @@ module.exports = {
        } )
     },
     store : (req,res) => {
+        const {producto,categoria,informacion,marca,precio,variedad,stock,descuento,vegano,celiaco} = req.body
         let productoNuevo = {
             id: productos[productos.length - 1].id + 1,
-            Producto,
-            categoria,
-            Informacion,
-            Marca,
-            Precio : +Precio,
-            Variedad,
-            Stock,
-            Descuento,
+            Producto : producto,
+            categoria : categoria,
+            Informacion : informacion,
+            Marca : marca,
+            Precio : +precio,
+            Variedad : variedad,
+            Stock : +stock,
+            Descuento : +descuento,
             imagen : req.file ? req.file.filename : 'default-image.png',
-            Vegano,
-            Celiaco,
+            Vegano : vegano,
+            Celiaco : celiaco ,
         }
         productos.push(productoNuevo)
         fs.writeFileSync(path.join(__dirname,'..','data','productos.json'),JSON.stringify(productos,null,2),'utf-8');
@@ -49,30 +50,29 @@ module.exports = {
     productEdit : (req,res)=>{
         let producto = productos.find(producto => producto.id === +req.params.id)
       return res.render("productEdit",{
-          productos,
-          producto,
+          productos : producto
       })
     },
-    update : (req,res) => {    
-            const {nombre,informacion,marca,variedad,precio,stock,descuento,vegano,celiaco,descripcion,} = req.body;
-
-            productos.forEach(producto => {
-                if(producto.id === +req.params.id){
-                    producto.nombre = nombre;
-                    producto.informacion = informacion;
-                    producto.marca = marca;
-                    producto.variedad = variedad;
-                    producto.stock = stock;
-                    producto.descuento = descuento;
-                    producto.vegano = vegano;
-                    producto.celiaco = celiaco;
-                    producto.descripcion = descripcion;
-                    producto.precio = +precio;
+    update : (req,res) => {
+        const {nombre,categoria,informacion,marca,precio,variedad,stock,descuento,vegano,celiaco} = req.body
+        productos.forEach(item => {
+                if(item.id === +req.params.id){
+                    item.Producto = nombre;
+                    item.categoria = categoria;
+                    item.Informacion = informacion;
+                    item.Marca = marca;
+                    item.Variedad = variedad;
+                    item.Stock = +stock;
+                    item.Imagen = req.file;
+                    item.Descuento = +descuento;
+                    item.Vegano = vegano;
+                    item.Celiaco = celiaco;
+                    item.Precio = +precio;
                 }
             });
     
             fs.writeFileSync(path.join(__dirname,'..','data','productos.json'),JSON.stringify(productos,null,2),'utf-8');
-            return res.redirect('/')
+            return res.redirect('/admin')
     },
     destroy : (req,res) => {
         let productosModificados = productos.filter(producto => producto.id !== +req.params.id);

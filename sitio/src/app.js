@@ -1,18 +1,16 @@
-const methodOverride = require('method-override');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const methodOverride = require('method-override');
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require("./routes/product");
 
 var app = express();
-
-/* configura métodos PUT y DELETE */
-app.use(methodOverride('_method'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,6 +21,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..','public')));
+
+/* configura métodos PUT y DELETE */
+app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
