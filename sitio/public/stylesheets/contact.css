@@ -4,7 +4,7 @@
 .contacto h1{
     text-align: left;
 }
-.contacto form{
+.contacto .form article form{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -59,7 +59,7 @@ height: 100%;
         font-size: 30px;
         margin-bottom: 15px;
     }
-	.contacto form {
+    .contacto .form article form {
     	margin: 17vh 0px;
 	    padding: 50px;
 	    width: 100%;
@@ -72,7 +72,7 @@ height: 100%;
     .contacto {
       height: 96vh;
     }
-    .contacto form {
+    .contacto .form article form {
       margin: calc(17vh - 50px) 0px;
       max-width: 840px;
       display: flex;

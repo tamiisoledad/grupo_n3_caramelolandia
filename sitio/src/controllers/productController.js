@@ -5,6 +5,11 @@ const capitalizeOneLetter = require('../utils/capitalizeOneLetter');
 
 
 module.exports = {
+    products: (req,res) => res.render("products",{productos}),
+    buscar: (req,res) => {
+        let busqueda = productos.filter(producto => producto.categoria.toLowerCase().includes(req.query.categoria.toLowerCase()))
+        return res.render("products", {productos: busqueda})
+    },
     productDetail : (req,res) => {
         let producto = productos.find(producto => producto.id === +req.params.id)
         return res.render("productDetail",{

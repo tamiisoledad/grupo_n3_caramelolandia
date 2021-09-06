@@ -6,75 +6,48 @@
 <body>
     <%- include('../partials/header') %>
     <main id="admin">
-    	<section>
-    		<h1>Productos</h1>
-            <hr>
+        <section>
+            <h1>Productos</h1>
             <table id="table">
                 <thead>
                     <tr>
-                        <th><input
-                            type="search"
-                            id="buscador"
-                            oninput="search()"
-                            placeholder="Alfajor, caramelo..."></th>
+                        <th><buscador></buscador></th>
                         <th></th>
+                        <th><button title="Nuevo">+</button></th>
                         <th>PRECIO</th>
-                        <th>VISIBILIDAD</th>
+                        <th>DESCUENTO</th>
                         <th>STOCK</th>
                     </tr>
                 </thead>
-                <tr>
-                    <td>Alfajor</td>
-                    <td><button>:</button></td>
-                    <td>25</td>
-                    <td>Publica</td>
-                    <td>224</td>
-                </tr>
-                <tr>
-                    <td>Caramelo</td>
-                    <td><button>:</button></td>
-                    <td>5</td>
-                    <td>Privada</td>
-                    <td>723</td>
-                </tr>
-                <tr>
-                    <td>Chupetin</td>
-                    <td><button>:</button></td>
-                    <td>10</td>
-                    <td>Publica</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>Gomitas</td>
-                    <td><button>:</button></td>
-                    <td>2</td>
-                    <td>Publica</td>
-                    <td>535</td>
-                </tr>
-                <tr>
-                    <td>Chicle</td>
-                    <td><button>:</button></td>
-                    <td>20</td>
-                    <td>Privada</td>
-                    <td>25</td>
-                </tr>
-                <tr>
-                    <td>Confites</td>
-                    <td><button>:</button></td>
-                    <td>30</td>
-                    <td>Publica</td>
-                    <td>85</td>
-                </tr>
-                <tr>
-                    <td>Turron</td>
-                    <td><button>:</button></td>
-                    <td>20</td>
-                    <td>Publica</td>
-                    <td>813</td>
-                </tr>
+
+                <% productos.forEach(producto => { %>
+                    <tr>
+                        <td><%= producto.categoria %> <%= producto.Marca %> de <%= producto.Variedad %></td>
+                        <td>
+                            <% if(producto.Vegano){ %>
+                                <img class="tag" src="images/celiacos-1.jpg">
+                            <% } %>
+                            <% if(producto.Celiaco){ %>
+                                <img class="tag" src="images/descarga.png">
+                            <% } %>
+                        </td>
+                        <td>
+                            <a href="/products/edit/<%= producto.id %>" title="Editar">:</a>
+
+                            <form
+                                action="/products/delete/<%= producto.id %>?_method=DELETE"
+                                method="POST">
+                                <button type='submit'>X</button>
+                            </form>
+                        </td>
+                        <td><%= producto.Precio %></td>
+                        <td><%= producto.Descuento %></td>
+                        <td><%= producto.Stock %></td>
+                    </tr>
+                <% }) %>
             </table>
-    	</section>
-	</main>
+        </section>
+    </main>
     <%- include('../partials/footer') %>
 
 </body>
@@ -109,6 +82,10 @@
     vertical-align: middle;
     border-radius: 2px
 }
+#admin .tag {
+    height: 19px;
+    margin: 0px 5px -5px 0px;
+}
 #admin button {
     width: 1.5rem;
     height: 1.5rem;
@@ -133,18 +110,32 @@
     border-bottom: 1px solid rgb(0 0 0 / 12%);
     margin: 3px 0px 4px;
 }
-td:nth-child(3):before {
+#admin td:nth-child(4):before {
     content: "$";
+}
+#admin td:nth-child(5):after {
+    content: "%";
+}
+#admin td:nth-child(4),
+#admin th:nth-child(4),
+#admin td:nth-child(5),
+#admin th:nth-child(5),
+#admin td:nth-child(6),
+#admin th:nth-child(6){
+    text-align: center !important;
 }
 </style>
 <script>
 const $ = x => document.querySelectorAll(x);
 
-for (let i = 0;i < $('button').length; i++){ 
-    $('button')[i].setAttribute('title', 'Editar');
-}
-
-
+$('buscador')[0].innerHTML = `
+    <input
+        type="search"
+        id="buscador"
+        oninput="search()"
+        placeholder="Alfajor, caramelo..."
+    >
+`
 function search() {
     let input, filter, table, tr, td, i, txtValue;
     input = $("#buscador")[0];
