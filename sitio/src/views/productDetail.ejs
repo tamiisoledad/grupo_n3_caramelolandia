@@ -73,13 +73,15 @@
       <h3>Productos relacionados</h3>
       <section class="relacionados">
             <% productos.forEach(producto => { %>
-              <article>
-              <a href="/products/detail/<%= producto.id %> "><img src="/images/productos/<%= producto.Imagen %>" alt="product1" width="100%"></a>
-              <div class="nombreprod">
-                <span>$<%= producto.Precio %></span>
-                <h4><%= producto.Producto %></h4>
-              </div>
-            </article>
+              <% if (producto.id < 5) { %>
+                <article>
+                  <a href="/products/detail/<%= producto.id %> "><img src="/images/productos/<%= producto.Imagen %>" alt="product1" width="100%"></a>
+                  <div class="nombreprod">
+                    <span>$<%= producto.Precio %></span>
+                    <h4><%= producto.Producto %></h4>
+                  </div>
+                </article>
+              <% } %>
             <% }) %>
       </section>
       <div class="nav-pages">

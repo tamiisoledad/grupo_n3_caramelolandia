@@ -27,6 +27,11 @@
     align-items: center;
 }
 
+.detail section article div.carruselarrow img{
+    max-width: 40%;
+    max-height: 470px;
+}
+
 /*producto*/
 
 .deatil main section article.producto{
@@ -123,6 +128,10 @@
     text-align: center;
     margin: 20px;
     border: 1px solid var(--rosa);
+}
+
+.detail main section.relacionados article img{
+    height: 435px;
 }
 
 .detail main section.relacionados article:hover{
