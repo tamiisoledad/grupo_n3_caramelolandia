@@ -14,6 +14,7 @@ module.exports = {
     }),
     
     processRegister : (req,res) => {
+        return res.send(req.body)
         const {name,email,password} = req.body;
 
         let user = {
@@ -26,7 +27,7 @@ module.exports = {
         }
 
         users.push(user);
-        fs.writeFileSync(path.join(__dirname,'..','data','usuarios.json'),JSON.stringify(users,null,2),'utf-8');
+        fs.writeFileSync(path.join(__dirname,'..','data','users.json'),JSON.stringify(users,null,2),'utf-8');
         return res.redirect('/users/login')
     }
 }
