@@ -6,19 +6,19 @@
 <body class="login">
     <%- include('partials/header') %>
     <main id="login">
-		<form action="" id="form">
+		<form action="/users/login" method="POST" id="form">
 			<div>
 			  <h1>Iniciar cuenta</h1>
 		      <div class="element">
 		         <div class="input-data">
-		            <input type="email" required name="data-1">
+		            <input type="email" required name="email">
 		            <div class="underline"></div>
 		            <label>Correo electronico</label>
 		         </div>
 		      </div>
 		      <div class="element">
 		         <div class="input-data">
-		            <input type="password" required name="data-2">
+		            <input type="password" required name="password">
 		            <div class="underline"></div>
 		            <label>Contraseña</label>
 		         </div>
