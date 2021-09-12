@@ -1,21 +1,11 @@
 [
   {
-    "id": 1,
-    "name": "Eleonora Vidal",
-    "email": "eleo@gmail.com",
-    "password": "syddpPo5D",
-    "rol": "admin",
-    "image": "default-image.png",
-    "terms": true,
-    "sales": true
-  },
-  {
     "id": 2,
     "name": "leandro rodriguez",
     "email": "leandrodj456@gmail.com",
     "password": "$2a$10$somSHwq5AGreeamGpdnSK.yxbvuHmxzaLcUCUaFOagKs4yBb2u79u",
     "image": "1631483561607_img_.png",
-    "rol": "user",
+    "rol": "admin",
     "terms": "true",
     "sales": "true"
   }
