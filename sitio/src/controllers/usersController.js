@@ -15,7 +15,7 @@ module.exports = {
     
     processRegister : (req,res) => {
         return res.send(req.body)
-        const {name,email,password} = req.body;
+        const {name,email,password,image,terms,sales} = req.body;
 
         let user = {
             id : users[users.length-1] ? users[users.length-1].id + 1 : 1,

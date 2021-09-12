@@ -6,7 +6,7 @@
 <body>
 	<%- include('partials/header') %>
 	<main id="register">
-		<form action="/users/register" method="POST" id="form">
+		<form action="" method="POST" id="form" enctype="multipart/form-data">
 			<div>
 				<h1>Crear tu cuenta</h1>
 				<div class="element">
@@ -30,10 +30,14 @@
 						<label>Contraseña</label>
 					</div>
 				</div>
+				<div class="element">
+					<label for="img">Subir foto de perfil</label>
+					<input type="file" name="image" id="img" accept="images/*">
+				</div>
 				<label>Acepto los <a href="#!">terminos y condiciones</a></label>
-					<input required type="checkbox" name="terms" id="terms"><br>
+					<input required type="checkbox" name="terms" id="terms" value="true" ><br>
 				<label>Recibir notificaciones de ofertas</label>
-					<input type="checkbox" name="sales" id="sales"><br>
+					<input type="checkbox" name="sales" id="sales" value="true" ><br>
 				<br>
 				<input required type="submit" id="c" name="data-6" id="acept" value="Registrarse">
 			</div>
