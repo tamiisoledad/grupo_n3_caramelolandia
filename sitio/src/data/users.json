@@ -8,5 +8,15 @@
     "rol": "admin",
     "terms": "true",
     "sales": "true"
+  },
+  {
+    "id": 3,
+    "name": "juan diego ",
+    "email": "jdeg_21@hotmail.com",
+    "password": "$2a$10$StwhMho60d5dM5UYrQLl.O5bil5yCnJQ2AW07F4sAScbsP5.eZ96G",
+    "image": "1631484467713_img_.png",
+    "rol": "admin",
+    "terms": "true",
+    "sales": "true"
   }
 ]
