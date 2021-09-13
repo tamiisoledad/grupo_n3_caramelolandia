@@ -12,12 +12,15 @@ module.exports = {
     processLogin : (req,res) => {
         let errors = validationResult(req)
         if(errors.isEmpty()){
-            const {email} = req.body
+            const {email, remember} = req.body
         let usuario = users.find(usuario=>usuario.email === email)
         req.session.userLogin={
             id: usuario.id,
             nombre: usuario.nombre,
             rol : usuario.rol
+        }
+        if(remember){
+            res.cookie("remember", req.session.userLogin, {maxAge: 3000000*60})
         }
         return res.redirect('/')
         }else{
@@ -48,7 +51,8 @@ module.exports = {
         return res.redirect('/users/login')
     },
     logout : (req,res)=> {
-        req.session.destroy()
+        req.session.destroy();
+        res.cookie("remember", null, {maxAge: -1});
         return res.redirect('/')
     }
 }

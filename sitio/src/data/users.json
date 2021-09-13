@@ -18,5 +18,15 @@
     "rol": "admin",
     "terms": "true",
     "sales": "true"
+  },
+  {
+    "id": 4,
+    "name": "Tamara Benitez",
+    "email": "tamiisoledad4@gmail.com",
+    "password": "$2a$10$hGcBPxGteMrQDUhiEJmJruyQG/WEB.4zPHs57EHPkUh4y0OObaQ3S",
+    "image": "1631491552343_img_.png",
+    "rol": "admin",
+    "terms": "true",
+    "sales": "true"
   }
 ]
