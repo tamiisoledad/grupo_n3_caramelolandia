@@ -1,7 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ERROR</title>
+</head>
 <body>
 <main>
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<pre>
+<%= message %>
+</pre>
+<!-- <%= error.status %> -->
+<!-- <%= error.stack %> -->
 </main>
+<style>
+:root {
+	--black: #21222c !important;
+	--gray: #6c7393 !important;
+	--white: #f8f8f2 !important;
+	--cyan: #80ffea !important;
+	--pink: #ff80bf !important;
+	--green: #8aff80 !important;
+	--yellow: #ffff80 !important;
+	--purple: #9580ff !important;
+	--blue: #6272a4 !important;
+}
+html {
+    background: var(--black);
+    color: var(--white);
+    font-size: large;
+    font-family: monospace;
+}
+.clave {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.operador{
+	color: var(--pink);
+}
+.clase {
+	color: var(--cyan) !important;
+}
+.metodo {
+	color: var(--green) !important;
+}
+.funcion {
+	color: var(--cyan) !important;
+}
+.comentario {
+	color: var(--pink) !important;
+}
+.numero {
+	color: var(--purple) !important;
+}
+.cadena {
+	color: var(--yellow) !important;
+}
+</style>
+<script>
+let element = document.querySelector("pre");
+element.innerHTML = element.innerHTML
+.replace(/^(\w|\W)+(sitio)/gmi, `$2`)
+.replace(/(\t)/gmi, `  `)
+.replace(/\"([\x09-\!#-■]*)\"/gmi, `<font class="cadena">"$1"</font>`)
+.replace(/\'([!-&\s(-■]+)\'/gmi, `<font class="cadena">'$1'</font>`)
+.replace(/\s(\w+)\.(\w+)\s/gmi, ` <font class="clase">$1</font>.<font class="metodo">$2</font> `)
+.replace(/\s(\w+)\.(\w+)\(/gmi, ` <font>$1</font>.<font class="funcion">$2</font>(`)
+.replace(/\s(\w+)\(/gmi, ` <font class="funcion">$1</font>(`)
+.replace(/\b(is not a )(number|string|object|array|function)\b/gmi, `<font class="clave">$1$2</font>`)
+.replace(/\b(\d+)\b/gmi, `<font class="numero">$1</font>`)
+;
+</script>
 </body>
