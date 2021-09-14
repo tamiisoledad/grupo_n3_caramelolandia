@@ -13,7 +13,7 @@
                     <tr>
                         <th><buscador></buscador></th>
                         <th></th>
-                        <th><a href="/products/add" id="create"><a></th>
+                        <th><a href="/products/add" id="create"><i class="icon">add</i><a></th>
                         <th>PRECIO</th>
                         <th>DESCUENTO</th>
                         <th>STOCK</th>
@@ -22,7 +22,7 @@
 
                 <% productos.forEach(producto => { %>
                     <tr>
-                        <td><%= producto.categoria %> <%= producto.Marca %> de <%= producto.Variedad %></td>
+                        <td><a href="/products/detail/<%= producto.id %>"><%= producto.categoria %> <%= producto.Marca %> de <%= producto.Variedad %></a></td>
                         <td>
                             <% if(producto.Vegano){ %>
                                 <img class="tag" src="images/celiacos-1.jpg">
@@ -32,12 +32,12 @@
                             <% } %>
                         </td>
                         <td>
-                            <a href="/products/edit/<%= producto.id %>" class="update"></a>
+                            <a href="/products/edit/<%= producto.id %>" class="update"><i class="icon">edit</i></a>
 
                             <form
                                 action="/products/delete/<%= producto.id %>?_method=DELETE"
                                 method="POST">
-                                <button type='submit' class="release"></button>
+                                <button type='submit' class="release"><i class="icon">delete</i></button>
                             </form>
                         </td>
                         <td><%= producto.Precio %></td>
@@ -51,145 +51,6 @@
     <%- include('../partials/footer') %>
 
 </body>
-<style>
-#admin form{
-    display: initial;
-}
-#admin {
-    padding: 1rem 3rem;
-    min-height: 100vh;
-}
-#admin h1 {
-    font-size: xxx-large;
-    font-weight: 400;
-}
-#admin table,
-#admin td,
-#admin th {
-    border: none
-}
-#admin table {
-    width: 100%;
-    display: table;
-    border-collapse: collapse;
-    border-spacing: 0
-}
-#admin tr {
-    border-bottom: 1px solid rgba(0, 0, 0, .12)
-}
-#admin td,
-#admin th {
-    padding: 15px 5px;
-    display: table-cell;
-    text-align: left;
-    vertical-align: middle;
-    border-radius: 2px
-}
-#admin .tag {
-    height: 19px;
-    margin: 0px 5px -5px 0px;
-}
-#admin input {
-    outline: none;
-    border: none;
-    border-bottom: 1px solid rgb(0 0 0 / 12%);
-    font-size: 1rem;
-    position: relative;
-    top: 2px;
-    width: 100%;
-    padding: 2px;
-    background: transparent;
-}
-#admin hr {
-    border: none;
-    border-bottom: 1px solid rgb(0 0 0 / 12%);
-    margin: 3px 0px 4px;
-}
-#admin td:nth-child(4):before {
-    content: "$";
-}
-#admin td:nth-child(5):after {
-    content: "%";
-}
-#admin td:nth-child(4),
-#admin th:nth-child(4),
-#admin td:nth-child(5),
-#admin th:nth-child(5),
-#admin td:nth-child(6),
-#admin th:nth-child(6){
-    text-align: center !important;
-}
-#admin .update,
-#admin .release,
-#admin #create {
-    width: 2rem;
-    height: 2rem;
-    color: white;
-    border: none;
-    cursor: pointer;
-    display: block;
-    position: relative;
-    font-size: large;
-}
-#admin .update:active,
-#admin .release:active,
-#admin #create:active{
-  top: 3px;
-}
-
-#admin .update {
-    background: #03a9f4;
-    border-radius: 5px 0 0 5px;
-}
-#admin .update::before {
-    content: "E";
-    position: relative;
-    left: 11px;
-    top: 5px;
-}
-#admin .release {
-    background: #f44336;
-    border-radius: 0 5px 5px 0;
-}
-#admin .release::before {
-    content: "X";
-    position: relative;
-}
-#admin td:nth-child(3){
-    display: flex;
-}
-#admin th:nth-child(3){
-    padding: 0px 21px;
-}
-#admin #create {
-    background: white;
-    color: black;
-    border: 1px solid rgb(0 0 0 / 50%);
-    font-size: xx-large;
-}
-#admin #create::before {
-    content: "+";
-    bottom: 5px;
-    left: 6px;
-    position: relative;
-}
-#admin #create:hover::after {
-    top: -67px;
-    left: 32px;
-    position: relative;
-    display: block;
-    padding: 5px 4px 5px 20px;
-    width: 55px;
-    border-radius: 1rem 1rem 1rem 0;
-}
-#admin #create::after {
-    background: var(--fucsia);
-    content: "nuevo";
-    font-size: 13px;
-    position: absolute;
-    display: none;
-}
-</style>
 <script>
 const $ = x => document.querySelectorAll(x);
 
