@@ -24,7 +24,7 @@
                     <tr>
                         <td>
                             <id>
-                                <% if (producto.id < 10) { -%>0<% } -%><%= producto.id %></id>
+                                <% if (producto.id < 100 && productos.length > 99) { -%>0<% } -%><% if (producto.id < 10 && productos.length > 9) { -%>0<% } -%><%= producto.id %></id>
                                 <a href="/products/detail/<%= producto.id %>" title="Ver más">
                                     <%= producto.categoria %> <%= producto.Marca %> de <%= producto.Variedad %>
                                 </a>
