@@ -22,22 +22,28 @@
 
                 <% productos.forEach(producto => { %>
                     <tr>
-                        <td><a href="/products/detail/<%= producto.id %>"><%= producto.categoria %> <%= producto.Marca %> de <%= producto.Variedad %></a></td>
                         <td>
-                            <% if(producto.Vegano){ %>
-                                <img class="tag" src="images/celiacos-1.jpg">
+                            <id>
+                                <% if (producto.id < 10) { -%>0<% } -%><%= producto.id %></id>
+                                <a href="/products/detail/<%= producto.id %>" title="Ver más">
+                                    <%= producto.categoria %> <%= producto.Marca %> de <%= producto.Variedad %>
+                                </a>
+                        </td>
+                        <td>
+                            <% if(producto.Vegano){ -%>
+                                <img class="tag" src="images/celiacos-1.jpg" title="Vegano">
                             <% } %>
-                            <% if(producto.Celiaco){ %>
-                                <img class="tag" src="images/descarga.png">
+                            <% if(producto.Celiaco){ -%>
+                                <img class="tag" src="images/descarga.png" title="Celiaco">
                             <% } %>
                         </td>
                         <td>
-                            <a href="/products/edit/<%= producto.id %>" class="update"><i class="icon">edit</i></a>
+                            <a href="/products/edit/<%= producto.id %>" class="update" title="Actualizar"><i class="icon">edit</i></a>
 
                             <form
                                 action="/products/delete/<%= producto.id %>?_method=DELETE"
                                 method="POST">
-                                <button type='submit' class="release"><i class="icon">delete</i></button>
+                                <button type='submit' class="delete" title="Borrar"><i class="icon">delete</i></button>
                             </form>
                         </td>
                         <td><%= producto.Precio %></td>
@@ -59,7 +65,7 @@ $('buscador')[0].innerHTML = `
         type="search"
         id="buscador"
         oninput="search()"
-        placeholder="Alfajor, caramelo..."
+        placeholder="id, categoria, marca..."
     >
 `
 function search() {
