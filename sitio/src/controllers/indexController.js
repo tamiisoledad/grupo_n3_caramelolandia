@@ -14,7 +14,7 @@ module.exports = {
     },
     admin : (req,res) => {
         return res.render('admin/admin',{
-            productos : JSON.parse(fs.readFileSync(path.join(__dirname, "../data/productos.json"), "utf-8"))
+            productos : JSON.parse(fs.readFileSync(path.join(__dirname, "../data/productos.json"), "utf-8")).reverse()
         })
     },
     contacto : (req,res) => res.render("contact") 
