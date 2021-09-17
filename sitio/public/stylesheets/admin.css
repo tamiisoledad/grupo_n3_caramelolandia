@@ -19,6 +19,7 @@
   word-wrap: normal;
   direction: ltr;
   -webkit-font-smoothing: antialiased;
+  color: var(--negro);
 }
 
 #admin form{
@@ -28,7 +29,7 @@
     padding: 1rem 3rem;
     min-height: 100vh;
 }
-#admin h1 {
+#admin h2 {
     font-size: xxx-large;
     font-weight: 400;
 }
@@ -93,7 +94,7 @@
 #admin #create {
     width: 2.2rem;
     height: 2.2rem;
-    color: white;
+    color: var(--blanco);
     border: none;
     cursor: pointer;
     display: block;
@@ -120,19 +121,19 @@
 #admin th:nth-child(3){
     padding: 0px 21px;
 }
-#admin i {
+#admin .update i.icon,
+#admin .delete i.icon {
     position: relative;
-    color: white;
+    color: var(--blanco);
 }
-#admin .update i {
+#admin .update i.icon {
     top: 5px;
     left: 6px;
 }
-#admin .delete i {
+#admin .delete i.icon {
     top: 2px;
 }
-#admin #create i {
-    color: black;
+#admin #create i.icon {
     position: absolute;
     font-size: xx-large;
     top: 4px;
