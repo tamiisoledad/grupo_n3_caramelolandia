@@ -35,20 +35,17 @@ html {
     font-weight: bold;
     text-transform: uppercase;
 }
-.operador{
-	color: var(--pink);
+.operador, .comentario{
+	color: var(--pink) !important;
 }
 .clase {
 	color: var(--cyan) !important;
 }
-.metodo {
+.metodo, .atributo {
 	color: var(--green) !important;
 }
 .funcion {
 	color: var(--cyan) !important;
-}
-.comentario {
-	color: var(--pink) !important;
 }
 .numero {
 	color: var(--purple) !important;
@@ -60,15 +57,17 @@ html {
 <script>
 let element = document.querySelector("pre");
 element.innerHTML = element.innerHTML
-.replace(/^(\w|\W)+(sitio)/gmi, `$2`)
-.replace(/(\t)/gmi, `  `)
-.replace(/\"([\x09-\!#-■]*)\"/gmi, `<font class="cadena">"$1"</font>`)
-.replace(/\'([!-&\s(-■]+)\'/gmi, `<font class="cadena">'$1'</font>`)
-.replace(/\s(\w+)\.(\w+)\s/gmi, ` <font class="clase">$1</font>.<font class="metodo">$2</font> `)
-.replace(/\s(\w+)\.(\w+)\(/gmi, ` <font>$1</font>.<font class="funcion">$2</font>(`)
-.replace(/\s(\w+)\(/gmi, ` <font class="funcion">$1</font>(`)
-.replace(/\b(is not a )(number|string|object|array|function)\b/gmi, `<font class="clave">$1$2</font>`)
-.replace(/\b(\d+)\b/gmi, `<font class="numero">$1</font>`)
-;
+.replace(/^(\w|\W)+(sitio)/gim, `$2`)
+.replace(/(\t)/gim, `  `)
+.replace(/\"([\x09-\!#-■]*)\"/gim, `<font class="cadena">"$1"</font>`)
+.replace(/\'([!-&\s(-■]+)\'/gim, `<font class="cadena">'$1'</font>`)
+.replace(/\s(\w+)\.(\w+)\s/gim, ` <font class="clase">$1</font>.<font class="metodo">$2</font> `)
+.replace(/\s(\w+)\.(\w+)\(/gim, ` <font>$1</font>.<font class="funcion">$2</font>(`)
+.replace(/\s(\w+)\(/gim, ` <font class="funcion">$1</font>(`)
+.replace(/^(\w+)\s(is not a |is not )(number|string|object|array|function|null|undefined|class|infinity|nan|defined)\b/gim, `<font class="funcion">$1</font> <u><font class="clave">$2$3</font></u>`)
+.replace(/(\s|\-|\,|\()(?!\$)(\d+)(?!\:|\@)(i)?\b/gim, `$1<font class="numero">$2$3<\/font>`)
+.replace(/([\w-\W].+)\.(ejs|js)(:\d+)/, `<font class="comentario">$1.$2$3</font><br>`)
+.replace(/%(\b|_|=|-|#|%|\s)([\x09-$&-\xFF]+)(\s|-|_)%/gim, `%$1<font class="funcion">$2</font>$3%`)
+.replace(/(Could not find the include file )/, `<font class="clave">$1</font>`)
 </script>
 </body>
