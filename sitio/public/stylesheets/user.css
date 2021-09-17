@@ -5,6 +5,23 @@
     font-size: 14px;
     color: var(--negro);
 }
+
+@media (min-width:481px) /* tablet */ {
+    #user * { font-size: 15px;   }
+}
+
+@media (min-width:769px) /* desktop */ {
+    #user * { font-size: 16px;   }
+}
+
+@media (min-width:1200px)/* largue monitor */ {
+    #user * { font-size: 16.7px; }
+}
+
+@media (min-width:1400px)/* gigant monitor */ {
+    #user * { font-size: 17.4px; }
+}
+
 #user {
     background-color: var(--blanco);
 }
