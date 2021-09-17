@@ -17,5 +17,6 @@ module.exports = {
             productos : JSON.parse(fs.readFileSync(path.join(__dirname, "../data/productos.json"), "utf-8")).reverse()
         })
     },
-    contacto : (req,res) => res.render("contact") 
+    contacto : (req,res) => res.render("contact") ,
+    usuario : (req,res) => res.render("user") 
 }
