@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('partials/head', {title: "Usuario"})%>
+<%- include('partials/head', {title: "Perfil de usuario"})%>
 
 <body>
     <%- include('partials/header') %>
 
     <main id="user">
-        <div id="background">
+        <div id="background" style="background: url('images/fondo.webp')">
             <h1 id="name">Usuario</h1>
             <div id="perfil" style="background-image: url('images/profiles/1631491552343_img_.png')">
-                <button id="imagen"><a href=""><i class="icon">photo_camera</i></a></button>
+                <button id="imagen"><a href=""><i class="icon" id="camera">photo_camera</i></a></button>
             </div>
         </div>
         <div id="contain">

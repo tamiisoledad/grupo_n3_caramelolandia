@@ -9,7 +9,6 @@
     background-color: var(--blanco);
 }
 #user #background {
-    background: url('images/fondo.webp');
     position: relative;
     height: 200px;
 }
@@ -33,6 +32,10 @@
     bottom: -4px;
     right: -7px;
 }
+#user #camera {
+    position: relative;
+    bottom: -2px;
+}
 #user #name {
     position: absolute;
     font-weight: 700;
@@ -44,8 +47,7 @@
     padding: 1.2rem;
 }
 #user ul {
-    background-color: var(--blanco);
-    padding: 10px;
+    background-color: #7b7b7b1f;
     box-shadow: 0px 2px 8px -6px;
     gap: 1px;
     display: grid;
