@@ -28,5 +28,14 @@
     "rol": "admin",
     "terms": "true",
     "sales": "true"
+  },
+  {
+    "id": 5,
+    "name": "admin",
+    "email": "admin@candyland.com",
+    "password": "$2a$10$xor5MaeR5mtfk81tHD6aOe.JBFWyl/dzBuweP8.As4eG4BQxoDIa6",
+    "image": "default-image.png",
+    "rol": "admin",
+    "terms": "true"
   }
 ]
