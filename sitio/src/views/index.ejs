@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('partials/head',{title: "Caramelolandia"})%>
+ <%- include('partials/head',{title: "Caramelolandia"})%>
 <script defer src="/javascript/index.js"></script>
 
 <body class="home">
@@ -9,17 +9,16 @@
     <main>
         <section class="carrusel">
             <div class="grande">
-                <img src="/images/banner/imagen.jpg" alt="Imagen 1" class="img">
-                <img src="/images/banner/imagen7.jfif" alt="Imagen 2" class="img">
+                <div class="carousel-item"></div>
+                <div class="carousel-item2"></div>
             </div>
             <il class="puntos">
                 <li class="punto activo"></li>
                 <li class="punto"></li>
             </il>
         </section>
-        <div>
+        
             <h2>productos</h2>
-        </div>
         <section class="productos">
             <div class="pri">
                 <% productos.forEach(producto => { %>
@@ -39,5 +38,4 @@
     </main>
     <%- include('partials/footer') %>
 </body>
-
 </html>

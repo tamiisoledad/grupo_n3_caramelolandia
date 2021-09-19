@@ -2,6 +2,10 @@
   scroll-behavior: smooth;
 }
 
+#login span{
+  color: red;
+  margin-bottom: 15px;
+}
 body > #login, #login *, .lupa i {
   background:  var(--blanco);
   color: var(--negro);
