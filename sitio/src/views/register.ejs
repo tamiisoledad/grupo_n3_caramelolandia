@@ -11,23 +11,26 @@
 				<h1>Crear tu cuenta</h1>
 				<div class="element">
 					<div class="input-data">
-						<input type="text" required name="name" id="name">
+						<input type="text"  name="name" id="name" value="<%= locals.old && old.name ? old.name : null %>">
 						<div class="underline"></div>
 						<label>Nombre Completo</label>
+						<span><%= locals.errors && errors.name ? errors.name.msg : null %></span>
 					</div>
 				</div>
 				<div class="element">
 					<div class="input-data">
-						<input type="email" required name="email" id="email">
+						<input type="email"  name="email" id="email" value="<%= locals.old && old.email ? old.email : null %>">
 						<div class="underline"></div>
 						<label>Correo electronico</label>
+						<span><%= locals.errors && errors.email ? errors.email.msg : null %></span>
 					</div>
 				</div>
 				<div class="element">
 					<div class="input-data">
-						<input type="password" required name="password" id="password">
+						<input type="password"  name="password" id="password" value="<%= locals.old && old.password ? old.password : null %>">
 						<div class="underline"></div>
 						<label>Contraseña</label>
+						<span><%= locals.errors && errors.password ? errors.password.msg : null %></span>
 					</div>
 				</div>
 				<div class="element">
@@ -35,7 +38,7 @@
 					<input type="file" name="image" id="img" accept="images/*">
 				</div>
 				<label>Acepto los <a href="#!">terminos y condiciones</a></label>
-					<input required type="checkbox" name="terms" id="terms" value="true" ><br>
+					<input  type="checkbox" name="terms" id="terms" value="true" ><br>
 				<label>Recibir notificaciones de ofertas</label>
 					<input type="checkbox" name="sales" id="sales" value="true" ><br>
 				<br>

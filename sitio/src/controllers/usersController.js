@@ -8,7 +8,9 @@ let users = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','users.js
 
 
 module.exports = {
+
     login : (req,res) => res.render("login"),
+
     processLogin : (req,res) => {
         let errors = validationResult(req)
         if(errors.isEmpty()){
@@ -28,12 +30,14 @@ module.exports = {
         }
     },
 
-    register : (req,res) => res.render("register",{
-        productos
-    }),
+    register : (req,res) => res.render("register"),
     
     processRegister : (req,res) => {
-        const {name,email,password,terms,sales} = req.body;
+
+        let errors = validationResult(req)
+
+        if(errors.isEmpty()){
+            const {name,email,password,terms,sales} = req.body;
 
         let user = {
             id : users[users.length-1] ? users[users.length-1].id + 1 : 1,
@@ -49,6 +53,12 @@ module.exports = {
         users.push(user);
         fs.writeFileSync(path.join(__dirname,'..','data','users.json'),JSON.stringify(users,null,2),'utf-8');
         return res.redirect('/users/login')
+        }else{
+            res.render('register',{
+                errors : errors.mapped(),
+                old : req.body
+            })
+        }
     },
     logout : (req,res)=> {
         req.session.destroy();

@@ -14,6 +14,10 @@ body > #register, #register *, .lupa i {
   align-items: center;
 }
 
+#register span{
+  color: red;
+}
+
 #register form {
 	margin: 15vh 0;
 }
