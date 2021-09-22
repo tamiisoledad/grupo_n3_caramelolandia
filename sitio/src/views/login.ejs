@@ -24,10 +24,10 @@
 		         </div><br>
 				 <div class="">
 		            <input type="checkbox" name="remember">
-		            <div class="underline"></div>
 		            <label>Recordarme</label>
 		         </div>
 		      </div><br>
+			  <span><%= locals.errores && errores ? errores.email.msg : null %></span><br>
 				<input required type="submit" id="c" name="data-3" id="acept" value="Continuar">
 			</div>
 			<div id="get">

@@ -1,6 +1,23 @@
 /* main */
 .home{
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+}
+.home .carousel-item{
+    /* height: 450px; */
+    width: 100%;
+    background-image: url('/images/banner/imagen.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 2.8%;
+    min-height: 200px !important;
+}
+.home .carousel-item2{
+    /* height: 450px; */
+    width: 100%;
+    background-image: url('/images/banner/imagen4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 200px !important;
 }
 .home main section.carrusel {
     width: 100%;
@@ -8,9 +25,11 @@
     background-repeat: repeat;
     border-bottom:1px solid rgba(0, 0, 0, 0.3);
     border: solid 1px black;
+    height: 250px;
+    max-height: 600px;
 }
 .home .carrusel{
-    width: 90%;
+    width: 100%;
     max-width: 120em;
     padding: 2em;
     
@@ -23,6 +42,7 @@
     align-items: center;
     transition: all .5s ease;
     transform: translateX(0%);
+    height: 167px;
     max-height: 700px !important; 
 }
 .home .carrusel .img{
@@ -52,10 +72,15 @@
     background-color: rgb(250, 135, 240);
 }
 
-.home main div h2{
+.home main h2{
     text-transform: capitalize;
     text-align: center;
-    margin-top: 10px;
+    margin: 30px;
+}
+.home main section.productos div.pri{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .home main section.productos div  article{
     display: flex;
@@ -63,7 +88,7 @@
     align-items: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     margin: 10px;
-    width: 25%;
+    width: 75%;
     max-height: 70vh;
 }
 .home main section.productos article img{
@@ -101,6 +126,9 @@
 }
 /* laptops */
 @media (min-width:769px){
+    .home main section.carrusel {
+        height: 900px;
+    }
     .home .carrusel{
     margin-bottom: 10px;
     }
@@ -109,16 +137,27 @@
     height: 2em;
     margin: 1em 1em 0;
     }
+    .home .carrusel .grande{
+        height: 486px;
+    }
     .home main section.productos{
         display: flex;
         flex-direction: column;
     }
     .home main section.productos div.pri{
         display: flex;
+        flex-direction: row;
     }
     .home main section.productos article{
         margin: 18px;
         width: 350px;
+    }
+    .home .carousel-item{
+        height: 450px;
+       
+    }
+    .home .carousel-item2{
+        height: 450px;
     }
 }
 /* desktop */

@@ -34,7 +34,7 @@ height: 100%;
     text-align: center;
     margin-bottom: 10px;
 }
-.contacto button{
+.contacto button.cont{
     background-color: var(--rosa);
     text-align: center;
     border: none;
