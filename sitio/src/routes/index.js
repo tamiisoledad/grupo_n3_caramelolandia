@@ -9,6 +9,7 @@ module.exports = express.Router()
 	/* GET home page. */
 	.get('/', index)
 	.get('/user', User.isLoger, usuario)
+	.post('/user')
 		// &&
 		.get('/admin', User.isAdmin, admin)
 	.get('/contact', contacto)
