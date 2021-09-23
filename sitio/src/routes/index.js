@@ -8,8 +8,9 @@ const User = {
 module.exports = express.Router()
 	/* GET home page. */
 	.get('/', index)
-	.get('/admin', User.isAdmin, admin)
 	.get('/user', User.isLoger, usuario)
+		// &&
+		.get('/admin', User.isAdmin, admin)
 	.get('/contact', contacto)
 	.get('/search', search)
 ;
