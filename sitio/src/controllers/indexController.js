@@ -18,5 +18,7 @@ module.exports = {
         })
     },
     contacto : (req,res) => res.render("contact") ,
-    usuario : (req,res) => res.render("user") 
+    usuario : (req,res) => res.render("user",{
+        user : JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json"), "utf-8"))
+    }) 
 }
