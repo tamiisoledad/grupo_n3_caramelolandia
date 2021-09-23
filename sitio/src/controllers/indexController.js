@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/productos.json"), "utf-8"));
+const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "productos.json"), "utf-8"));
 
 module.exports = {
     index : (req,res) => res.render("index",{
@@ -14,11 +14,12 @@ module.exports = {
     },
     admin : (req,res) => {
         return res.render('admin/admin',{
-            productos : JSON.parse(fs.readFileSync(path.join(__dirname, "../data/productos.json"), "utf-8")).reverse()
+            productos : JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "productos.json"), "utf-8")).reverse(),
+            usuarios : JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "users.json"), "utf-8")).reverse()
         })
     },
     contacto : (req,res) => res.render("contact") ,
     usuario : (req,res) => res.render("user",{
-        user : JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json"), "utf-8"))
+
     }) 
 }
