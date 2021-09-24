@@ -8,8 +8,10 @@
 
     <main id="user">
         <div id="background" style="background: url('images/fondo.webp')">
-            <h1 id="name">Usuario</h1>
-            <div id="perfil" style="background-image: url('images/profiles/1631491552343_img_.png')">
+            <h1 id="name">
+                <%= usuarios.filter(user => (user.id == usuario.id))[0].name %>
+            </h1>
+            <div id="perfil" style="background-image: url('images/profiles/<%= usuarios.filter(user => (user.id == usuario.id))[0].image %>')">
                 <button id="imagen"><a href=""><i class="icon" id="camera">photo_camera</i></a></button>
             </div>
         </div>
@@ -17,13 +19,13 @@
             <h2>Datos personales</h2>
             <ul>
                 <li><b>Nombre y apellido</b>
-                    <br>User Example
+                    <br><%= usuarios.filter(user => (user.id == usuario.id))[0].name %>
                 </li>
                 <li><b>Documento</b>
                     <br>12345678
                 </li>
                 <li><b>Email</b>
-                    <br>user@example.com
+                    <br><%= usuarios.filter(user => (user.id == usuario.id))[0].email %>
                 </li>
                 <li><b>Telefono</b>
                     <br>1234567890
