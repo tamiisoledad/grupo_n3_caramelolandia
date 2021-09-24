@@ -28,8 +28,7 @@ module.exports = {
     },
     usuario : (req,res) => {
         return res.render("user", {
-            usuario : req.session.userLogin,
-            usuarios : DataBase.get("users")
+            user : DataBase.get("users").filter(u => (u.id == req.session.userLogin.id))[0]
         })
     },
     contacto : (req,res) => res.render("contact")

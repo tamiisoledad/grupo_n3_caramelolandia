@@ -9,9 +9,9 @@
     <main id="user">
         <div id="background" style="background: url('images/fondo.webp')">
             <h1 id="name">
-                <%= usuarios.filter(user => (user.id == usuario.id))[0].name %>
+                <%= user.name %>
             </h1>
-            <div id="perfil" style="background-image: url('images/profiles/<%= usuarios.filter(user => (user.id == usuario.id))[0].image %>')">
+            <div id="perfil" style="background-image: url('images/profiles/<%= user.image %>')">
                 <button id="imagen"><a href=""><i class="icon" id="camera">photo_camera</i></a></button>
             </div>
         </div>
@@ -19,19 +19,19 @@
             <h2>Datos personales</h2>
             <ul>
                 <li><b>Nombre y apellido</b>
-                    <br><%= usuarios.filter(user => (user.id == usuario.id))[0].name %>
+                    <br><%= user.name %>
                 </li>
                 <li><b>Documento</b>
-                    <br>12345678
+                    <br><%= user.dni || "12345678" %>
                 </li>
                 <li><b>Email</b>
-                    <br><%= usuarios.filter(user => (user.id == usuario.id))[0].email %>
+                    <br><%= user.email %>
                 </li>
                 <li><b>Telefono</b>
-                    <br>1234567890
+                    <br><%= user.tel || "1234567890" %>
                 </li>
                 <li><b>Dirreccion</b>
-                    <br>Address of ways 1234
+                    <br><%= user.adrress || "Example Addres's  1234" %>
                 </li>
             </ul>
             <h2>Tarjetas</h2>
