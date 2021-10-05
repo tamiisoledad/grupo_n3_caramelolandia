@@ -1,6 +1,14 @@
 const fs = require("fs");
 const path = require("path");
-const productos = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/productos.json"), "utf-8"));
+
+const DataBase = {
+    /** Regresa la base de datos completa.
+     * fileName : String
+    */
+    get : (fileName) => JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", fileName + '.json'), "utf-8"))
+}
+
+const productos = DataBase.get("productos")
 
 module.exports = {
     index : (req,res) => res.render("index",{
@@ -14,9 +22,14 @@ module.exports = {
     },
     admin : (req,res) => {
         return res.render('admin/admin',{
-            productos : JSON.parse(fs.readFileSync(path.join(__dirname, "../data/productos.json"), "utf-8")).reverse()
+            productos : DataBase.get("productos").reverse(),
+            usuarios : DataBase.get("users").reverse()
         })
     },
-    contacto : (req,res) => res.render("contact") ,
-    usuario : (req,res) => res.render("user") 
+    usuario : (req,res) => {
+        return res.render("user", {
+            user : DataBase.get("users").filter(u => (u.id == req.session.userLogin.id))[0]
+        })
+    },
+    contacto : (req,res) => res.render("contact")
 }
