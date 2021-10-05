@@ -406,20 +406,6 @@
     "Celiaco": true
   },
   {
-    "id": 30,
-    "Producto": "Gomitas Ositos-Mogul",
-    "categoria": "Gomitas",
-    "Informacion": "dfljksldkjflksjdlkjdsfj slkdjflksdflksjdflksjdflksdjflksdjfskdljf sdlkfjsdlkfjsdlkfjslkdfjdsk sdlf sdlkjfldskjfldskfjdsklg",
-    "Marca": "Mogul",
-    "Precio": 878,
-    "Variedad": "Ositos ",
-    "Stock": 43,
-    "Descuento": 34,
-    "Imagen": "gomitasOsitos-Mogul.webp",
-    "Vegano": true,
-    "Celiaco": false
-  },
-  {
     "id": 31,
     "Producto": "Chupetines Felfort paraguitas",
     "categoria": "Chupetines",
