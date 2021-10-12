@@ -1,5 +1,7 @@
 -- MySQL dump 10.13  Distrib 5.5.62, for Win64 (AMD64)
 --
+CREATE DATABASE  IF NOT EXISTS `caramelolandia` 
+USE `caramelolandia`
 -- Host: localhost    Database: caramelolandia
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.4.21-MariaDB
