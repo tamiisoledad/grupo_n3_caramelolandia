@@ -22,7 +22,7 @@ module.exports = (sequelize,dataTypes) => {
 
     const config = {
 
-      tableName : 'image', //si la tabla no coincide con el prural del modelo va esta configuracion
+      tableName : 'images', //si la tabla no coincide con el prural del modelo va esta configuracion
       timestamps : true, // si tiene timestamps va false
       underscored : true // si esta escrito con guion bajo(_) ej: updated_:at
 
@@ -33,7 +33,7 @@ const Image = sequelize.define(alias,cols,config)
 Image.associate = function(models){
   Image.belongsTo(models.Producto,{
     as : "products",
-    foreignkey: "image_id"
+    foreignkey: "product_id"
   });
 }
 
