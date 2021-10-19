@@ -13,24 +13,16 @@ module.exports = (sequelize,dataTypes) => {
       name : {
           type : dataTypes.STRING(100),
           allowNull : false
-      },
-      ranking : {
-          type : dataTypes.INTEGER.UNSIGNED,
-          allowNull : false,
-          unique : true
-      },
-      active :{
-          type : dataTypes.BOOLEAN,
-          defaultValue : 1,
-          allowNull: false
       }
   }
 
   const config = {
 
-      underscored : true
+    tableName : 'category', //si la tabla no coincide con el prural del modelo va esta configuracion
+    timestamps : true, // si tiene timestamps va false
+    underscored : true // si esta escrito con guion bajo(_) ej: updated_:at
 
-  }
+}
 
 const Category = sequelize.define(alias,cols,config)
 

@@ -20,9 +20,11 @@ module.exports = (sequelize,dataTypes) => {
     }  
     }
 
-  const config = {
+    const config = {
 
-      underscored : true
+      tableName : 'image', //si la tabla no coincide con el prural del modelo va esta configuracion
+      timestamps : true, // si tiene timestamps va false
+      underscored : true // si esta escrito con guion bajo(_) ej: updated_:at
 
   }
 
