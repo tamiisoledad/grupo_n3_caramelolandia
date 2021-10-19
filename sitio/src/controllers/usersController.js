@@ -1,10 +1,5 @@
-const path = require('path');
-const fs = require('fs');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
-let productos = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','productos.json'),'utf-8'));
-let users = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','users.json'),'utf-8'));
-
 
 
 module.exports = {
@@ -15,16 +10,22 @@ module.exports = {
         let errors = validationResult(req)
         if(errors.isEmpty()){
             const {email, remember} = req.body
-        let usuario = users.find(usuario=>usuario.email === email)
-        req.session.userLogin={
-            id: usuario.id,
-            nombre: usuario.nombre,
-            rol : usuario.rol
-        }
-        if(remember){
-            res.cookie("remember", req.session.userLogin, {maxAge: 3000000*60})
-        }
-        return res.redirect('/')
+        db.Usuario.findOne({
+            where: {
+                email
+            }
+        }).then(usuario=> {
+            req.session.userLogin={
+                id: usuario.id,
+                name: usuario.name,
+                rol_id : usuario.rol_id,
+                avatar_id: usuario.avatar_id
+            }
+            if(remember){
+                res.cookie("remember", req.session.userLogin, {maxAge: 3000000*60})
+            }
+            return res.redirect('/')
+        }).catch(error => console.log(error))
         }else{
             return res.render('login',{errores:errors.mapped()})
         }
@@ -37,27 +38,24 @@ module.exports = {
         let errors = validationResult(req)
 
         if(errors.isEmpty()){
-            const {name,email,password,terms,sales} = req.body;
-
-        let user = {
-            id : users[users.length-1] ? users[users.length-1].id + 1 : 1,
-            name : name,
-            email : email,
-            password : bcryptjs.hashSync(password, 10),
-            image : req.file ? req.file.filename : 'default-image.png',
-            rol : "user",
-            terms : terms,
-            sales : sales
-        }
-
-        users.push(user);
-        fs.writeFileSync(path.join(__dirname,'..','data','users.json'),JSON.stringify(users,null,2),'utf-8');
-        return res.redirect('/users/login')
+            const {name,email,password} = req.body;
+            db.Usuario.create({
+                name: name.trim(),
+                email,
+                password: bcryptjs.hashSync(password, 10),
+                rol_id: 2,
+                avatar_id: req.file ? req.file.filename : "default-img.png"
+            }).then(usuario => {
+                req.session.userLogin = {
+                    id: usuario.id,
+                    name: user.name,
+                    avatar_id: user.avatar_id,
+                    rol_id: user.rol_id
+                }
+                return res.redirect("/")
+            }).catch( error=> console.log(error))
         }else{
-            res.render('register',{
-                errors : errors.mapped(),
-                old : req.body
-            })
+            return res.render("register", {errors: errors.mapped()})
         }
     },
     logout : (req,res)=> {
@@ -65,4 +63,5 @@ module.exports = {
         res.cookie("remember", null, {maxAge: -1});
         return res.redirect('/')
     }
+    
 }

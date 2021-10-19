@@ -25,5 +25,18 @@ module.exports = {
             })
         })
     },
+    updateUser : (req,res) => {
+        const {password} = req.body
+        db.Usuario.update({
+            name:req.body.nombre,
+            email: req.body.email,
+            password: bcryptjs.hashSync(password, 10)
+        },{
+            where:{
+                id:req.params.id
+            }
+        })
+        res.redirect('/user')
+        },
     contacto : (req,res) => res.render("contact")
 }
