@@ -48,7 +48,16 @@ module.exports = (sequelize, DataTypes) => {
             type : DataTypes.INTEGER.UNSIGNED,
             defaultValue : null
 
+        },
+            created_at:{
+                type : DataTypes.DATE,
+                defaultValue : null
+            },
+        updated_at: {
+            type : DataTypes.DATE,
+                defaultValue : null
         }
+        
 
     }
      
