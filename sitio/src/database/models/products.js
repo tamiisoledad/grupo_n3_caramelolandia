@@ -34,10 +34,6 @@ module.exports = (sequelize, DataTypes) => {
             type : DataTypes.INTEGER,
             allowNull : false
         },
-        image_id : {
-            type : DataTypes.INTEGER.UNSIGNED,
-            defaultValue : null
-        },
         vegan : {
             type : DataTypes.BOOLEAN,
             allowNull : false,
