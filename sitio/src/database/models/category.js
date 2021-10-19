@@ -36,7 +36,7 @@ const Category = sequelize.define(alias,cols,config)
 
 Category.associate = function(models){
 
-  Category.hasMany(models.Product, {
+  Category.hasMany(models.Producto, {
 
     as : "products",
 

@@ -1,0 +1,4 @@
+.env
+.env.Example
+.env.Local
+.env.Staging

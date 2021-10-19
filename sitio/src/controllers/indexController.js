@@ -1,34 +1,28 @@
-const fs = require("fs");
-const path = require("path");
-
-const DataBase = {
-    /** Regresa la base de datos completa.
-     * fileName : String
-    */
-    get : (fileName) => JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", fileName + '.json'), "utf-8"))
-}
-
-const productos = DataBase.get("productos")
+const db= require('../database/models');
 
 module.exports = {
-    index : (req,res) => res.render("index",{
-        productos
-    }),
-    search: (req, res) => {
-        let resultado = productos.filter(producto => producto.Producto.toLowerCase().includes(req.query.buscar.toLowerCase()) || producto.categoria.toLowerCase().includes(req.query.buscar.toLowerCase()))
-        return res.render("search",{
-            productos: resultado
+    index : (req,res) => {
+        db.Producto.findAll()
+        .then(function(productos){
+            return res.render('products', {
+                productos: productos
+            })
         })
     },
     admin : (req,res) => {
-        return res.render('admin/admin',{
-            productos : DataBase.get("productos").reverse(),
-            usuarios : DataBase.get("users").reverse()
+        db.Producto.findAll()
+        .then(function(productos){
+            return res.render('admin/admin', {
+                productos: productos
+            })
         })
     },
     usuario : (req,res) => {
-        return res.render("user", {
-            user : DataBase.get("users").filter(u => (u.id == req.session.userLogin.id))[0]
+        db.Usuario.findByPk(req.params.id)
+        .then(function(usuario){
+            res.render('user',{
+                usuario:usuario
+            })
         })
     },
     contacto : (req,res) => res.render("contact")

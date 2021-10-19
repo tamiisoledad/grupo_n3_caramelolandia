@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
             type : DataTypes.DECIMAL(3,2),
             allowNull : false
         },
-        vareity : {
+        variety : {
             type : DataTypes.STRING(500),
             allowNull : false
         },
@@ -48,11 +48,6 @@ module.exports = (sequelize, DataTypes) => {
             allowNull : false,
             defaultValue: 0
         },
-        length : {
-            type : DataTypes.INTEGER.UNSIGNED,
-            defaultValue : null
-
-        },
         category_id : {
             type : DataTypes.INTEGER.UNSIGNED,
             defaultValue : null
@@ -72,7 +67,7 @@ module.exports = (sequelize, DataTypes) => {
     const Product = sequelize.define(alias,cols,config)
     
     Product.associate = function(models){
-        Product.hasMany(models.image,{
+        Product.hasMany(models.Imagen,{
           as : "image",
           foreignkey: "image_id"
         });
