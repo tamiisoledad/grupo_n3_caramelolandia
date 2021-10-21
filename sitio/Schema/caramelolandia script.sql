@@ -18,34 +18,6 @@ USE `caramelolandia`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `avatars`
---
-
-DROP TABLE IF EXISTS `avatars`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `avatars` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `file` varchar(255) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `createdAt` datetime DEFAULT NULL,
-  `updatedAt` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `avatars_FK` (`user_id`),
-  CONSTRAINT `avatars_FK` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `avatars`
---
-
-LOCK TABLES `avatars` WRITE;
-/*!40000 ALTER TABLE `avatars` DISABLE KEYS */;
-/*!40000 ALTER TABLE `avatars` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `categories`
 --
 
@@ -145,7 +117,6 @@ CREATE TABLE `products` (
   `price` decimal(8,2) NOT NULL,
   `variety` varchar(100) DEFAULT NULL,
   `stock` int(11) DEFAULT NULL,
-  `image_id` int(11) NOT NULL,
   `vegan` tinyint(4) NOT NULL,
   `celiac` tinyint(4) NOT NULL,
   `category_id` int(11) NOT NULL,
@@ -205,7 +176,7 @@ CREATE TABLE `users` (
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `avatar_id` varchar(255) DEFAULT NULL,
+  `avatar` varchar(255) DEFAULT NULL,
   `rol_id` int(11) NOT NULL,
   `createdAt` datetime DEFAULT NULL,
   `updatedAt` datetime DEFAULT NULL,
