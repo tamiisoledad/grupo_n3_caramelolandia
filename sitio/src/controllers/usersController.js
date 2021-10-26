@@ -10,7 +10,7 @@ module.exports = {
         let errors = validationResult(req)
         if(errors.isEmpty()){
             const {email, remember} = req.body
-        db.Usuario.findOne({
+        db.User.findOne({
             where: {
                 email
             }
@@ -39,7 +39,7 @@ module.exports = {
 
         if(errors.isEmpty()){
             const {name,email,password} = req.body;
-            db.Usuario.create({
+            db.User.create({
                 name: name.trim(),
                 email,
                 password: bcryptjs.hashSync(password, 10),

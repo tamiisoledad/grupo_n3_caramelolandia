@@ -124,9 +124,7 @@ CREATE TABLE `products` (
   `updatedAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `products_FK` (`category_id`),
-  KEY `products_FK_1` (`image_id`),
-  CONSTRAINT `products_FK` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`),
-  CONSTRAINT `products_FK_1` FOREIGN KEY (`image_id`) REFERENCES `images` (`id`)
+  CONSTRAINT `products_FK` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -150,7 +148,7 @@ CREATE TABLE `rols` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `createdAt` datetime DEFAULT NULL,
-  `updatedAt` int(11) DEFAULT NULL,
+  `updatedAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;

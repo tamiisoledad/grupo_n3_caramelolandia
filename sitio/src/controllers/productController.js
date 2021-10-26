@@ -5,7 +5,7 @@ const capitalizeOneLetter = require('../utils/capitalizeOneLetter');
 
 module.exports = {
     products: (req,res) =>{
-        db.Producto.findAll()
+        db.Product.findAll()
         .then(function(productos){
             return res.render('products', {
                 productos: productos
@@ -32,7 +32,7 @@ module.exports = {
     },
     productDetail : (req,res) => {
        
-        db.Producto.findByPk(req.params.id,{
+        db.Product.findByPk(req.params.id,{
             include:[
                 {
                     association: 'products'
@@ -54,7 +54,7 @@ module.exports = {
        } )
     },
     store : (req,res) => {
-       db.Producto.create({
+       db.Product.create({
            name:req.body.nombre,
            info: req.body.informacion,
            mark:req.body.marca,
@@ -69,8 +69,8 @@ module.exports = {
     },
 
     productEdit : (req,res)=>{
-       let pedidoProducto = db.Producto.findByPk(req.params.id)
-       let pedidoCategoria = db.Categoria.findAll()
+       let pedidoProducto = db.Product.findByPk(req.params.id)
+       let pedidoCategoria = db.Category.findAll()
        Promise.all([
            pedidoProducto,pedidoCategoria
        ])
@@ -84,7 +84,7 @@ module.exports = {
     })
     },
     update : (req,res) => {
-    db.Producto.update({
+    db.Product.update({
         name:req.body.nombre,
         info: req.body.informacion,
         mark:req.body.marca,
@@ -102,7 +102,7 @@ module.exports = {
     res.redirect('/products/detail/'+req.params.id)
     },
     destroy : (req,res) => {
-       db.Producto.destroy({
+       db.Product.destroy({
            where:{
                id:req.params.id
            }

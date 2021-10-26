@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
 
-    const alias = 'Producto'
+    const alias = 'Product'
 
     const cols = {
         id:{
@@ -49,14 +49,16 @@ module.exports = (sequelize, DataTypes) => {
             defaultValue : null
 
         },
-            created_at:{
+           /*  createdAt:{
                 type : DataTypes.DATE,
-                defaultValue : null
+                defaultValue : null,
+                allowNull: true
             },
-        updated_at: {
+        updatedAt: {
             type : DataTypes.DATE,
-                defaultValue : null
-        }
+                defaultValue : null,
+                allowNull: true
+        } */
         
 
     }
@@ -70,7 +72,22 @@ module.exports = (sequelize, DataTypes) => {
     }
     
     const Product = sequelize.define(alias,cols,config)
+    Product.associate = function(models){
+        Product.belongsTo(models.Category,{
+            as : 'category',
+            foreignKey : "category_id"
+          })
     
+          Product.hasMany(models.Image,{
+            as : 'images',
+            onDelete : 'cascade',
+            foreignKey: "product_id"
+          })
+          Product.belongsTo(models.Product_user,{
+              as: "products_user",
+              foreignKey: "product_id"
+          })
+    }
  
 
     return Product

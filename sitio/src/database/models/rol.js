@@ -13,22 +13,32 @@ module.exports = (sequelize,dataTypes) => {
         name : {
             type : dataTypes.STRING(100),
             allowNull : false
-        }
+        },
+       /*  createdAt:{
+            type : dataTypes.DATE,
+            defaultValue : null,
+            allowNull: true
+        },
+    updatedAt: {
+        type : dataTypes.DATE,
+            defaultValue : null,
+            allowNull: true
+    } */
     }
 
     const config = {
 
-        tableName : 'rol', //si la tabla no coincide con el prural del modelo va esta configuracion
+        tableName : 'rols', //si la tabla no coincide con el prural del modelo va esta configuracion
         timestamps : true, // si tiene timestamps va false
-        underscored : true // si esta escrito con guion bajo(_) ej: updated_:at
+        underscored : false // si esta escrito con guion bajo(_) ej: updated_:at
 
     }
 
 const Rol = sequelize.define(alias,cols,config)
 
 Rol.associate = function(models){
-    Rol.belongsTo(models.Usuario,{
-      as : "usuarios",
+    Rol.belongsTo(models.User,{
+      as : "rol",
       foreignkey: "user_id"
     });
   }

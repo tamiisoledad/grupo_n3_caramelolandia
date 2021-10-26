@@ -1,6 +1,8 @@
+
+
 module.exports = (sequelize,dataTypes) => {
 
-  const alias = "Categoria";
+  const alias = "Category";
 
   const cols = {
 
@@ -13,14 +15,24 @@ module.exports = (sequelize,dataTypes) => {
       name : {
           type : dataTypes.STRING(100),
           allowNull : false
-      }
+      },
+     /*  createdAt:{
+        type : dataTypes.DATE,
+        defaultValue : null,
+        allowNull: true
+    },
+updatedAt: {
+    type : dataTypes.DATE,
+        defaultValue : null,
+        allowNull: true
+} */
   }
 
   const config = {
 
-    tableName : 'category', //si la tabla no coincide con el prural del modelo va esta configuracion
+    tableName : 'categories', //si la tabla no coincide con el prural del modelo va esta configuracion
     timestamps : true, // si tiene timestamps va false
-    underscored : true // si esta escrito con guion bajo(_) ej: updated_:at
+    underscored : false // si esta escrito con guion bajo(_) ej: updated_:at
 
 }
 
@@ -28,7 +40,7 @@ const Category = sequelize.define(alias,cols,config)
 
 Category.associate = function(models){
 
-  Category.hasMany(models.Producto, {
+  Category.hasMany(models.Product, {
 
     as : "products",
 
