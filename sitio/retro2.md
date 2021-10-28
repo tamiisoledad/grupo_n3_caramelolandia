@@ -1,1 +1,0 @@
-![retro]("./public/images/retro2.png")
