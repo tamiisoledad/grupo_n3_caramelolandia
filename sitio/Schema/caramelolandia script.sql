@@ -52,12 +52,12 @@ DROP TABLE IF EXISTS `images`;
 CREATE TABLE `images` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `file` varchar(255) NOT NULL,
-  `product_id` int(11) NOT NULL,
+  `productId` int(11) NOT NULL,
   `createdAt` datetime DEFAULT NULL,
   `updatedAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `images_FK` (`product_id`),
-  CONSTRAINT `images_FK` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
+  KEY `images_FK` (`productId`),
+  CONSTRAINT `images_FK` FOREIGN KEY (`productId`) REFERENCES `products` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -80,15 +80,15 @@ DROP TABLE IF EXISTS `product_users`;
 CREATE TABLE `product_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
+  `productId` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
   `total` decimal(8,2) NOT NULL,
   `createdAt` datetime DEFAULT NULL,
   `updatedAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `product_users_FK_1` (`user_id`),
-  KEY `product_users_FK` (`product_id`),
-  CONSTRAINT `product_users_FK` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
+  KEY `product_users_FK` (`productId`),
+  CONSTRAINT `product_users_FK` FOREIGN KEY (`productId`) REFERENCES `products` (`id`),
   CONSTRAINT `product_users_FK_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -124,9 +124,7 @@ CREATE TABLE `products` (
   `updatedAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `products_FK` (`category_id`),
-  KEY `products_FK_1` (`image_id`),
-  CONSTRAINT `products_FK` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`),
-  CONSTRAINT `products_FK_1` FOREIGN KEY (`image_id`) REFERENCES `images` (`id`)
+  CONSTRAINT `products_FK` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -150,7 +148,7 @@ CREATE TABLE `rols` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `createdAt` datetime DEFAULT NULL,
-  `updatedAt` int(11) DEFAULT NULL,
+  `updatedAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;

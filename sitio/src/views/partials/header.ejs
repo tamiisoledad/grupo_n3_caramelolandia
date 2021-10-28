@@ -37,7 +37,7 @@
                     <% if (locals.userLogin) { %>
                        
                         <li><a href="/user">Mi perfil</a></li>
-                        <% if (locals.userLogin.rol === 'admin') { %>
+                        <% if (locals.userLogin.rolId === 1) { %>
                             <li><a href="/admin">Admin</a></li>
                         <% } %>
                         <li><a href="/users/logout">Cerrar sesión</a></li>
@@ -58,10 +58,10 @@
                         <li><a href="/products">Productos</a></li>
                         <li><a href="/contact">Contacto</a></li>
                             <li><a href="">Mi perfil</a></li>
-                            <% if (locals.userLogin.rol === 'admin') { %>
+                            <% if (locals.userLogin.rolId == 1) { %>
                                 <li><a href="/admin">Admin</a></li>
                             <% } %>
-                            
+                                 
                             <li><a href="/users/logout">Cerrar sesión</a></li>
                         
                         <% }else{%>

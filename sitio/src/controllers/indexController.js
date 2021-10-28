@@ -2,15 +2,16 @@ const db= require('../database/models');
 
 module.exports = {
     index : (req,res) => {
-        db.Producto.findAll()
-        .then(function(productos){
-            return res.render('products', {
-                productos: productos
-            })
+        db.Product.findAll({
+            include : ['category','images']
         })
+        .then(productos => {
+                return res.render('index',{
+                    productos})
+         }) .catch(error => console.log(error)) 
     },
     admin : (req,res) => {
-        db.Producto.findAll()
+        db.Product.findAll()
         .then(function(productos){
             return res.render('admin/admin', {
                 productos: productos
@@ -18,7 +19,7 @@ module.exports = {
         })
     },
     usuario : (req,res) => {
-        db.Usuario.findByPk(req.params.id)
+        db.User.findByPk(req.params.id)
         .then(function(usuario){
             res.render('user',{
                 usuario:usuario
@@ -27,7 +28,7 @@ module.exports = {
     },
     updateUser : (req,res) => {
         const {password} = req.body
-        db.Usuario.update({
+        db.User.update({
             name:req.body.nombre,
             email: req.body.email,
             password: bcryptjs.hashSync(password, 10)

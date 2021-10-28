@@ -1,5 +1,6 @@
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
+const db= require('../database/models');
 
 
 module.exports = {
@@ -10,16 +11,20 @@ module.exports = {
         let errors = validationResult(req)
         if(errors.isEmpty()){
             const {email, remember} = req.body
-        db.Usuario.findOne({
+        db.User.findOne({
             where: {
                 email
             }
-        }).then(usuario=> {
+        },{
+            include : [
+                {association : 'users'}]
+                }
+                ).then(usuario=> {
             req.session.userLogin={
                 id: usuario.id,
                 name: usuario.name,
-                rol_id : usuario.rol_id,
-                avatar_id: usuario.avatar_id
+                rolId : usuario.rolId,
+                avatar: usuario.avatar
             }
             if(remember){
                 res.cookie("remember", req.session.userLogin, {maxAge: 3000000*60})
@@ -39,18 +44,18 @@ module.exports = {
 
         if(errors.isEmpty()){
             const {name,email,password} = req.body;
-            db.Usuario.create({
+            db.User.create({
                 name: name.trim(),
                 email,
                 password: bcryptjs.hashSync(password, 10),
-                rol_id: 2,
-                avatar_id: req.file ? req.file.filename : "default-img.png"
+                rolId: 2,
+                avatar: req.file ? req.file.filename : "default-img.png"
             }).then(usuario => {
                 req.session.userLogin = {
                     id: usuario.id,
-                    name: user.name,
-                    avatar_id: user.avatar_id,
-                    rol_id: user.rol_id
+                    name: usuario.name,
+                    avatar: usuario.avatar,
+                    rolId: usuario.rolId
                 }
                 return res.redirect("/")
             }).catch( error=> console.log(error))

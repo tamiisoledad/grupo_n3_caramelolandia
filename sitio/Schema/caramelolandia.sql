@@ -1,1 +1,0 @@
-SELECT * FROM caramelolandia.images;
