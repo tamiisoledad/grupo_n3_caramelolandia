@@ -1,7 +1,8 @@
 const db= require('../database/models');
 const {validationResult} = require("express-validator")
 const capitalizeOneLetter = require('../utils/capitalizeOneLetter');
-
+const fs = require("fs");
+const path = require("path")
 
 module.exports = {
     products: (req,res) =>{

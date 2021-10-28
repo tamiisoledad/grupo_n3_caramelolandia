@@ -26,14 +26,14 @@
                             <id>
                                 <% if (producto.id < 100 && productos.length > 99) { -%>0<% } -%><% if (producto.id < 10 && productos.length > 9) { -%>0<% } -%><%= producto.id %></id>
                                 <a href="/products/detail/<%= producto.id %>" title="Ver más">
-                                    <%= producto.categoria %> <%= producto.Marca %> de <%= producto.Variedad %>
+                                    <%= producto.name %> <%= producto.mark %> de <%= producto.variety %>
                                 </a>
                         </td>
                         <td>
-                            <% if(producto.Vegano){ -%>
+                            <% if(producto.vegan){ -%>
                                 <img class="tag" src="images/celiacos-1.jpg" title="Vegano">
                             <% } %>
-                            <% if(producto.Celiaco){ -%>
+                            <% if(producto.celiac){ -%>
                                 <img class="tag" src="images/descarga.png" title="Celiaco">
                             <% } %>
                         </td>
@@ -46,9 +46,9 @@
                                 <button type='submit' class="delete" title="Borrar"><i class="icon">delete</i></button>
                             </form>
                         </td>
-                        <td><%= producto.Precio %></td>
-                        <td><%= producto.Descuento %></td>
-                        <td><%= producto.Stock %></td>
+                        <td><%= producto.price %></td>
+                        <td><%= producto.discount %></td>
+                        <td><%= producto.stock %></td>
                     </tr>
                 <% }) %>
             </table>

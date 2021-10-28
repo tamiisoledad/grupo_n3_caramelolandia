@@ -24,7 +24,7 @@ module.exports = {
                 id: usuario.id,
                 name: usuario.name,
                 rolId : usuario.rolId,
-                avatarId: usuario.avatarId
+                avatar: usuario.avatar
             }
             if(remember){
                 res.cookie("remember", req.session.userLogin, {maxAge: 3000000*60})
@@ -49,13 +49,13 @@ module.exports = {
                 email,
                 password: bcryptjs.hashSync(password, 10),
                 rolId: 2,
-                avatarId: req.file ? req.file.filename : "default-img.png"
+                avatar: req.file ? req.file.filename : "default-img.png"
             }).then(usuario => {
                 req.session.userLogin = {
                     id: usuario.id,
-                    name: user.name,
-                    avatarId: user.avatarId,
-                    rolId: user.rolId
+                    name: usuario.name,
+                    avatar: usuario.avatar,
+                    rolId: usuario.rolId
                 }
                 return res.redirect("/")
             }).catch( error=> console.log(error))

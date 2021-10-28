@@ -7,34 +7,34 @@
     <%- include('partials/header') %>
    <main>
        <h1>Editar Producto</h1>
-       <form action="/products/edit/<%= productos.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+       <form action="/products/edit/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
            <div class="box-form ">
                <label for="producto">Nombre del Producto</label>
-               <input type="text" name="nombre" id="producto" value="<%= productos.Producto %>">
+               <input type="text" name="nombre" id="producto" value="<%= producto.name %>">
            </div>
            <div class="box-form">
                <label for="informacion">Informacion Nutricional</label> 
-               <textarea name="informacion" id="informacion" cols="30" rows="10"><%= productos.Informacion %></textarea>
+               <textarea name="informacion" id="informacion" cols="30" rows="10"><%= producto.info %></textarea>
            </div>
            <div class="box-form">
                <label for="marca">Marca</label>
-               <input type="text" name="marca" id="marca" value="<%= productos.Marca %>">
+               <input type="text" name="marca" id="marca" value="<%= producto.mark %>">
            </div>
             <div class="box-form">
                 <label for="variedad">Variedad</label>
-                <input type="text" name="variedad" id="variedad" value="<%= productos.Variedad %>">
+                <input type="text" name="variedad" id="variedad" value="<%= producto.variety %>">
             </div>
             <div class="box-form">
                 <label for="precio">Precio</label>
-                <input type="number" name="precio" id="precio" value="<%= productos.Precio %>">
+                <input type="number" name="precio" id="precio" value="<%= producto.price %>">
             </div>
             <div class="box-form">
                 <label for="stock">Stock</label>
-                <input type="number" name="stock" id="stock" value="<%= productos.Stock %>">
+                <input type="number" name="stock" id="stock" value="<%= producto.stock %>">
             </div>
             <div class="box-form">
                 <label for="descuento">Descuento</label>
-                <input type="number" name="descuento" id="descuento" value="<%= productos.Descuento %>">
+                <input type="number" name="descuento" id="descuento" value="<%= producto.discount %>">
             </div>
             <div class="box-form">
                 <label for="imagen">Subir Imagen</label>

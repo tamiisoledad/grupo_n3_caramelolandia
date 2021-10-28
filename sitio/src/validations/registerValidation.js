@@ -3,7 +3,7 @@ const db = require("../database/models");
 
 module.exports = [
     body("email").custom(value => {
-      return  db.Usuario.findOne({
+      return  db.User.findOne({
             where: {
                 email : value
             }
