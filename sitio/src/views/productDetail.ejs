@@ -11,7 +11,7 @@
             <article class="producto">
               <div class="carruselarrow">
                 <a href="" class="arrow"><i class="fas fa-chevron-left"></i></a>
-                <img src="/images/productos/<%= producto.Imagen %>" alt="" width="80%"/>
+                <img src="/images/productos/<%= detalle.images[0].file %>" alt="" width="80%"/>
                 <a href="" class="arrow"><i class="fas fa-chevron-right"></i></a>
               </div>
               <div class="nav">
@@ -25,22 +25,22 @@
             <article class="descripcion">
               <div class="nombre">
                 <h4>nombre del producto:</h4>
-                <p><%= producto.Producto %></p>
+                <p><%= detalle.name %></p>
               </div>
               <div class="stock">
                 <h4>Disponible en:</h4>
-                <p><%= producto.Variedad %></p>
+                <p><%= detalle.variety %></p>
               </div>
               <div class="marca">
                 <h4>Marca:</h4>
-                <p><%= producto.Marca %></p>
+                <p><%= detalle.mark %></p>
               </div>
               <div class="info">
                 <h4>Informacion nutricional:</h4>
-                <p><%= producto.Informacion %></p>
+                <p><%= detalle.info %></p>
               </div>
               <div class="vegan">
-                <% if (producto.Vegano === true) { %>
+                <% if (detalle.vegan === true) { %>
                   <img src="/images/—Pngtree—icon for vegan vector illustration_5224039.png" width="300px" alt="">
                 <% } else { %>
                   <h4>Apto vegano:</h4>
@@ -49,7 +49,7 @@
                  
               </div>
               <div class="vegan">
-                <% if (producto.Celiaco === true) { %>
+                <% if (detalle.celiac === true) { %>
                   <img src="/images/unnamed.png" width="220px" alt="">
                 <% } else { %>
                   <h4>Apto Celiaco:</h4>
@@ -58,11 +58,11 @@
               </div>
               <div class="precio">
                 <h4>Precio:</h4>
-                <p>$<%= producto.Precio %></p>
+                <p>$<%= detalle.price %></p>
               </div>
               <div class="desc">
                 <h4>Descuento:</h4>
-                <p><%= producto.Descuento %>%</p>
+                <p><%= detalle.discount %>%</p>
               </div>
             </article>
           </section>
@@ -72,17 +72,18 @@
       </div>
       <h3>Productos relacionados</h3>
       <section class="relacionados">
-            <% productos.forEach(producto => { %>
-              <% if (producto.id < 5) { %>
-                <article>
-                  <a href="/products/detail/<%= producto.id %> "><img src="/images/productos/<%= producto.Imagen %>" alt="product1" width="100%"></a>
-                  <div class="nombreprod">
-                    <span>$<%= producto.Precio %></span>
-                    <h4><%= producto.Producto %></h4>
-                  </div>
-                </article>
-              <% } %>
-            <% }) %>
+        <% productos.forEach(producto => { %>
+          <% if(producto.id < 5){ %>
+          <article class="a">
+               <a class="product" href="/products/detail/<%= producto.id %> "> <img src="/images/productos/<%= producto.images[0].file%>" alt=""></a>
+               <div>
+               <h4><%= producto.name %> </h4>
+              </div>
+               <p>$<%= producto.price %> </p>
+               <a class="carrito" href="/products/cart">añadir al carrito</a>
+          </article>
+              <%}%>
+      <% }) %>
       </section>
       <div class="nav-pages">
         <i class="far fa-arrow-alt-circle-left"></i>

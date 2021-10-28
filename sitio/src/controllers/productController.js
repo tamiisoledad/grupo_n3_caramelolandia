@@ -15,7 +15,7 @@ module.exports = {
     buscar: (req,res) => {
         if(req.query.busqueda){
             db.Product.find.All({
-                includes: ['category', 'images'],
+                include: ['category', 'images'],
                 where: {
 
                 }
@@ -32,16 +32,20 @@ module.exports = {
     },
     productDetail : (req,res) => {
        
-        db.Product.findByPk(req.params.id,{
+        let detalle = db.Product.findByPk(req.params.id,{
             include : [
                 {association : 'category'},
                 {association : 'images'}
             ]
         })
-        .then(function(producto){
-            res.render('productDetail',{
-                producto:producto
-            })
+        let productos = db.Product.findAll({
+            include : ['category','images']
+        })
+        Promise.all([detalle, productos])
+        .then(([detalle, productos]) => {
+                return res.render('productDetail',{
+                    productos,
+                    detalle})
         })
     },
 
@@ -156,7 +160,7 @@ module.exports = {
                             });
 
                                 await queryInterface.bulkDelete('Images', {
-                                    product_id : product.id
+                                    productId : product.id
                                 });
                         
 
@@ -164,7 +168,7 @@ module.exports = {
                             let images = req.files.map(image => {
                                 let item = {
                                     file : image.filename,
-                                    product_id : product.id
+                                    productId : product.id
                                 }
                                 return item
                             }) 

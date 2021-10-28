@@ -1,53 +1,24 @@
-
-module.exports = (sequelize,dataTypes) => {
-
-  const alias = "Image";
-
-  const cols = {
-
-      id : {  
-          type : dataTypes.INTEGER.UNSIGNED,
-          primaryKey : true,
-          allowNull : false,
-          autoIncrement : true
-      },
-      file : {
-          type : dataTypes.STRING(255),
-          allowNull : false
-      },
-      product_id : {
-        type : dataTypes.INTEGER.UNSIGNED,
-        allowNull : false
-    },
-   /*  createdAt:{
-      type : dataTypes.DATE,
-      defaultValue : null,
-      allowNull: true
-  },
-updatedAt: {
-  type : dataTypes.DATE,
-      defaultValue : null,
-      allowNull: true
-} */
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class Image extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
     }
-
-    const config = {
-
-      tableName : 'images', //si la tabla no coincide con el prural del modelo va esta configuracion
-      timestamps : true, // si tiene timestamps va false
-      underscored : true // si esta escrito con guion bajo(_) ej: updated_:at
-
-  }
-
-const Image = sequelize.define(alias,cols,config)
-
-Image.associate = function(models){
-  Image.belongsTo(models.Product,{
-    as : "product",
-    foreignkey: "product_id"
+  };
+  Image.init({
+    file: DataTypes.STRING,
+    productId: DataTypes.INTEGER
+  }, {
+    sequelize,
+    modelName: 'Image',
   });
-}
-
-return Image
-
-}
+  return Image;
+};

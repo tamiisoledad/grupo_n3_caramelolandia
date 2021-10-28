@@ -2,34 +2,13 @@ const db= require('../database/models');
 
 module.exports = {
     index : (req,res) => {
-        let productos = db.Product.findAll({
-                include : [
-                    {association : 'category'},
-                    {association : 'images'}
-                ]
-           });
-        let categorias = db.Category.findAll({
-                include : [
-                    {association : 'products'}
-                    
-                ]
-            });
-        let imagenes = db.Image.findAll({
-                include : [
-                    {association : 'product'}
-                    
-                ]
-            
-        });
-
-        Promise.all([productos, categorias, imagenes])
-        .then(([productos, categorias, imagenes])=> {
-            return res.render('index',{
-                productos: productos.category && productos.images,
-                categorias: categorias.products,
-                imagenes:imagenes.product
-            })
-        }) .catch(error => console.log(error)) 
+        db.Product.findAll({
+            include : ['category','images']
+        })
+        .then(productos => {
+                return res.render('index',{
+                    productos})
+         }) .catch(error => console.log(error)) 
     },
     admin : (req,res) => {
         db.Product.findAll()
