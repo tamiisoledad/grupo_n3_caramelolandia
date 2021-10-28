@@ -9,13 +9,15 @@
        <h1>Agregar Producto</h1>
        <form action="" method="POST" enctype="multipart/form-data">
            <div class="box-form ">
-               <label for="producto">Nombre del Producto</label>
-               <input type="text" name="producto" placeholder="ej: alfajor">
+               <label for="nombre">Nombre del Producto</label>
+               <input type="text" name="nombre" placeholder="ej: alfajor">
+               <span><%= locals.errors && errores.nombre ? errores.nombre.msg : null %></span>
            </div>
 
            <div class="box-form">
                <label for="informacion">Informacion Nutricional</label> 
                <textarea name="informacion" id="informacion" cols="30" rows="10"></textarea>
+               <span><%= locals.errors && errores.informacion ? errores.informacion.msg : null %></span>
            </div>
            <div class="box-form">
                <label for="marca">Marca</label>
@@ -28,6 +30,7 @@
             <div class="box-form">
                 <label for="precio">Precio</label>
                 <input type="number" name="precio" id="precio">
+                <span><%= locals.errors && errores.precio ? errores.precio.msg : null %></span>
             </div>
             <div class="box-form">
                 <label for="stock">Stock</label>
@@ -39,27 +42,28 @@
             </div>
             <div class="box-img">
                 <label for="imagen">Subir Imagen</label>
-                <input type="file" name="imagen" id="imagen" accept="images/*">
+                <input type="file" name="imagen" id="imagen" accept="images/*"multiple>
             </div>
             <div class="box-form">
                 <label for="vegano">Apto Vegano</label>
                 <select name="vegano" id="vegano">
-                <option value="si">Si</option>
-                <option value="no">No</option>
+                <option value=1>Si</option>
+                <option value=0>No</option>
             </select>
             </div>
             <div class="box-form">
-                <label for="vegano">Categoria</label>
+                <label for="categoria">Categoria</label>
                 <select name="categoria" id="categoria">
-                <option value="si">Si</option>
-                <option value="no">No</option>
+                    <% categorias.forEach(categoria => { %>
+                        <option value="<%= categoria.id %>"><%= categoria.name %> </option>
+                       <% }) %>
             </select>
             </div>
             <div class="box-form">
                 <label for="celiaco">Sin Tacc</label>
                 <select name="celiaco" id="celiaco">
-                <option value="si">Si</option>
-                <option value="no">No</option>
+                <option value=1>Si</option>
+                <option value=0>No</option>
             </select>
             </div>
             <div class="box-button">

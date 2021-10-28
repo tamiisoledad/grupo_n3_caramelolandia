@@ -30,8 +30,8 @@ module.exports = (sequelize, DataTypes) => {
     variety: DataTypes.STRING,
     stock: DataTypes.INTEGER,
     discount: DataTypes.DECIMAL,
-    vegan: DataTypes.INTEGER,
-    celiac: DataTypes.INTEGER,
+    vegan: DataTypes.BOOLEAN,
+    celiac: DataTypes.BOOLEAN,
     categoryId: DataTypes.INTEGER
   }, {
     sequelize,

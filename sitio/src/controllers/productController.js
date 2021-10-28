@@ -53,6 +53,7 @@ module.exports = {
     productCart : (req,res) => res.render("productCart"),
 
     productAdd : (req,res) => {
+        
         db.Category.findAll({
             order : [
                 ['name','ASC']
@@ -64,6 +65,7 @@ module.exports = {
             .catch(error => console.log(error))
     },
     store : (req,res) => {
+        
         let errors = validationResult(req);
 
         if(errors.isEmpty()){
@@ -73,10 +75,11 @@ module.exports = {
                 mark:req.body.marca,
                 price:+req.body.precio,
                 variety:req.body.variedad,
+                discount: +req.body.descuento,
                 stock:+req.body.stock,
-                vegan:req.body.vegano,
-                celiac:req.body.celiaco,
-                category_id:req.body.categoria,
+                vegan:+req.body.vegano,
+                celiac:+req.body.celiaco,
+                categoryId:req.body.categoria,
             }) .then(product => {
                 console.log(product);
                 if(req.files.length != 0){
@@ -126,7 +129,7 @@ module.exports = {
     ])
     {
         res.render('productEdit',{
-            producto:producto, categorias:categorias
+            product:producto, categorias:categorias
         })
     }).catch(error => console.log(error))
     },
@@ -140,9 +143,9 @@ module.exports = {
                 price:+req.body.precio,
                 variety:req.body.variedad,
                 stock:+req.body.stock,
-                vegan:req.body.vegano,
-                celiac:req.body.celiaco,
-                category_id:req.body.categoria,
+                vegan:+req.body.vegano,
+                celiac:+req.body.celiaco,
+                categoryId:req.body.categoria,
             },{
                 where:{
                     id:req.params.id
@@ -184,7 +187,7 @@ module.exports = {
 
        
     }else{
-        let categories = db.Category.findAll({
+        let categorias = db.Category.findAll({
             order : [
                 ['name']
             ]
@@ -192,11 +195,12 @@ module.exports = {
         let product = db.Product.findByPk(req.params.id, {
             include : ['category','images']
         })
-        Promise.all(([categories, product]))
-            .then(([categories, product]) => {
+        Promise.all(([categorias, product]))
+            .then(([categorias, product]) => {
                 return res.render('productEdit',{
-                    categories,
+                    categorias,
                     product,
+                    old : req.body,
                     errores : errors.mapped()
                 })
             })

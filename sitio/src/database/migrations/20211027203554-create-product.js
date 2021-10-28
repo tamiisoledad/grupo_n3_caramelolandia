@@ -34,13 +34,14 @@ module.exports = {
         type: Sequelize.DECIMAL
       },
       vegan: {
-        type: Sequelize.INTEGER
+        type: Sequelize.BOOLEAN
       },
       celiac: {
-        type: Sequelize.INTEGER
+        type: Sequelize.BOOLEAN
       },
       categoryId: {
         type: Sequelize.INTEGER,
+        
         allowNull: false,
         referencer: {
           model: {
