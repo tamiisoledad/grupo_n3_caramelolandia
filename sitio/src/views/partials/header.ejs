@@ -35,12 +35,15 @@
                 <label for="users"><i class="fas fa-user"></i></label>
                 <ul>
                     <% if (locals.userLogin) { %>
+                        <div id="perfil" style="background-image: url('images/profiles/<%=locals.userLogin.avatar%>')"></div>
                        
                         <li><a href="/user">Mi perfil</a></li>
                         <% if (locals.userLogin.rolId === 1) { %>
                             <li><a href="/admin">Admin</a></li>
+                            
                         <% } %>
                         <li><a href="/users/logout">Cerrar sesión</a></li>
+                        
                     
                     <% }else{%>
                     <li><a href="/users/login">Iniciar sesión</a></li>
@@ -63,6 +66,7 @@
                             <% } %>
                                  
                             <li><a href="/users/logout">Cerrar sesión</a></li>
+                            
                         
                         <% }else{%>
                             
@@ -76,8 +80,8 @@
                         <% } %>
                     </ul>
                 </div>
-                <div id="perfil" style="background-image: url('images/profiles/<%= locals.userLogin.avatar %>')"></div>
+               
             </nav>
         </div>
     </div>
-</header>
+</header>e
