@@ -16,28 +16,31 @@ module.exports = {
             return res.render('admin/admin', {
                 productos: productos
             })
-        })
+        }).catch(error => console.log(error))
     },
     usuario : (req,res) => {
-        db.User.findByPk(req.params.id)
+        db.User.findByPk(req.session.userLogin.id)
         .then(function(usuario){
-            res.render('user',{
+           return res.render('user',{
                 usuario:usuario
             })
-        })
+        }).catch(error => console.log(error))
     },
     updateUser : (req,res) => {
         const {password} = req.body
-        db.User.update({
-            name:req.body.nombre,
-            email: req.body.email,
-            password: bcryptjs.hashSync(password, 10)
-        },{
-            where:{
-                id:req.params.id
-            }
+        db.User.update(
+            {
+                name: req.body.name,
+                avatar: req.file ? req.file.filename : req.session.userLogin.avatar,
+            },
+            {
+                where : {id : req.session.userLogin.id},
+            },
+        )
+        .then( () => {
+            return res.redirect('/')
         })
-        res.redirect('/user')
+        .catch(error => console.log(error))
         },
     contacto : (req,res) => res.render("contact")
 }
