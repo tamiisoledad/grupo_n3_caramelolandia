@@ -2,11 +2,10 @@
 <html lang="en">
 
 <%- include('partials/head', {title:"Registrarse"})%>
-
 <body>
 	<%- include('partials/header') %>
 	<main id="register">
-		<form action="" method="POST" id="form" enctype="multipart/form-data">
+		<form action="" method="POST" id="form" enctype="multipart/form-data" class="register">
 			<div>
 				<h1>Crear tu cuenta</h1>
 				<div class="element">
@@ -14,7 +13,8 @@
 						<input type="text"  name="name" id="name" value="<%= locals.old && old.name ? old.name : null %>">
 						<div class="underline"></div>
 						<label>Nombre Completo</label>
-						<span><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+						<span id="name-error"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+						<small id="name-msg" ></small>
 					</div>
 				</div>
 				<div class="element">
@@ -22,7 +22,8 @@
 						<input type="email"  name="email" id="email" value="<%= locals.old && old.email ? old.email : null %>">
 						<div class="underline"></div>
 						<label>Correo electronico</label>
-						<span><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+						<span id="email-error"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+						<small id="email-msg" ></small>
 					</div>
 				</div>
 				<div class="element">
@@ -30,15 +31,17 @@
 						<input type="password"  name="password" id="password" value="<%= locals.old && old.password ? old.password : null %>">
 						<div class="underline"></div>
 						<label>Contraseña</label>
-						<span><%= locals.errors && errors.password ? errors.password.msg : null %></span>
+						<span id="pass-error"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
+						<small id="pass-msg" ></small>
 					</div>
 				</div>
 				<div class="element">
 					<label for="img">Subir foto de perfil</label>
 					<input type="file" name="image" id="img" accept="images/*">
+					<small id="img-msg" ></small>
 				</div>
 				<label>Acepto los <a href="#!">terminos y condiciones</a></label>
-					<input  type="checkbox" name="terms" id="terms" value="true" ><br>
+					<input required type="checkbox" name="terms" id="terms" value="true" ><br>
 				<label>Recibir notificaciones de ofertas</label>
 					<input type="checkbox" name="sales" id="sales" value="true" ><br>
 				<br>
@@ -59,5 +62,6 @@
 		</form>
 	</main>
 	<%- include('partials/footer') %>
+	<script src="/javascript/register.js"></script>
 </body>
 </html>
