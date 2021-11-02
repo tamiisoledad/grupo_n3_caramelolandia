@@ -8,7 +8,7 @@ const user = require("../middlewares/user/isLoger")
 module.exports = express.Router()
 	/* GET users listing. */
 	.get('/', products)
-	.get('/category', buscar)
+	.get('/search', buscar)
 	.get('/detail/:id', productDetail)
 	.get('/cart', user, productCart)
 
