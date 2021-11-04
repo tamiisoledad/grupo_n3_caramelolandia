@@ -74,6 +74,7 @@ module.exports = {
   },
   store: (req, res) => {
     let errors = validationResult(req);
+    
 
     if (errors.isEmpty()) {
       db.Product.create({

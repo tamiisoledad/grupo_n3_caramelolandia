@@ -64,6 +64,12 @@
     resize: none;
 }
 
+.edit .box-form  small{
+    color: red;
+    margin: 10px 0;
+    display: inline-block;
+}
+
 .edit main form div.box-button button{
     background-color: var(--fucsia);
     padding: 5px;
