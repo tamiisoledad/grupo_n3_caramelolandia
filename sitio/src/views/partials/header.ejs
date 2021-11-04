@@ -18,13 +18,13 @@
             <form class="buscar" action="/products/search">
                 <input type="text" name="buscar" id="buscar" placeholder="Buscar producto">
                 <button type="submit"> Buscar</button>
+                <i id="cerrar" class="fas fa-times"></i>
             </form>
         </div>
         <div class="menu">
             <div class="buscar">
             <form action="">
-                <input name="search" id="search" type="text" placeholder="Buscar producto">
-                <label for="search"><i class="fas fa-search"></i></label>
+                <label for="search" id="lupaHeader"><i class="fas fa-search"></i></label>
             </form>    
             </div>
             <div class="iconos">
@@ -33,7 +33,7 @@
             <div class="users">
                 <input type="checkbox" id="users">
                 <label for="users"><i class="fas fa-user"></i></label>
-                <ul>
+                <ul class="menu-2">
                     <% if (locals.userLogin) { %>
                         <div id="perfil" style="background-image: url('images/profiles/<%=locals.userLogin.avatar%>')"></div>
                        

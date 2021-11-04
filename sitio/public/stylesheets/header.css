@@ -7,7 +7,19 @@ header div#perfil {
     border-radius: 10rem;
     border: 6px solid var(--blanco); */
 }
-
+header ul.menu-2 {
+    background-color: pink;
+    border:black;
+    text-align: center;
+}
+header ul.menu-2 div{
+    margin:  5px auto !important; 
+}
+header #cerrar {
+    display: none;
+    cursor: pointer;
+    color: rgb(172, 21, 147)
+}
 header .buscar{
     display: inline-block;
     
@@ -281,7 +293,7 @@ header div.container nav ul li a{
         width: 180px;
     }
     header div.form{
-        display: block;
+        display: flex;
     }
     header div.form form input{
         height: 50px;
