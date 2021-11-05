@@ -3,7 +3,7 @@ const { check } = require('express-validator');
 module.exports = [
 
     check('nombre')
-    .notEmpty().withMessage('El nombre es obligatorio')
+    .notEmpty().withMessage('El nombre es obligatorio').bail()
     .isLength({min:5}).withMessage('El nombre debe tener minimo 5 caracteres').bail(),
 
     check('marca')

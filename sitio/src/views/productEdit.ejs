@@ -12,36 +12,43 @@
                <label for="nombre">Nombre del Producto</label>
                <input type="text" name="nombre" id="nombre" class="form-control" value="<%= product.name %>">
                 <small class="text-danger small"><%= locals.errores && errores.nombre ? errores.nombre.msg : null %> </small>
+                <small class="alertNombre"></small>
            </div>
            <div class="box-form">
                <label for="info">informacion Nutricional</label> 
                <textarea name="informacion" id="informacion" cols="30" rows="10"value = <%= product.info %>></textarea>
                <small class="text-danger small"><%= locals.errores && errores.informacion ? errores.informacion.msg : null %> </small>
+               <small class="alertInformacion"></small>
            </div>
            <div class="box-form">
                <label for="marca">Marca</label>
                <input type="text" name="marca" id="marca" value="<%= product.mark %>">
                <small class="text-danger small"><%= locals.errores && errores.marca ? errores.marca.msg : null %> </small>
+               <small class="alertMarca"></small>
            </div>
             <div class="box-form">
                 <label for="variedad">Variedad</label>
                 <input type="text" name="variedad" id="variedad" value="<%= product.variety %>">
                 <small class="text-danger small"><%= locals.errores && errores.variedad ? errores.variedad.msg : null %> </small>
+                <small class="alertVariedad"></small>
             </div>
             <div class="box-form">
                 <label for="precio">Precio</label>
                 <input type="number" name="precio" id="precio" value="<%= product.price %>">
                 <small class="text-danger small"><%= locals.errores && errores.precio ? errores.precio.msg : null %> </small>
+                <small class="alertPrecio"></small>
             </div>
             <div class="box-form">
                 <label for="stock">Stock</label>
                 <input type="number" name="stock" id="stock" value="<%= product.stock %>">
                 <small class="text-danger small"><%= locals.errores && errores.stock ? errores.stock.msg : null %> </small>
+                <small class="alertStock"></small>
             </div>
             <div class="box-form">
                 <label for="descuento">Descuento</label>
                 <input type="number" name="descuento" id="descuento" value="<%= product.discount %>">
                 <small class="text-danger small"><%= locals.errores && errores.descuento ? errores.descuento.msg : null %> </small>
+                <small class="alertDescuento"></small>
             </div>
             <div class="box-form">
                 <label for="imagen">Subir Imagen</label>
@@ -78,6 +85,8 @@
        </form>
    </main>
 	
+   <script src="/javascript/productos.js"></script>
+
     <%- include('partials/footer') %>
 
 </body>
