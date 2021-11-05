@@ -7,7 +7,9 @@ const { Op } = require("sequelize");
 
 module.exports = {
   products: (req, res) => {
-    db.Product.findAll().then(function (productos) {
+    db.Product.findAll({
+      include : ['images']
+    }).then(function (productos) {
       return res.render("products", {
         productos: productos,
       });
