@@ -7,7 +7,7 @@
     <%- include('partials/header') %>
    <main>
        <h1>Agregar Producto</h1>
-       <form action="" method="POST" enctype="multipart/form-data">
+       <form action="" method="POST" id="form" enctype="multipart/form-data">
            <div class="box-form ">
                <label for="nombre">Nombre del Producto</label>
                <input type="text" name="nombre" id="nombre" class="form-control" value="<%= locals.old && old.nombre ? old.nombre : null %>">
@@ -17,7 +17,7 @@
 
            <div class="box-form">
                <label for="info">Informacion Nutricional</label> 
-               <textarea name="informacion" id="info" cols="30" rows="10" class="form-control" value="<%= locals.old && old.informacion ? old.informacion : null %>"></textarea>
+               <textarea name="informacion" id="informacion" cols="30" rows="10" class="form-control" value="<%= locals.old && old.informacion ? old.informacion : null %>"></textarea>
                <small class="text-danger small"><%= locals.errores && errores.informacion ? errores.informacion.msg : null %> </small>
                <small class="alertInformacion"></small>
            </div>

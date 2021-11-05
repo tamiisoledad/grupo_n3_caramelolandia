@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
     let nombre = document.querySelector('#nombre');
     let alertNombre = document.getElementsByClassName('alertNombre')[0];
-    let informacion = document.querySelector('#info');
+    let informacion = document.querySelector('#informacion');
     let alertInformacion = document.getElementsByClassName('alertInformacion')[0];
     let marca = document.querySelector('#marca');
     let alertMarca = document.getElementsByClassName('alertMarca')[0];
@@ -31,7 +31,7 @@ window.addEventListener("load", () => {
     informacion.addEventListener("blur", () => {
 
         switch (true) {
-            case nombre.value.length < 1:
+            case informacion.value.length < 1:
                 alertInformacion.innerText = "Debes dar informacion sobre el producto"
                 alertInformacion.style.color = "red"
 
@@ -114,9 +114,22 @@ window.addEventListener("load", () => {
         }
     })
 
-
+    form.addEventListener("submit", (e) => {
+            
+        if(estado != 0 || nombre.value == "" || informacion.value == "" || marca.value == "" || variedad.value == "" || precio.value == "" || stock.value == "" || descuento.value == ""){
+         e.preventDefault()
+        }else {
+            form.submit()
+        }
+         
+    }) 
+     
+     
+    console.log(form)
 
 
 
 
 })
+
+
