@@ -1,14 +1,17 @@
 .contacto main{
     margin: 10px 0;
+    background-image: url('/images/banner/imagen4.jpg');
 }
 .contacto h1{
     text-align: left;
+    color: var(--azul-facebook) ;
 }
 .contacto .form article form{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    background-image: url("../images/fondo.webp");
 }
 .contacto .datos{
     min-width: 300px;
