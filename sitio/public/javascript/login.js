@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
     let form = document.querySelector("#form");
     let alertEmail = document.querySelector(".alert-email");
     let alertPassword = document.querySelector(".alert-password")
-    let estado = 0
+    
 
     
         email.addEventListener("blur", () => {
@@ -13,16 +13,16 @@ window.addEventListener("load", () => {
                 case email.value === "":
                     alertEmail.innerHTML = "Debes completar el campo"
                     alertEmail.style.color = "red"
-                    ++estado
+                   
                     break;
                 case !regExEmail.test(email.value):
                     alertEmail.innerText = "Debe ser un email valido"
                     alertEmail.style.color = "red"
-                    ++estado
+                   
                     break;
                 default:
                     alertEmail.innerHTML = null
-                    estado = 0
+                    
                     break;
             }
         })
@@ -31,21 +31,37 @@ window.addEventListener("load", () => {
                 case password.value === "":
                     alertPassword.innerHTML = "Debes completar el campo"
                     alertPassword.style.color = "red"
-                    ++estado
+                    
                     break;
                 default:
                     alertPassword.innerHTML = null
-                    estado = 0
+                    
                     break;
             }
         })
         form.addEventListener("submit", (e) => {
-            
-           if(estado != 0 || email.value == "" || password.value == ""){
+            switch (true){
+                case email.value === "":
+                    alertEmail.innerHTML = "Debes completar el campo"
+                    alertEmail.style.color = "red"
+                    e.preventDefault()
+                   
+                case password.value === "":
+                    alertPassword.innerHTML = "Debes completar el campo"
+                    alertPassword.style.color = "red"
+                    e.preventDefault()
+                    break;
+                default:
+                    alertPassword.innerHTML = null
+                    alertEmail.innerHTML = null
+                    form.submit()
+                        break;
+            }
+          /*  if(estado != 0 || email.value == "" || password.value == ""){
             e.preventDefault()
            }else {
                form.submit()
-           }
+           } */
             
     }) 
         
