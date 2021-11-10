@@ -13,6 +13,7 @@ window.addEventListener("load", () => {
     let alertStock = document.getElementsByClassName('alertStock')[0];
     let descuento = document.querySelector('#descuento');
     let alertDescuento = document.getElementsByClassName('alertDescuento')[0];
+    let form = document.querySelector("#form");
     let estado = 0
 
     nombre.addEventListener("blur", () => {
@@ -115,17 +116,73 @@ window.addEventListener("load", () => {
     })
 
     form.addEventListener("submit", (e) => {
-            
-        if(estado != 0 || nombre.value == "" || informacion.value == "" || marca.value == "" || variedad.value == "" || precio.value == "" || stock.value == "" || descuento.value == ""){
-         e.preventDefault()
-        }else {
-            form.submit()
+        
+        switch (true){
+            case nombre.value === "":
+                alertNombre.innerHTML = "Debes completar el campo"
+                alertNombre.style.color = "red"
+                e.preventDefault()
+                
+               
+            case informacion.value === "":
+                alertInformacion.innerHTML = "Debes completar el campo"
+                alertInformacion.style.color = "red"
+                e.preventDefault()
+                
+                case marca.value === "":
+                alertMarca.innerHTML = "Debes completar el campo"
+                alertMarca.style.color = "red"
+                e.preventDefault()
+                
+                case variedad.value === "":
+                alertVariedad.innerHTML = "Debes completar el campo"
+                alertVariedad.style.color = "red"
+                e.preventDefault()
+                
+                case precio.value === "":
+                alertPrecio.innerHTML = "Debes completar el campo"
+                alertPrecio.style.color = "red"
+                e.preventDefault()
+                
+                case stock.value === "":
+                alertStock.innerHTML = "Debes completar el campo"
+                alertStock.style.color = "red"
+                e.preventDefault()
+                
+                case descuento.value === "":
+                alertDescuento.innerHTML = "Debes completar el campo"
+                alertDescuento.style.color = "red"
+                e.preventDefault()
+                break;
+            default:
+                alertNombre.innerHTML = null
+                alertInformacion.innerHTML = null
+                alertMarca.innerHTML = null
+                alertVariedad.innerHTML = null
+                alertPrecio.innerHTML = null
+                alertStock.innerHTML = null
+                alertDescuento.innerHTML = null
+                form.submit()
+                    break;
         }
+      /*  if(estado != 0 || email.value == "" || password.value == ""){
+        e.preventDefault()
+       }else {
+           form.submit()
+       } */
+        
+}) 
+            
+        //if(estado != 0 || nombre.value == "" || informacion.value == "" || marca.value == "" || variedad.value == "" || precio.value == "" || stock.value == "" || descuento.value == ""){
+        // e.preventDefault()
+       // }else {
+           // form.submit()
+     //   }
          
-    }) 
+   // }) 
      
      
-    console.log(form)
+   // console.log(form)
 
 
 
