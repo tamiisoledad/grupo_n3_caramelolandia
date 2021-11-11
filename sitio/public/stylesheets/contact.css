@@ -1,10 +1,22 @@
+section .form{
+  display: flex;
+  flex-direction: column;
+   align-items:center ;
+}
 .contacto main{
     margin: 10px 0;
     background-image: url('/images/banner/imagen4.jpg');
+    background-attachment: fixed;
+    background-size: cover;
 }
 .contacto h1{
-    text-align: left;
-    color: var(--azul-facebook) ;
+    text-align: center;
+    color: var(--azul) ;
+}
+.sobre{
+  text-align: center;
+  color: #FF71BE;
+  background: rgba( 255, 255, 255, .8) ;
 }
 .contacto .form article form{
     display: flex;
@@ -50,6 +62,39 @@ height: 100%;
 .contacto .g-recaptcha{
     margin: 0 auto !important;
 }
+.container{
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ #integrantes{
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../images/fondo.webp");
+
+ }
+ #integrantes h2{
+   padding: 10px 0;
+ }
+ div.perfil img{
+  padding: 10px 0;
+
+  height: 300px;
+  width: 300px;
+ }
+ div.foto{
+   width: 30%;
+   height: auto;
+   padding-bottom: 20px;
+ }
+ div .foto p{
+   padding: 0 30px ;
+ }
 
 @media (min-width:769px) {
     .contacto main{
@@ -82,6 +127,12 @@ height: 100%;
       flex-wrap: wrap;
       flex-direction: column;
       justify-content: space-around;
+      align-items: center;
+    }
+    .form{
+      display: flex;
+      flex-direction: column;
+       align-items:center ;
     }
     .contacto .datos input{
       margin-bottom: 15px;
