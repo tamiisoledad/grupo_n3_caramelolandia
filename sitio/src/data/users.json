@@ -1,0 +1,41 @@
+[
+  {
+    "id": 2,
+    "name": "leandro rodriguez",
+    "email": "leandrodj456@gmail.com",
+    "password": "$2a$10$somSHwq5AGreeamGpdnSK.yxbvuHmxzaLcUCUaFOagKs4yBb2u79u",
+    "image": "1631483561607_img_.png",
+    "rol": "admin",
+    "terms": "true",
+    "sales": "true"
+  },
+  {
+    "id": 3,
+    "name": "juan diego ",
+    "email": "jdeg_21@hotmail.com",
+    "password": "$2a$10$StwhMho60d5dM5UYrQLl.O5bil5yCnJQ2AW07F4sAScbsP5.eZ96G",
+    "image": "1631484467713_img_.png",
+    "rol": "admin",
+    "terms": "true",
+    "sales": "true"
+  },
+  {
+    "id": 4,
+    "name": "Tamara Benitez",
+    "email": "tamiisoledad4@gmail.com",
+    "password": "$2a$10$hGcBPxGteMrQDUhiEJmJruyQG/WEB.4zPHs57EHPkUh4y0OObaQ3S",
+    "image": "1631491552343_img_.png",
+    "rol": "admin",
+    "terms": "true",
+    "sales": "true"
+  },
+  {
+    "id": 5,
+    "name": "admin",
+    "email": "admin@candyland.com",
+    "password": "$2a$10$xor5MaeR5mtfk81tHD6aOe.JBFWyl/dzBuweP8.As4eG4BQxoDIa6",
+    "image": "1631491552343_img_.png",
+    "rol": "admin",
+    "terms": "true"
+  }
+]

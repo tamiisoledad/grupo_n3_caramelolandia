@@ -1,0 +1,87 @@
+<header class="header">
+    <div class="container">
+        <div class="izq">
+            <div class="img">
+                <a href="/"><img src="/images/logo.webp" width="45%" class="logo" alt="logo"></a>
+            </div>
+            <div class="lista">
+                <input type="checkbox" id="lista">
+                <label for="lista">Menú <i class="fas fa-chevron-down"></i></label>
+                <ul class="lista">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/products">Productos</a></li>
+                    <li><a href="/contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="form">
+            <form class="buscar" action="/products/search">
+                <input type="text" name="buscar" id="buscar" placeholder="Buscar producto">
+                <button type="submit"> Buscar</button>
+                <i id="cerrar" class="fas fa-times"></i>
+            </form>
+        </div>
+        <div class="menu">
+            <div class="buscar">
+            <form action="">
+                <label for="search" id="lupaHeader"><i class="fas fa-search"></i></label>
+            </form>    
+            </div>
+            <div class="iconos">
+                <a class="carrito" href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <div class="users">
+                <input type="checkbox" id="users">
+                <label for="users"><i class="fas fa-user"></i></label>
+                <ul class="menu-2">
+                    <% if (locals.userLogin) { %>
+                        <div id="perfil" style="background-image: url('images/profiles/<%=locals.userLogin.avatar%>')"></div>
+                       
+                        <li><a href="/user">Mi perfil</a></li>
+                        <% if (locals.userLogin.rolId === 1) { %>
+                            <li><a href="/admin">Admin</a></li>
+                            
+                        <% } %>
+                        <li><a href="/users/logout">Cerrar sesión</a></li>
+                        
+                    
+                    <% }else{%>
+                    <li><a href="/users/login">Iniciar sesión</a></li>
+                    <li><a href="/users/register">Registrarse</a></li>
+                    <% } %>
+                </ul>
+            </div>
+            <nav>
+                <div class="burger">
+                    <input type="checkbox" id="menu">
+                    <label for="menu"><i class="fas fa-bars"></i></label>
+                    <ul class="info">
+                        <% if (locals.userLogin) { %>
+                            <li><a href="/">Inicio</a></li>
+                        <li><a href="/products">Productos</a></li>
+                        <li><a href="/contact">Contacto</a></li>
+                            <li><a href="">Mi perfil</a></li>
+                            <% if (locals.userLogin.rolId == 1) { %>
+                                <li><a href="/admin">Admin</a></li>
+                            <% } %>
+                                 
+                            <li><a href="/users/logout">Cerrar sesión</a></li>
+                            
+                        
+                        <% }else{%>
+                            
+                        <li><a href="/users/login">Iniciar sesión</a></li>
+                        <li><a href="/users/register">Registrarse</a></li>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/products">Productos</a></li>
+                        <li><a href="/contact">Contacto</a></li>
+                        
+                         
+                        <% } %>
+                    </ul>
+                </div>
+               
+            </nav>
+        </div>
+    </div>
+</header>

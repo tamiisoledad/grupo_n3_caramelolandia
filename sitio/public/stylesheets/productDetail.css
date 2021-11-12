@@ -1,0 +1,210 @@
+/*main*/
+
+/*carrusel*/
+
+
+
+.detail main section a.arrow{
+    color: rgba(0, 255, 255, 0);
+    font-size: 50px;
+    display: none;
+}
+
+.deatil main section.carrusel{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.deatil main section.carrusel img{
+    width: 50%;
+}
+
+.detail section article div.carruselarrow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.detail section article div.carruselarrow img{
+    max-width: 40%;
+    max-height: 470px;
+}
+
+/*producto*/
+
+.deatil main section article.producto{
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.detail main section article div.nav{
+    text-align: center;
+}
+
+.detail main section a.circle{
+    margin: 15px 15px 0 0;
+}
+
+.detail main section article.descripcion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul);
+    border-radius: 25px;
+    margin: 15px auto;
+    text-align: center;
+    width: 90%;
+}
+
+.detail main section article.descripcion h4{
+    padding: 10px;
+    margin: 20px;
+    display: inline-block;
+    text-transform: capitalize;
+    background-color: rgba(153, 152, 152, 0.575);
+    border-radius: 5px;
+}
+
+.detail main section article.descripcion p{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.418);
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.detail main section article.descripcion p:last-child{
+    margin: 15px;
+}
+
+.detail main section article.descripcion div.nombre,.detail main section article.descripcion div.stock,.detail main section article.descripcion div.marca,.detail main section article.descripcion div.info,.detail main section article.descripcion div.vegan,.detail main section article.descripcion div.acerca{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail main div .agregar{
+    display: flex;
+    margin: 20px 100px 20px 100px;
+    padding: 7px;
+    background-color: var(--fucsia);
+    border-radius: 25px;
+    align-content: space-around;
+    text-align: center;
+    justify-content: center;
+}
+
+.detail main div .agregar:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 1em var(--azul);
+
+}
+
+.detail main h3{
+    text-align: center;
+    margin: 20px 50px 20px 50px;
+    padding: 10px;
+    background-color: var(--fucsia);
+    border-radius: 25px;
+}
+
+/*productos relacionados*/
+
+.detail main .relacionados{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.detail main section.relacionados article{
+    width: 90%;
+    text-align: center;
+    margin: 20px;
+    border: 1px solid var(--rosa);
+}
+
+.detail main section.relacionados article img{
+    height: 435px;
+}
+
+.detail main section.relacionados article:hover{
+    transform:scale(1.1);
+    box-shadow: 0 0 1em var(--azul);
+}
+
+.detail main section.relacionados article a{
+    border-bottom: 2px solid var(--rosa);
+}
+
+.detail main div.nav-pages{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.detail main div.nav-pages i{
+    color: var(--azul);
+    font-size: 25px;
+    margin: 5px;
+}
+
+.detail main section.relacionados article div.nombreprod{
+    background-color: var(--rosa);
+    border: solid 1px var(--rosa);
+    margin: 10px 70px 10px 70px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
+}
+
+@media (min-width : 481px) {
+    
+    /*main*/
+
+    .detail main section article div.nav{
+        display: none;
+    }
+
+    .detail main section a.arrow{
+        display: block;
+    }
+}
+
+@media (min-width : 769px) {
+    
+    /*main*/
+
+    .detail main .relacionados{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    .detail main section.relacionados article{
+        margin: 20px 10px 10px 10px;
+    }
+
+    .detail main div .agregar{
+        margin: 20px 30% 20px 30%;
+    }
+
+    .detail main h3{
+        margin: 20px 20% 20px 20% ;
+    }
+}
+
+@media (min-width : 1240px){
+    .detail main .box-detail{
+        display: flex;
+        align-items: center;
+    }
+
+    .detail main .carrusel{
+        width: 273%;
+    }
+}

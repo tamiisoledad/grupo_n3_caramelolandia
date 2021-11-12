@@ -1,0 +1,358 @@
+header div#perfil {
+    background-size: contain;
+    width: 6rem;
+    height: 6rem;
+    margin: 1.2rem;
+   /*  position: absolute;
+    border-radius: 10rem;
+    border: 6px solid var(--blanco); */
+}
+header ul.menu-2 {
+    background-color: pink;
+    border:black;
+    text-align: center;
+}
+header ul.menu-2 div{
+    margin:  5px auto !important; 
+}
+header #cerrar {
+    display: none;
+    cursor: pointer;
+    color: rgb(172, 21, 147)
+}
+header .buscar{
+    display: inline-block;
+    
+}
+header input.search{
+    width: 300px;
+    height: 30px;
+}
+header{
+    text-align: center;
+    background-color: var(--fucsia);
+    height: 75px;
+   /*  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 15; */
+
+}
+header div.menu{
+    display: flex;
+    align-items: center;
+}
+header div.izq{
+    height: 70px;
+}
+header div.img {
+    /* display: block; */
+    /* border-radius: 50%;
+    border: 1px solid #bbbfbe; */
+    /* margin: 15px auto 30px; */
+    width: 85px;
+}
+
+header div.img img{
+    width: 100%;
+}
+header div.container div.izq div.lista{
+    display: none;
+}
+header div.container div.izq div.lista input{
+    display: none;
+}
+header div.container div.izq div.lista label{
+    display: none;
+    width: 90px;
+    font-size: 25px;
+    margin-left: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+header div.container div.izq div.lista ul.lista{
+    display: none;
+}
+header div.container div.izq div.lista input:checked ~ ul{
+    display: block;
+    position: absolute;
+    /* right: 15px; */
+    z-index: 1;
+    top: 89px;
+}
+header div.container div.izq div.lista ul li{
+    width: 100%;
+    background-color: var(--fucsia);
+    margin-bottom: 1px;
+    
+    border: 1px solid rgb(0, 0, 0);
+}
+header div.container div.izq div.lista ul li a{
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+}
+header div.form {
+    display: none;
+}
+header div.form form input{
+    border: 1px solid var(--fucsia-oscuro);
+    height: 36px;
+    width: 187px;
+    margin-left: -25px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+header div.form form button{
+    background-color: var(--rosa);
+    /* width: 28px; */
+    padding: 7px;
+    box-shadow: 0 0 3px rgb(0 0 0 / 50%);
+    border-radius: 4px;
+    cursor: pointer;
+}
+header div.users {
+    display: none;
+}
+header div.users input{
+    display: none;
+}
+header div.users input:checked ~ ul{
+    display: block;
+    position: absolute;
+    right: 0px;
+    z-index: 1;
+    top: 90px;
+}
+header div.users ul li{
+    width: 100%;
+    background-color: var(--fucsia);
+    margin-bottom: 1px;
+    border: 1px solid rgb(0, 0, 0);
+}
+header div.users ul li a{
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+}
+header div.users label {
+    display: block;
+    background-color: var(--rosa);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    margin: 3px;
+    text-align: center;
+    color: black;
+    width: 35px;
+    padding: 7px;
+    height: 35px;
+    font-size: 21px;
+    cursor: pointer;
+}
+header div.users ul{
+    display: none;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    /* position: relative; */
+}
+header a.carrito i{
+    display: block;
+    background-color: var(--rosa);
+    width: 28px;
+    padding: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    margin: 3px;
+    text-align: center;
+    height:27px;
+    /* right: 0; */
+    /* position: absolute; */
+}
+header div.buscar form input{
+    display: none;
+}
+header div.container div.menu form input::selection{
+    display: block;
+}
+header div.container div.menu form label i{
+    display: block;
+    background-color: var(--rosa);
+    width: 28px;
+    padding: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    margin: 3px;
+    text-align: center;
+    height:27px;
+    color: black;
+}
+
+header div.container nav ul,header nav input{
+    display: none;
+}
+
+header div.container nav input:checked ~ ul{
+    display: block;
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+}
+header div.container nav ul li{
+    padding: 0 10px;
+}
+
+header div.container nav label{
+    display: block;
+    width: 28px;
+    background-color: var(--azul);
+    /* color: var(--fucsia-oscuro); */
+    padding: 4px;
+    border-radius: 4px;
+    margin: 3px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+header div.container nav ul li {
+    width: 100%;
+    background-color: var(--azul);
+    margin-bottom: 1px;
+}
+
+header div.container nav ul li a{
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+}
+@media (min-width: 769px){
+    header{
+        height: 90px;
+    }
+    header .container{
+        height: 90px;
+    }
+    header div.container div.izq{
+        display: flex;
+        align-items: center;
+    }
+    header div.img{
+        width: 125px;
+    }
+    header div.form{
+        display: block;
+    }
+    header div.container div.izq div.lista label{
+        display: inline-block;
+    }
+    header div.container div.izq div.lista{
+        display: block;
+    }
+    header div.users {
+        display: block;
+    }
+    header div.container div.menu{
+        flex-direction: column;
+    }
+    header div.container div.menu form label i{
+        display: none;
+        width: 35px;
+        padding: 7px;
+        height: 35px;
+        font-size: 21px;
+    }
+    header a.carrito i{
+        width: 35px;
+        padding: 7px;
+        height: 35px;
+        font-size: 21px;
+    }
+    header div.container nav label{
+        display: none;
+        width: 35px;
+        padding: 7px;
+        height: 35px;
+        font-size: 21px;
+    }
+}
+@media (min-width: 1281px){
+    header{
+        height: 120px;
+    }
+    header .container{
+        height: 120px;
+    }
+    header div.img{
+        width: 180px;
+    }
+    header div.form{
+        display: flex;
+    }
+    header div.form form input{
+        height: 50px;
+        width: 260px;
+        margin-left: -50px;
+        border-radius: 6px;
+        font-size: 21px;
+    }
+    header div.form form button{
+        padding: 11px;
+        border-radius: 6px;
+        font-size: 21px;
+    }
+    header div.users label{
+        width: 50px;
+        padding: 9px;
+        height: 50px;
+        font-size: 30px;
+        border-radius: 10px;
+    }
+    header div.users input:checked ~ ul{
+        top: 118px
+    }
+    header div.users ul li a{
+        font-size: 27px;
+    }
+    header div.container div.izq div.lista label{
+        width: 141px;
+        font-size: 40px;
+        margin-left: 30px;
+    }
+    header form.buscar{
+        display: block;
+    }
+    header div.container div.izq div.lista input:checked ~ ul{
+        top: 118px
+    }
+    header div.container div.menu a.lupa i{
+        width: 50px;
+        padding: 9px;
+        height: 50px;
+        font-size: 30px;
+        border-radius: 10px;
+    }
+    header div.container div.izq div.lista ul li a{
+        font-size: 27px;
+    }
+    header a.carrito i{
+        width: 50px;
+        padding: 9px;
+        height: 50px;
+        font-size: 30px;
+        border-radius: 10px;
+    }
+    header div.container nav label{
+        width: 50px;
+        padding: 9px;
+        height: 50px;
+        font-size: 30px;
+        border-radius: 10px;
+    }
+}

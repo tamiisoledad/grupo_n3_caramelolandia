@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+ <%- include('partials/head',{title: "Caramelolandia"})%>
+<script defer src="/javascript/index.js"></script>
+
+<body class="home">
+    <%- include('partials/header') %>
+    <main>
+        <section class="carrusel">
+            <div class="grande">
+                <div class="carousel-item"></div>
+                <div class="carousel-item2"></div>
+            </div>
+            <il class="puntos">
+                <li class="punto activo"></li>
+                <li class="punto"></li>
+            </il>
+        </section>
+        
+            <h2>productos</h2>
+        <section class="productos">
+            <div class="pri">
+                <% productos.forEach(producto => { %>
+                    <% if(producto.id < 5){ %>
+                    <article class="a">
+                         <a class="product" href="/products/detail/<%= producto.id %> "> <img src="/images/productos/<%= producto.images[0].file%>" alt=""></a>
+                         <div>
+                         <h4><%= producto.name %> </h4>
+                        </div>
+                         <p>$<%= producto.price %> </p>
+                         <a class="carrito" href="/products/cart">añadir al carrito</a>
+                    </article>
+                        <%}%>
+                <% }) %>
+            </div>
+        
+    </main>
+    <%- include('partials/footer') %>
+    
+</body>
+</html>

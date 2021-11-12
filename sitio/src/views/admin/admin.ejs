@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head', {title: "Administrador"})%>
+
+<body>
+    <%- include('../partials/header') %>
+    <main id="admin">
+        <section>
+            <h2>Productos</h2>
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th><buscador></buscador></th>
+                        <th></th>
+                        <th><a href="/products/add" id="create" title="Agregar"><i class="icon">add</i><a></th>
+                        <th>PRECIO</th>
+                        <th>DESCUENTO</th>
+                        <th>STOCK</th>
+                    </tr>
+                </thead>
+
+                <% productos.forEach(producto => { %>
+                    <tr>
+                        <td>
+                            <id>
+                                <% if (producto.id < 100 && productos.length > 99) { -%>0<% } -%><% if (producto.id < 10 && productos.length > 9) { -%>0<% } -%><%= producto.id %></id>
+                                <a href="/products/detail/<%= producto.id %>" title="Ver más">
+                                    <%= producto.name %> <%= producto.mark %> de <%= producto.variety %>
+                                </a>
+                        </td>
+                        <td>
+                            <% if(producto.vegan){ -%>
+                                <img class="tag" src="images/celiacos-1.jpg" title="Vegano">
+                            <% } %>
+                            <% if(producto.celiac){ -%>
+                                <img class="tag" src="images/descarga.png" title="Celiaco">
+                            <% } %>
+                        </td>
+                        <td>
+                            <a href="/products/edit/<%= producto.id %>" class="update" title="Actualizar"><i class="icon">edit</i></a>
+
+                            <form
+                                action="/products/delete/<%= producto.id %>?_method=DELETE"
+                                method="POST">
+                                <button type='submit' class="delete" title="Borrar"><i class="icon">delete</i></button>
+                            </form>
+                        </td>
+                        <td><%= producto.price %></td>
+                        <td><%= producto.discount %></td>
+                        <td><%= producto.stock %></td>
+                    </tr>
+                <% }) %>
+            </table>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>
+
+</body>
+<script>
+const $ = x => document.querySelectorAll(x);
+
+$('buscador')[0].innerHTML = `
+    <input
+        type="search"
+        id="buscador"
+        oninput="search()"
+        placeholder="id, categoria, marca..."
+    >
+`
+function search() {
+    let input, filter, table, tr, td, i, txtValue;
+    input = $("#buscador")[0];
+    filter = input.value.toUpperCase();
+    table = $("#table")[0];
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
+</script>
+</html>

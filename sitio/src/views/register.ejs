@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head', {title:"Registrarse"})%>
+<body>
+	<%- include('partials/header') %>
+	<main id="register">
+		<form action="" method="POST" id="form" enctype="multipart/form-data" class="register">
+			<div>
+				<h1>Crear tu cuenta</h1>
+				<div class="element">
+					<div class="input-data">
+						<input type="text"  name="name" id="name" value="<%= locals.old && old.name ? old.name : null %>">
+						<div class="underline"></div>
+						<label>Nombre Completo</label>
+						<span id="name-error"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+						<small id="name-msg" ></small>
+					</div>
+				</div>
+				<div class="element">
+					<div class="input-data">
+						<input type="email"  name="email" id="email" value="<%= locals.old && old.email ? old.email : null %>">
+						<div class="underline"></div>
+						<label>Correo electronico</label>
+						<span id="email-error"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+						<small id="email-msg" ></small>
+					</div>
+				</div>
+				<div class="element">
+					<div class="input-data">
+						<input type="password"  name="password" id="password" value="<%= locals.old && old.password ? old.password : null %>">
+						<div class="underline"></div>
+						<label>Contraseña</label>
+						<span id="pass-error"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
+						<small id="pass-msg" ></small>
+					</div>
+				</div>
+				<div class="element">
+					<label for="img">Subir foto de perfil</label>
+					<input type="file" name="image" id="img" accept="images/*">
+					<small id="img-msg" ></small>
+				</div>
+				<label>Acepto los <a href="#!">terminos y condiciones</a></label>
+					<input required type="checkbox" name="terms" id="terms" value="true" ><br>
+				<label>Recibir notificaciones de ofertas</label>
+					<input type="checkbox" name="sales" id="sales" value="true" ><br>
+				<br>
+				<input required type="submit" id="c" name="data-6" id="acept" value="Registrarse">
+			</div>
+			<div id="get">
+				<div></div>
+				<div>
+					<hr>
+					<input type="button" id="g" name="aceptG" id="acept" value="Registrarse con Google">
+					<p></p>
+					<input type="button" id="f" name="aceptF" id="acept" value="Registrarse con Facebook">	
+				</div>
+				<div id="init">
+					<a href="/users/login">Iniciar tu cuenta</a>
+				</div>
+			</div>
+		</form>
+	</main>
+	<%- include('partials/footer') %>
+	<script src="/javascript/register.js"></script>
+	<script src="/javascript/facebook.js"></script>
+</body>
+</html>
