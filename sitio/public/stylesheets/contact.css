@@ -1,7 +1,8 @@
-section .form{
+ .form{
   display: flex;
   flex-direction: column;
-   align-items:center ;
+  align-items:center ;
+  justify-content: center;
 }
 .contacto main{
     margin: 10px 0;
@@ -23,7 +24,13 @@ section .form{
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    margin: auto;
     background-image: url("../images/fondo.webp");
+    width: 95%;
+    
+}
+.contacto .form article form p{
+padding: 20px;
 }
 .contacto .datos{
     min-width: 300px;
@@ -62,38 +69,46 @@ height: 100%;
 .contacto .g-recaptcha{
     margin: 0 auto !important;
 }
-.container{
-  display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
+
 
  #integrantes{
   display: flex;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     background-image: url("../images/fondo.webp");
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
 
  }
+ 
+
  #integrantes h2{
    padding: 10px 0;
+   color: var(--azul);
+   display: inline;
+   padding-bottom: 30px;
  }
- div.perfil img{
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.foto{
+  width: 80%;
+  height: auto;
+}
+
+div.perfil img{
   padding: 10px 0;
 
-  height: 300px;
-  width: 300px;
+  height: 100%;
+  width: 100%;
  }
- div.foto{
-   width: 30%;
-   height: auto;
-   padding-bottom: 20px;
- }
+ 
  div .foto p{
-   padding: 0 30px ;
+   padding:30px ;
  }
 
 @media (min-width:769px) {
@@ -114,6 +129,18 @@ height: 100%;
 	    max-width: 420px;
       box-shadow: rgb(0 0 0 / 50%) 0px 10px 20px 1px;
 	}
+  .container{
+    display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+  }
+  div.foto{
+    width: 30%;
+    height: auto;
+    padding-bottom: 20px;
+  }
 }
 
 @media (min-width:1200px) {
@@ -140,4 +167,5 @@ height: 100%;
     .contacto div.botones{
       margin: 15px 0;
     }
+    
     }
