@@ -86,12 +86,12 @@ let images = [
     createdAt: new Date, updatedAt: new Date
   },
   {
-    "file": "chicleBubaloo.webp",
+    "file": "chicleBubbalooTuttiFutti.webp",
     "productId" : 18,
     createdAt: new Date, updatedAt: new Date
   },
   {
-    "file": "chicleBeldent.webp",
+    "file": "chiclesBeldent.webp",
     "productId" : 19,
     createdAt: new Date, updatedAt: new Date
   },
