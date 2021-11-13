@@ -91,9 +91,13 @@
     width: 75%;
     max-height: 70vh;
 }
-.home main section.productos article img{
+.home main section.productos article div.indexB{
     width: 100%;
-    max-height: 45vh;
+    height: 400px;
+    background-size: contain!important;
+    background-repeat:no-repeat;
+    background-color: white;
+
 }
 .home main section.productos article div{
     text-align: center;

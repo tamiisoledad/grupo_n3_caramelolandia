@@ -2,7 +2,8 @@ window.addEventListener("load", ()=>{
     let icono = document.querySelector("#lupaHeader");
     let form = document.querySelector("div.form");
     let menu = document.querySelector("div.menu");
-    let cerrar = document.querySelector("#cerrar")
+    let cerrar = document.querySelector("#cerrar");
+   
 
     icono.addEventListener("click", () => {
         form.style.display = "block"
@@ -15,4 +16,5 @@ window.addEventListener("load", ()=>{
         menu.style.display = "flex"
         cerrar.style.display = "none"
     })
+    
 })

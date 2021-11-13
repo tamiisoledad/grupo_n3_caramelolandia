@@ -1,5 +1,7 @@
+window.addEventListener("load", ()=>{
 const grande = document.querySelector(".grande");
 const punto = document.querySelectorAll(".punto");
+const detalle = document.querySelector("div.indexB");
 
 punto.forEach((cadaPunto, i)=>{
     punto[i].addEventListener("click", ()=>{
@@ -12,3 +14,9 @@ punto.forEach((cadaPunto, i)=>{
         punto[i].classList.add("activo");
     })
 })
+
+detalle.addEventListener("click", ()=>{
+    
+})
+})
+

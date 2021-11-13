@@ -24,9 +24,9 @@
                 <% productos.forEach(producto => { %>
                     <% if(producto.id < 5){ %>
                     <article class="a">
-                         <a class="product" href="/products/detail/<%= producto.id %> "> <img src="/images/productos/<%= producto.images[0].file%>" alt=""></a>
+                         <div class="indexB" style="background-image: url('/images/productos/<%=producto.images[0].file%>')"></div>
                          <div>
-                         <h4><%= producto.name %> </h4>
+                            <a class="product" href="/products/detail/<%= producto.id %>"><h4><%= producto.name %> </h4></a>
                         </div>
                          <p>$<%= producto.price %> </p>
                          <a class="carrito" href="/products/cart">añadir al carrito</a>
