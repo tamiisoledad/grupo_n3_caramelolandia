@@ -1,4 +1,4 @@
- .form{
+ .contacto .form{
   display: flex;
   flex-direction: column;
   align-items:center ;
@@ -14,7 +14,7 @@
     text-align: center;
     color: var(--azul) ;
 }
-.sobre{
+.contacto .sobre{
   text-align: center;
   color: #FF71BE;
   background: rgba( 255, 255, 255, .8) ;
@@ -71,7 +71,7 @@ height: 100%;
 }
 
 
- #integrantes{
+ .contacto #integrantes{
   display: flex;
   flex-wrap: wrap;
     flex-direction: column;
@@ -84,30 +84,30 @@ height: 100%;
  }
  
 
- #integrantes h2{
+ .contacto #integrantes h2{
    padding: 10px 0;
    color: var(--azul);
    display: inline;
    padding-bottom: 30px;
  }
-.container{
+.contacto .containero{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-div.foto{
+.contacto div.foto{
   width: 80%;
   height: auto;
 }
 
-div.perfil img{
+.contacto div.perfil img{
   padding: 10px 0;
 
   height: 100%;
   width: 100%;
  }
  
- div .foto p{
+ .contacto div .foto p{
    padding:30px ;
  }
 
@@ -129,14 +129,14 @@ div.perfil img{
 	    max-width: 420px;
       box-shadow: rgb(0 0 0 / 50%) 0px 10px 20px 1px;
 	}
-  .container{
+  .contacto .containero{
     display: flex;
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
   }
-  div.foto{
+  .contacto div.foto{
     width: 30%;
     height: auto;
     padding-bottom: 20px;
@@ -156,7 +156,7 @@ div.perfil img{
       justify-content: space-around;
       align-items: center;
     }
-    .form{
+    .contacto .form{
       display: flex;
       flex-direction: column;
        align-items:center ;
