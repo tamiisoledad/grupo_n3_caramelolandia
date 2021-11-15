@@ -150,6 +150,7 @@ module.exports = {
           price: +req.body.precio,
           variety: req.body.variedad,
           stock: +req.body.stock,
+          discount: +req.body.descuento,
           vegan: +req.body.vegano,
           celiac: +req.body.celiaco,
           categoryId: req.body.categoria,

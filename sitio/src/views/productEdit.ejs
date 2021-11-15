@@ -15,11 +15,11 @@
                 <small class="alertNombre"></small>
            </div>
            <div class="box-form">
-               <label for="info">informacion Nutricional</label> 
-               <textarea name="informacion" id="informacion" cols="30" rows="10"value = <%= product.info %>></textarea>
-               <small class="text-danger small"><%= locals.errores && errores.informacion ? errores.informacion.msg : null %> </small>
-               <small class="alertInformacion"></small>
-           </div>
+            <label for="informacion">Informacion</label>
+            <input type="textarea" name="informacion" id="informacion" value="<%= product.info %>">
+            <small class="text-danger small"><%= locals.errores && errores.informacion ? errores.informacion.msg : null %> </small>
+            <small class="alertInformacion"></small>
+        </div>
            <div class="box-form">
                <label for="marca">Marca</label>
                <input type="text" name="marca" id="marca" value="<%= product.mark %>">
@@ -56,14 +56,14 @@
             </div>
             <div class="box-form">
                 <label for="vegano">Apto Vegano</label>
-                <select name="vegano" id="vegano">
+                <select name="vegano" id="vegano" value="<%= product.vegan %>">
                     <option value= false>No</option>
                         <option value= true>Si</option>
             </select>
             </div>
             <div class="box-form">
                 <label for="celiaco">Sin Tacc</label>
-                <select name="celiaco" id="celiaco">
+                <select name="celiaco" id="celiaco" value="<%= product.celiac %>">
                         <option value= false>No</option>
                         <option value= true>Si</option>
             </select>
