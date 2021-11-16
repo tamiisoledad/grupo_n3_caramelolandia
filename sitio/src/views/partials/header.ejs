@@ -27,9 +27,17 @@
                 <label for="search" id="lupaHeader"><i class="fas fa-search"></i></label>
             </form>    
             </div>
-            <div class="iconos">
-                <a class="carrito" href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
-            </div>
+            
+            <ul>
+                <% if (locals.userLogin) { %>
+                 <li>
+                     <button type="button" class="cartbutton">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="contador"></span>
+                     </button>
+                 </li>
+                <% } %>
+            </ul>
             <div class="users">
                 <input type="checkbox" id="users">
                 <label for="users"><i class="fas fa-user"></i></label>
@@ -60,7 +68,7 @@
                             <li><a href="/">Inicio</a></li>
                         <li><a href="/products">Productos</a></li>
                         <li><a href="/contact">Contacto</a></li>
-                            <li><a href="">Mi perfil</a></li>
+                            <li><a href="/user">Mi perfil</a></li>
                             <% if (locals.userLogin.rolId == 1) { %>
                                 <li><a href="/admin">Admin</a></li>
                             <% } %>

@@ -20,16 +20,22 @@ module.exports = (sequelize, DataTypes) => {
         as : 'images',
         onDelete : 'cascade'
       })
+      Product.belongsToMany(models.User, {
+        as: "users",
+        through: "ProductUsers",
+        foreignKey: "productId",
+        otherKey: "userId"
+      })
     }
   };
   Product.init({
     name: DataTypes.STRING,
     info: DataTypes.STRING,
     mark: DataTypes.STRING,
-    price: DataTypes.DECIMAL,
+    price: DataTypes.DECIMAL(10,2),
     variety: DataTypes.STRING,
     stock: DataTypes.INTEGER,
-    discount: DataTypes.DECIMAL,
+    discount: DataTypes.DECIMAL(10,2),
     vegan: DataTypes.BOOLEAN,
     celiac: DataTypes.BOOLEAN,
     categoryId: DataTypes.INTEGER
