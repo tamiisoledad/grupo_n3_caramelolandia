@@ -11,7 +11,7 @@
         <div class="prod-select">
           <h2>Productos seleccionados</h2>
           <div class="articulos">
-            <article>
+            <article class="productos">
               <h4>Nombre del producto</h4>
               <img src="/images/guaymallen.png" alt="" width="20%" />
               <div class="cantidad">
@@ -20,33 +20,11 @@
                 <i class="far fa-trash-alt"></i>
               </div>
             </article>
-            <article>
-              <h4>Nombre del producto</h4>
-              <img src="/images/guaymallen.png" alt="" width="20%" />
-              <div class="cantidad">
-                <label for="cantidad">Cantidad:</label>
-                <input type="number" id="cantidad" name="cantidad" min="1" max="100">
-                <i class="far fa-trash-alt"></i>
-              </div>
-            </article>
-            <article>
-              <h4>Nombre del producto</h4>
-              <img src="/images/guaymallen.png" alt="" width="20%" />
-              <div class="cantidad">
-                <label for="cantidad">Cantidad:</label>
-                <input type="number" id="cantidad" name="cantidad" min="1" max="100">
-                <i class="far fa-trash-alt"></i>
-              </div>
-            </article>
-            <article>
-              <h4>Nombre del producto</h4>
-              <img src="/images/guaymallen.png" alt="" width="20%" />
-              <div class="cantidad">
-                <label for="cantidad">Cantidad:</label>
-                <input type="number" id="cantidad" name="cantidad" min="1" max="100">
-                <i class="far fa-trash-alt"></i>
-              </div>
-            </article>
+           
+            <div class="final">
+              <h5>Total:</h5>
+              <h5 class="total"></h5>
+            </div>
           </div>
         </div>
       </section>
@@ -104,13 +82,12 @@
               <textarea name="instrucciones" id="instrucciones" cols="30" rows="5" placeholder="Ejemplo: Puerta color negra/No Hay timbre/Quien Recibe" style="resize: none"></textarea>
               </div>
               <div class="box-button">
-                <input type="submit" value="Comprar">
-                <input type="reset" value="Cancelar">
+                <input type="submit" value="Comprar" class="comprar">
+                <input type="reset" value="Cancelar" class="cancelar">
             </div>
             </form>
           </div>
         </section>
-      </ class="sections">
     </main>
         <%- include('partials/footer') %>
   </body>

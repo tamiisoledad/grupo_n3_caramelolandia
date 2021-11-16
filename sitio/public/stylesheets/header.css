@@ -163,7 +163,7 @@ header .container{
     align-items: center;
     /* position: relative; */
 }
-header button.cartbutton{
+header div.cartbutton{
     display: block;
     background-color: var(--rosa);
     width: 28px;
@@ -179,11 +179,14 @@ header button.cartbutton{
     /* right: 0; */
     /* position: absolute; */
 }
-header button .contador{
+header div .contador{
     font-size: 16px;
     position: absolute;
     top: 2px;
     right: -4px;
+    color: white;
+    border-radius: 50%;
+    background-color: grey;
 }
 header div.buscar form input{
     display: none;
@@ -277,7 +280,7 @@ header div.container nav ul li a{
         height: 35px;
         font-size: 21px;
     }
-    header button.cartbutton{
+    header div.cartbutton{
         width: 35px;
         padding: 7px;
         height: 35px;
@@ -350,7 +353,7 @@ header div.container nav ul li a{
     header div.container div.izq div.lista ul li a{
         font-size: 27px;
     }
-    header button.cartbutton{
+    header div.cartbutton{
         width: 50px;
         padding: 9px;
         height: 50px;
