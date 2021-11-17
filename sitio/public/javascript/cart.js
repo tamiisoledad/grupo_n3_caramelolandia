@@ -1,5 +1,5 @@
 window.addEventListener("load", ()=> {
-    let span = document.querySelector(".contador");
+    let span = document.querySelector("span.contador");
     let carrito = document.querySelector(".carrito");
     let totalP = document.querySelector(".total");
     let productos = document.querySelector("article.productos");
@@ -10,9 +10,6 @@ window.addEventListener("load", ()=> {
 
     const mostrarCantidad = cart  => {
         var cantidad = cart.length;
-       
-
-       
 
         span.innerHTML = cantidad
       
@@ -45,4 +42,5 @@ window.addEventListener("load", ()=> {
         }
     }
     getCarrito();
+  
 })
