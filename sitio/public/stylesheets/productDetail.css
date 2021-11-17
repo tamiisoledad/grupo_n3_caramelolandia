@@ -36,7 +36,8 @@
 .detail section article div.carruselarrow img{
     max-width: 100%;
     max-height: 470px;
-
+    padding-top: 21px;
+    padding-right: 34px;
 }
 
 /*producto*/
@@ -77,7 +78,7 @@
     border-radius: 25px;
     margin: 15px auto;
     text-align: center;
-    width: 90%;
+    width: 74%;
 }
 
 .detail main section article.descripcion h4{
@@ -99,6 +100,7 @@
 
 .detail main section article.descripcion p:last-child{
     margin: 15px;
+    padding: 20px;
 }
 
 .detail main section article.descripcion div.nombre,.detail main section article.descripcion div.stock,.detail main section article.descripcion div.marca,.detail main section article.descripcion div.info,.detail main section article.descripcion div.vegan,.detail main section article.descripcion div.acerca{
@@ -150,7 +152,8 @@
 }
 
 .detail main section.relacionados article img{
-    height: 435px;
+    max-width: 100%;
+    max-height: 285px;
 }
 
 .detail main section.relacionados article:hover{
