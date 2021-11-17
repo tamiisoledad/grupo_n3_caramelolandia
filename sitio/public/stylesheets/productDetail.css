@@ -1,5 +1,8 @@
 /*main*/
-
+.detail main{
+    background-image: url('/images/depositphotos_112437920-stock-illustration-abstract-wafer-background.jpg');
+    background-repeat: revert;
+}
 /*carrusel*/
 
 
@@ -13,11 +16,11 @@
 .deatil main section.carrusel{
     display: flex;
     justify-content: space-around;
-    width: 90%;
+    width: 100%;
 }
 
 .deatil main section.carrusel img{
-    width: 50%;
+    width: 100%;
 }
 
 .detail section article div.carruselarrow{
@@ -25,14 +28,24 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    margin-right: 10%;
+    padding-left: 20%;
 }
 
 .detail section article div.carruselarrow img{
-    max-width: 40%;
+    max-width: 100%;
     max-height: 470px;
+
 }
 
 /*producto*/
+
+.detail main .box-detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 
 .deatil main section article.producto{
     display: flex;
@@ -48,6 +61,11 @@
 .detail main section a.circle{
     margin: 15px 15px 0 0;
 }
+
+.detail main section.box-desc{
+    width: 120%;
+}
+
 
 .detail main section article.descripcion{
     display: flex;
@@ -183,6 +201,7 @@
     .detail main .relacionados{
         flex-wrap: nowrap;
         justify-content: space-around;
+        background-color: white;
     }
 
     .detail main section.relacionados article{
@@ -206,5 +225,16 @@
 
     .detail main .carrusel{
         width: 273%;
+    }
+    .detail section article div.carruselarrow img{
+    width: 55%;
+    }
+
+    .detail main section.box-desc {
+        width: 50%;
+        padding: 45px;
+    }
+    .detail main .carrusel {
+        width: 50%;
     }
 }
