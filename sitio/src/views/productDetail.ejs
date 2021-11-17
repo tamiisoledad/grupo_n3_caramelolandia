@@ -10,7 +10,7 @@
           <section class="carrusel">  
             <article class="producto">
               <div class="carruselarrow">
-                <img src="/images/productos/<%= detalle.images[0].file %>" alt="" width="80%"/>              
+                  <img src="/images/productos/<%= detalle.images[0].file %>" alt="" width="80%"/>               
               </div>         
             </article>
           </section>
@@ -53,10 +53,12 @@
                 <h4>Precio:</h4>
                 <p>$<%= detalle.price %></p>
               </div>
+            <% if (detalle.discount > 0) { %>
               <div class="desc">
                 <h4>Descuento:</h4>
                 <p><%= detalle.discount %>%</p>
               </div>
+            <% } %>  
             </article>
           </section>
         </div>
