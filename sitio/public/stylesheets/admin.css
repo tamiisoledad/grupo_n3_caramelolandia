@@ -145,3 +145,8 @@
     width: 2rem;
     display: inline-block;
 }
+#admin section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

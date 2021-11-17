@@ -1,6 +1,17 @@
 .listaproducts{
     overflow-x: hidden;
 }
+
+.listaproducts a{
+    display: flex;
+    justify-content: center;
+}
+
+.listaproducts a.product{
+    min-height: 100px;
+    
+}
+
 .grande{
     padding: 20px;
 }
@@ -22,6 +33,7 @@
         width: calc(100% / 2);
         height: 100%;
         width: 100%;
+        max-height: 280px;
         
        /*  max-height: 600px !important; */
     
@@ -85,19 +97,20 @@
 .listaproducts section div article a img{
     width: 50%;
     height: 100%;
+    margin: 11px;
 }
 .listaproducts section div article div.nombre{
     text-align: center;
-    height: 40px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
+    height: 109px;
+    display: flex;
+    justify-content: center; 
     width: 100%;
     margin-bottom: 5px;
     background-color: rgba(128, 128, 128, 0.3);
 }
 .listaproducts section div article h4{  
     text-transform: uppercase;
+    text-align: center;
 }
 
 .listaproducts section div article a.carrito{
