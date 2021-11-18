@@ -22,6 +22,18 @@ body > #register, #register *, .lupa i {
 	margin: 15vh 0;
 }
 
+#register .element .input-data #eye-icon{
+  color: lightblue;
+  position: relative;
+  left: 196px;
+    top: 21px;
+}
+
+#register .element .input-data #eye-icon:hover{
+  color: rgba(79, 79, 250, 0.658);
+
+}
+
 #register h1 {
   text-align: left;
 }
@@ -30,8 +42,9 @@ body > #register, #register *, .lupa i {
   min-width: 300px;
   width: 100%;
   max-width: 450px;
-  padding: 10px;
+  padding: 30px;
 }
+
 #register .element .input-data{
   height: 40px;
   width: 100%;
@@ -42,25 +55,19 @@ body > #register, #register *, .lupa i {
   width: 100%;
   border: none;
   font-size: 17px;
-  border-bottom: 2px solid silver;
-}
-#register .input-data input:focus ~ label,
-#register .input-data input:valid ~ label{
-  transform: translateY(-20px);
-  font-size: 15px;
-  color: var(--fucsia);
+  border-bottom: 2px solid var(--fucsia);
 }
 #register .element .input-data label{
   user-select: none;
   position: absolute;
-  bottom: 10px;
+  bottom: 32px;
   left: 0;
-  color: grey;
+  color: var(--fucsia);
   pointer-events: none;
   transition: all 0.3s ease;
 }
 #register .input-data .underline{
-  background: grey;
+  background: rgb(252, 85, 216);
   position: absolute;
   height: 2px;
   width: 100%;

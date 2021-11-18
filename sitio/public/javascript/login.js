@@ -68,3 +68,13 @@ window.addEventListener("load", () => {
         
     console.log(form)
 })
+
+const iconEye = document.querySelector('.icon-pass')
+
+iconEye.addEventListener('click',function(){
+    if(this.nextElementSibling.type === "password"){
+        this.nextElementSibling.type = "text;"
+    }else{
+        this.nextElementSibling.type = "password"
+    }
+})

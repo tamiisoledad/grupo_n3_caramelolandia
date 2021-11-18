@@ -32,6 +32,18 @@ body > #login, #login *, .lupa i {
   max-width: 450px;
   padding: 10px;
 }
+#login .element .input-data #eye-icon{
+  color: lightblue;
+  position: relative;
+  left: 128px;
+    top: 37px;
+}
+
+#login .element .input-data #eye-icon:hover{
+  color: rgba(79, 79, 250, 0.658);
+
+}
+
 #login .element .input-data{
   height: 40px;
   width: 100%;
@@ -42,7 +54,7 @@ body > #login, #login *, .lupa i {
   width: 100%;
   border: none;
   font-size: 17px;
-  border-bottom: 2px solid silver;
+  border-bottom: 2px solid var(--fucsia);
 }
 #login .input-data input:focus ~ label,
 #login .input-data input:valid ~ label{
