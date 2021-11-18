@@ -52,7 +52,10 @@
             </div>
             <div class="box-form">
                 <label for="imagen">Subir Imagen</label>
-                <input type="file" name="imagen" id="imagen"  value="<%= product.images[0].filename%>" accept="images/*" multiple>
+                <input type="file" name="imagen" id="imagen"   accept="images/*" multiple>
+                <div>
+                    <img src="/images/productos/<%= product.images[0].file%>" alt="">
+                </div>
             </div>
             <div class="box-form">
                 <label for="vegano">Apto Vegano</label>
