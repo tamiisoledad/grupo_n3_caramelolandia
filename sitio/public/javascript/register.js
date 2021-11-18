@@ -73,7 +73,14 @@ window.addEventListener("load", () => {
         $('terms').classList.remove('is-invalid');
         $('terms-error').innerText = "Debes aceptar los terminos y condiciones"
     })
+})
 
+const iconEye = document.querySelector('.icon-pass')
 
-
+iconEye.addEventListener('click',function(){
+    if(this.nextElementSibling.type === "password"){
+        this.nextElementSibling.type = "text;"
+    }else{
+        this.nextElementSibling.type = "password"
+    }
 })

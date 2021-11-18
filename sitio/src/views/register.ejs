@@ -28,8 +28,9 @@
 				</div>
 				<div class="element">
 					<div class="input-data">
+						<span class="icon-pass"><i class="far fa-eye" id="eye-icon"></i></span>
 						<input type="password"  name="password" id="password" value="<%= locals.old && old.password ? old.password : null %>">
-						<div class="underline"></div>
+						
 						<label>Contraseña</label>
 						<span id="pass-error"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
 						<small id="pass-msg" ></small>

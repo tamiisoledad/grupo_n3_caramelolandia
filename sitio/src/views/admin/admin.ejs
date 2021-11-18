@@ -42,7 +42,7 @@
                             <form
                                 action="/products/delete/<%= producto.id %>?_method=DELETE"
                                 method="POST">
-                                <button type='submit' class="delete" title="Borrar"><i class="icon" id="delete">delete</i></button>
+                                <button type='submit' class="delete" title="Borrar" id="delete"><i class="icon">delete</i></button>
                             </form>
                         </td>
                         <td><%= producto.price %></td>
@@ -54,7 +54,8 @@
         </section>
     </main>
     <%- include('../partials/footer') %>
-
+    <script src="/javascript/admin.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 <script>
 const $ = x => document.querySelectorAll(x);
@@ -86,4 +87,5 @@ function search() {
     }
 }
 </script>
+
 </html>
