@@ -9,7 +9,7 @@
       </div>
       <section class="carrito">
         <div class="prod-select">
-          <h2>Productos seleccionados</h2>
+          <h2 class="titulo-producto">Productos seleccionados</h2>
           <div class="articulos">
             <article class="productos">
               <h4>Nombre del producto</h4>
@@ -17,6 +17,8 @@
               <div class="cantidad">
                 <label for="cantidad">Cantidad:</label>
                 <input type="number" id="cantidad" name="cantidad" min="1" max="100">
+                <p>Precio:</p>
+                <p>Subtotal: </p>
                 <i class="far fa-trash-alt"></i>
               </div>
             </article>
@@ -61,7 +63,7 @@
         </section>
         <section class="entrega">
           <h2>Formas de entrega</h2>
-          <form action="" method="POST">
+          <form action="" method="POST" class="formulario">
           <div class="formas-entrega">
             <input type="radio" name="entrega" value="correo" id="correo"><i class="fas fa-mail-bulk"></i>
             <label for="correo">Retiro en correo</label>
@@ -90,5 +92,7 @@
         </section>
     </main>
         <%- include('partials/footer') %>
+       
   </body>
+
 </html>

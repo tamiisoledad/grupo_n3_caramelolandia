@@ -29,7 +29,10 @@ module.exports = {
             if(remember){
                 res.cookie("remember", req.session.userLogin, {maxAge: 3000000*60})
             }
-            req.session.cart = []
+            
+            req.session.cart = [];
+
+
             return res.redirect('/')
         }).catch(error => console.log(error))
         }else{
