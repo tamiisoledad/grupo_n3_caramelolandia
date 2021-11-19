@@ -32,7 +32,7 @@
                             <h4><%= producto.name %> </h4>
                            </div>
                             <p>$<%= producto.price %> </p>
-                            <a class="carrito" href="/products/cart">añadir al carrito</a>
+                            <a class="carrito" href="#" onclick="addItem(event,'<%=producto.id%>')">añadir al carrito</a>
                        </article> 
                 <% }) %>
             </div>
