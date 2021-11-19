@@ -2,17 +2,21 @@ const {body} = require("express-validator");
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
-const usuarios = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','users.json'),'utf-8'));
+const db = require("../database/models");
 
 
 module.exports = [
     body('email')
     .custom((value,{req})=>{
-        let usuario= usuarios.find(usuario=>usuario.email===value && bcrypt.compareSync(req.body.password,usuario.password))
-        if(usuario){
-            return true
-        }else{
-            return false
-        }
-    }).withMessage('credenciales invalidas')
+        return db.User.findOne({
+            where: {
+                email: value,
+            }
+        })
+        .then(user => {
+            if(!user || !bcrypt.compareSync(req.body.password, user.password)){
+                return Promise.reject()
+            }
+        })
+    }).catch( () => Promise.reject('Credenciales inválidas'))
 ]

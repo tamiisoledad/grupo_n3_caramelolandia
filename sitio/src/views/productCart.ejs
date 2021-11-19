@@ -9,9 +9,9 @@
       </div>
       <section class="carrito">
         <div class="prod-select">
-          <h2 class="titulo-producto">Productos seleccionados</h2>
+          <h2 class="titulo-producto" id="titulo-producto">Productos seleccionados</h2>
           <div class="articulos">
-            <article class="productos">
+            <article class="productosSeleccionados" id="productosSeleccionados">
               <h4>Nombre del producto</h4>
               <img src="/images/guaymallen.png" alt="" width="20%" />
               <div class="cantidad">
@@ -24,8 +24,7 @@
             </article>
            
             <div class="final">
-              <h5>Total:</h5>
-              <h5 class="total"></h5>
+              <h5 class="precioTotal" id="precioTotal">Total:</h5>
             </div>
           </div>
         </div>
@@ -63,7 +62,7 @@
         </section>
         <section class="entrega">
           <h2>Formas de entrega</h2>
-          <form action="" method="POST" class="formulario">
+          <form action="" method="POST" class="formulario" id="formulario">
           <div class="formas-entrega">
             <input type="radio" name="entrega" value="correo" id="correo"><i class="fas fa-mail-bulk"></i>
             <label for="correo">Retiro en correo</label>

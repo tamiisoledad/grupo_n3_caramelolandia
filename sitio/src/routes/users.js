@@ -4,7 +4,7 @@ const loginValidator = require('../validations/loginValidation');
 const uploadFile = require('../middlewares/profileMulter')
 const loginUserCheck = require('../middlewares/loginUserCheck')
 const registerValidation = require('../validations/registerValidation')
-const {show, add} = require("../controllers/cartController");
+
 
 module.exports = express.Router()
 	// GET users listing.
@@ -13,6 +13,5 @@ module.exports = express.Router()
 	.post('/register',uploadFile.single('image'),registerValidation,processRegister)
 	.post('/login',loginValidator,processLogin)
 	.get('/logout',logout)
-	.get("/show", show)
-	.get('/add/:id', add)
+	
 ;

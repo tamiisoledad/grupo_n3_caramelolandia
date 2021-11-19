@@ -29,7 +29,10 @@
                             <a class="product" href="/products/detail/<%= producto.id %>"><h4><%= producto.name %> </h4></a>
                         </div>
                          <p>$<%= producto.price %> </p>
-                         <a href="#" class="carrito">añadir al carrito</a>
+                         <% if (locals.userLogin) { %>
+                            <a href="#" class="carrito" onclick="addItem(event, '<%=producto.id%>')">añadir al carrito</a>
+                         <% } %>
+                         
                     </article>
                         <%}%>
                 <% }) %>
@@ -37,6 +40,20 @@
         
     </main>
     <%- include('partials/footer') %>
-    
+    <script src="/javascript/cart.js"></script>
+    <script>
+        
+    const addItem = async (e, id) => {
+        e.preventDefault();
+        try {
+            let response = await fetch('/apis/add/'+ id);
+            let result = await response.json()
+            mostrarCantidad(result.data)
+            console.log(result)
+        } catch (error) {
+            console.log()
+        }
+    }
+    </script>
 </body>
 </html>
