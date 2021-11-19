@@ -12,54 +12,7 @@
     
 }
 
-.grande{
-    padding: 20px;
-}
-.grande h1{
-    text-align: center;
-    margin-bottom: 10px;
-}
-.listaproducts .grande div{
-    width: 376%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    transition: all .5s ease;
-    transform: translateX(0%);
-    max-height: 700px !important; 
-}
-.listaproducts .carrusel{
-        width: calc(100% / 2);
-        height: 100%;
-        width: 100%;
-        max-height: 280px;
-        
-       /*  max-height: 600px !important; */
-    
-    }
-.listaproducts  .puntos{
-        width: 100%;
-        padding: .4em;
-        margin: 0 auto;
-        /* margin: 1em 0 0; */
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-    }
-.listaproducts  .punto{
-        width: 1em;
-        height: 1em;
-        background-color: rgb(219, 105, 210);
-        margin: 10px;
-        border-radius: 50%;
-        list-style: none;
-        cursor: pointer;
-    }
-.listaproducts .punto.activo{
-        background-color: rgb(250, 135, 240);
-    }
+
 
 .listaproducts section{
     display: flex;
@@ -101,7 +54,6 @@
 }
 .listaproducts section div article div.nombre{
     text-align: center;
-    height: 109px;
     display: flex;
     justify-content: center; 
     width: 100%;
@@ -119,4 +71,22 @@
     padding: 8px;
     border-radius: 12%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.listaproducts div.listado{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.listaproducts div.listado article.carrusel{
+    width: 25%;
+    height: 312px!important
+
+}
+.listaproducts div.listado article.carrusel div{
+    height: 100px;
+    margin: 23px;
+}
+.listaproducts div.listado article.carrusel div a img{
+    width: 50%!important;
 }

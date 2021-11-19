@@ -6,7 +6,7 @@
     <script defer src="/javascript/products.js"></script>
     <main>
         <section>
-            <div class="grande">
+            <div>
                 <form action="/products/category">
                  <h1>PRODUCTOS</h1>
                  <select name="categoria" id="categoria">
@@ -22,57 +22,22 @@
                  <button type="submit">Buscar</button>
                 </form>
             <div >
+                <div class="listado">
                 <% productos.forEach(producto => { %>
-                    <% if (producto.id <= 11) { %>
                         <article class="carrusel">
+                            <div>
                             <a class="product" href="/products/detail/<%= producto.id %> "><img src="/images/productos/<%= producto.images[0].file%>" alt=""></a>
+                            </div>
                             <div class="nombre">
                             <h4><%= producto.name %> </h4>
                            </div>
                             <p>$<%= producto.price %> </p>
                             <a class="carrito" href="/products/cart">añadir al carrito</a>
                        </article> 
-                    <% } %>  
                 <% }) %>
+            </div>
 
             </div>
-            <div >
-                <% productos.forEach(producto => { %>
-                    <% if (producto.id > 11 && producto.id <= 22 ) { %>
-                        <article class="carrusel">
-                            <a class="product" href="/products/detail/<%= producto.id %> "><img src="/images/productos/<%= producto.images[0].file%>" alt=""></a>
-                            <div class="nombre">
-                            <h4><%= producto.name %> </h4>
-                           </div>
-                            <p>$<%= producto.price %> </p>
-                            <a class="carrito" href="/products/cart">añadir al carrito</a>
-                       </article> 
-                    <% } %>  
-                <% }) %>
-            </div>
-            
-            <div >
-                <% productos.forEach(producto => { %>
-                    <% if (producto.id > 22 && producto.id <= 33) { %>
-                        <article class="carrusel">
-                            <a class="product" href="/products/detail/<%= producto.id %> "><img src="/images/productos/<%= producto.images[0].file%>" alt=""></a>
-                            <div class="nombre">
-                            <h4><%= producto.name %> </h4>
-                           </div >
-                            <p>$<%= producto.price %> </p>
-                            <a class="carrito" href="/products/cart">añadir al carrito</a>
-                       </article> 
-                    <% } %>  
-                <% }) %>
-            </div>
-        </div>
-            <il class="puntos">
-                <li class="punto activo"></li>
-                <li class="punto"></li>
-                <li class="punto"></li>
-                <li class="punto"></li>
-            </il>
-        </div> 
         </section>
     </main>
     <%- include('partials/footer')%>
