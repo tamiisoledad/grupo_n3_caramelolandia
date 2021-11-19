@@ -53,22 +53,33 @@
             <div class="box-form">
                 <label for="imagen">Subir Imagen</label>
                 <input type="file" name="imagen" id="imagen"   accept="images/*" multiple>
-                <div>
+                <div class="imagen">
                     <img src="/images/productos/<%= product.images[0].file%>" alt="">
                 </div>
             </div>
             <div class="box-form">
                 <label for="vegano">Apto Vegano</label>
                 <select name="vegano" id="vegano" value="<%= product.vegan %>">
-                    <option value= false>No</option>
-                        <option value= true>Si</option>
+                   
+                    <% if (!product.vegan === false) { %>
+                        <option value="true">Si</option>
+                        <option value="false">No</option>
+                      <% } else { %>
+                        <option value="false">No</option>
+                        <option value="true">Si</option>
+                        <% } %>
             </select>
             </div>
             <div class="box-form">
                 <label for="celiaco">Sin Tacc</label>
-                <select name="celiaco" id="celiaco" value="<%= product.celiac %>">
-                        <option value= false>No</option>
-                        <option value= true>Si</option>
+                <select name="celiaco" id="celiaco" >
+                    <% if (!product.celiac === false) { %>
+                        <option value="true">Si</option>
+                        <option value="false">No</option>
+                      <% } else { %>
+                        <option value="false">No</option>
+                        <option value="true">Si</option>
+                        <% } %>
             </select>
             
             </div>

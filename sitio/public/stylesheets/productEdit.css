@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: var(--azul);
 }
 
 .edit main h1{
@@ -22,6 +23,7 @@
     flex-direction: column;
     margin: 20px 0 20px 0;
     padding: 10px 0 10px 0;
+    background-image: url("/images/depositphotos_112437920-stock-illustration-abstract-wafer-background.jpg")
 }
 
 .edit main form div.box-form{
@@ -57,6 +59,14 @@
 
 .edit main form div.box-form input{
     padding: 15px;
+}
+.edit main form div.box-form div.imagen{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 50px;
+}
+.edit main form div.box-form div.imagen img{
+    width: 100%;
 }
 
 .edit main form div.box-form textarea{
