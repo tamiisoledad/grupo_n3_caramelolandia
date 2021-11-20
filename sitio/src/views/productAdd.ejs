@@ -59,6 +59,8 @@
             <div class="box-img">
                 <label for="imagen">Subir Imagen</label>
                 <input type="file" name="imagen" id="imagen" accept="images/*"multiple>
+                <div id="preview"></div>
+                <a href="#" id="resetId">Eliminar imagenes</a>
             </div>
             <div class="box-form">
                 <label for="vegano">Apto Vegano</label>
@@ -92,6 +94,7 @@
    </main>
 	<script src="/javascript/productos.js"></script>
     <%- include('partials/footer') %>
+    <script src="/javascript/productAdd.js"></script>
 
 </body>
 
