@@ -1,4 +1,5 @@
 const db= require('../database/models');
+const nodemailer = require("nodemailer");
 
 module.exports = {
     index : (req,res) => {
@@ -42,5 +43,47 @@ module.exports = {
         })
         .catch(error => console.log(error))
         },
-    contacto : (req,res) => res.render("contact")
+    contacto : (req,res) => res.render("contact"),
+    send: async (req, res) =>{
+        try {
+            const {name, email, comentario} = req.body;
+        const mensaje = contentHTML = `
+        <h1> Informacion de usuario </h1>
+        <ul>
+         <li>Nombre: ${name}</li>
+         <li>Email: ${email}</li>
+        </ul>
+        <p>Mensaje: ${comentario}</p>
+        `;
+
+        const transporter = nodemailer.createTransport({
+            host: 'smtp.office365.com',
+            port: 587,
+            secure: false,
+            auth: {
+                user: 'caramelolandia@outlook.com',
+                pass: '123caramelo'
+            }
+        })
+        const messageMail = {
+            from: "Cliente",
+            to: "caramelolandia@outlook.com",
+            subject: "E-ccomercer",
+            text: mensaje
+        }
+        await transporter.sendMail(messageMail, (error, info)=>{
+            if (error) {
+                console.log(error)
+            }else{
+                console.log("Email enviado")
+                res.status(200).jsop(req.body)
+                res.redirect("/")
+            }
+        })
+        
+        } catch (error) {
+            console.log(error)
+        }
+        
+    }
 }
