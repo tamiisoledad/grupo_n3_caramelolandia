@@ -14,7 +14,18 @@ window.addEventListener("load", () => {
     let descuento = document.querySelector('#descuento');
     let alertDescuento = document.getElementsByClassName('alertDescuento')[0];
     let form = document.querySelector("#form");
+    let imagen = document.getElementById("imagen");
     let estado = 0
+
+imagen.addEventListener("change", function(e){
+    console.log(this.files)
+    let reader = new FileReader();
+                reader.readAsDataURL(e.target.files[0]);
+                reader.onload = function(){
+                preview.src = reader.result;
+                };
+
+})
 
     nombre.addEventListener("blur", () => {
 

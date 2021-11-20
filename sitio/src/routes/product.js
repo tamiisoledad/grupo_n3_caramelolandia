@@ -18,7 +18,7 @@ module.exports = express.Router()
 
 	/* EDIT & UPDATE */
 	.get('/edit/:id',isAdmin, productEdit)
-	.put('/edit/:id',uploadFile.array('imagen'),productValidator,update)
+	.put('/edit/:id',uploadFile.single('imagen'),productValidator,update)
 
 	/* DELETE */
 	.delete('/delete/:id',isAdmin, destroy)

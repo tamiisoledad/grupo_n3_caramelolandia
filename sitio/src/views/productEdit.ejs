@@ -52,9 +52,9 @@
             </div>
             <div class="box-form">
                 <label for="imagen">Subir Imagen</label>
-                <input type="file" name="imagen" id="imagen"   accept="images/*" multiple>
+                <input type="file" name="imagen" id="imagen"  hidden accept="images/*">
                 <div class="imagen">
-                    <img src="/images/productos/<%= product.images[0].file%>" alt="">
+                    <img src="/images/productos/<%= product.images[0].file%>" id="preview" alt="">
                 </div>
             </div>
             <div class="box-form">

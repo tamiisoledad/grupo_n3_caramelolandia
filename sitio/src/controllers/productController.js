@@ -8,7 +8,7 @@ const { Op } = require("sequelize");
 module.exports = {
   products: (req, res) => {
     db.Product.findAll({
-      include : ['images']
+      include: ['images']
     }).then(function (productos) {
       return res.render("products", {
         productos: productos,
@@ -76,7 +76,7 @@ module.exports = {
   },
   store: (req, res) => {
     let errors = validationResult(req);
-    
+
 
     if (errors.isEmpty()) {
       db.Product.create({
@@ -162,81 +162,76 @@ module.exports = {
         }
       )
         .then(() => {
-          db.Product.findByPk(req.params.id, {
-            include: ["images"],
-          }).then(async (product) => {
-            if (req.files.length != 0) {
-              product.images.forEach((image) => {
-                if (
-                  fs.existsSync(
-                    path.join(__dirname, "../public/images", image.file)
-                  )
-                ) {
-                  fs.unlinkSync(
-                    path.join(__dirname, "../public/images", image.file)
-                  );
+          if (req.file) {
+            db.Image.findOne({
+              where: {
+                productId: req.params.id
+              }
+            }).then(image => {
+              if (
+                fs.existsSync(
+                  path.join(__dirname, "../public/images", image.file)
+                )
+              ) {
+                fs.unlinkSync(
+                  path.join(__dirname, "../public/images", image.file)
+                );
+              }
+              db.Image.update(
+                {
+                  file: req.file.filename
+                },
+                {
+                  where: { productId: req.params.id }
                 }
-              });
-
-              await queryInterface.bulkDelete("Images", {
-                productId: product.id,
-              });
-
-              let images = req.files.map((image) => {
-                let item = {
-                  file: image.filename,
-                  productId: product.id,
-                };
-                return item;
-              });
-
-              db.Image.bulkCreate(images, { validate: true }).then(() =>
-                console.log("imagenes guardadas satisfactoriamente")
-              );
-            }
-            return res.redirect("/admin");
-          });
-        })
-        .catch((error) => console.log(error));
-    } else {
-      let categorias = db.Category.findAll({
-        order: [["name"]],
-      });
-      let product = db.Product.findByPk(req.params.id, {
-        include: ["category", "images"],
-      });
-      Promise.all([categorias, product])
-        .then(([categorias, product]) => {
-          return res.render("productEdit", {
-            categorias,
-            product,
-            old: req.body,
-            errores: errors.mapped(),
-          });
-        })
-        .catch((error) => console.log(error));
-    }
-  },
-  destroy: (req, res) => {
-    db.Product.findByPk(req.params.id, {
-      include: ["images"],
-    })
-      .then((products) => {
-        products.images.forEach((image) => {
-          if (
-            fs.existsSync(path.join(__dirname, "../public/images", image.file))
-          ) {
-            fs.unlinkSync(path.join(__dirname, "../public/images", image.file));
+              ).then(()=>{
+                return res.redirect("/admin");
+              })
+            })
           }
-        });
-        db.Product.destroy({
-          where: {
-            id: req.params.id,
-          },
-        }).then(() => {
           return res.redirect("/admin");
-        });
-      })
-      .catch((error) => console.log(error));
+
+        })  .catch ((error) => console.log(error));
+     
+    } else {
+  let categorias = db.Category.findAll({
+    order: [["name"]],
+  });
+  let product = db.Product.findByPk(req.params.id, {
+    include: ["category", "images"],
+  });
+  Promise.all([categorias, product])
+    .then(([categorias, product]) => {
+      return res.render("productEdit", {
+        categorias,
+        product,
+        old: req.body,
+        errores: errors.mapped(),
+      });
+    })
+    .catch((error) => console.log(error));
+}
   },
+destroy: (req, res) => {
+  db.Product.findByPk(req.params.id, {
+    include: ["images"],
+  })
+    .then((products) => {
+      products.images.forEach((image) => {
+        if (
+          fs.existsSync(path.join(__dirname, "../public/images", image.file))
+        ) {
+          fs.unlinkSync(path.join(__dirname, "../public/images", image.file));
+        }
+      });
+      db.Product.destroy({
+        where: {
+          id: req.params.id,
+        },
+      }).then(() => {
+        return res.redirect("/admin");
+      });
+    })
+    .catch((error) => console.log(error));
+},
 };
