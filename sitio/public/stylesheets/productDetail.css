@@ -126,6 +126,8 @@
     align-content: space-around;
     text-align: center;
     justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .detail main div .agregar:hover{
