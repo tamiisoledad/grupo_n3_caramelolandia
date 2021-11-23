@@ -24,7 +24,7 @@
                 <% productos.forEach(producto => { %>
                     <% if(producto.id < 5){ %>
                     <article class="a">
-                         <div class="indexB" style="background-image: url('/images/productos/<%=producto.images[0].file%>')"></div>
+                         <div class="indexB" style="background-image: url('/images/productos/<%=producto.images[0].file%>');background-position: center;"></div>
                          <div>
                             <a class="product" href="/products/detail/<%= producto.id %>"><h4><%= producto.name %> </h4></a>
                         </div>
