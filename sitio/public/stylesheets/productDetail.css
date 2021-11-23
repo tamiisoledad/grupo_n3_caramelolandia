@@ -81,6 +81,12 @@
     width: 74%;
 }
 
+.detail main section article.descripcion div.precio p{
+    background-color: rgb(238, 62, 62);
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+}
+
 .detail main section article.descripcion h4{
     padding: 10px;
     margin: 20px;
@@ -206,6 +212,7 @@
         flex-wrap: nowrap;
         justify-content: space-around;
         background-color: white;
+        padding-bottom: 20px;
     }
 
     .detail main section.relacionados article{

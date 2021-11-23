@@ -25,8 +25,8 @@ body > #register, #register *, .lupa i {
 #register .element .input-data #eye-icon{
   color: lightblue;
   position: relative;
-  left: 196px;
-    top: 21px;
+  left: 168px;
+    top: 31px;
 }
 
 #register .element .input-data #eye-icon:hover{
